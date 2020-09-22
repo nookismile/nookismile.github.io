@@ -22,7 +22,7 @@
   --dark: #343a40;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
-  --breakpoint-md: 768px;
+  --breakpoint-md: 1000px;
   --breakpoint-lg: 1440px;
   --breakpoint-xl: 1920px;
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -444,8 +444,8 @@ pre {
   margin-left: auto; }
   @media (min-width: 576px) {
     .container {
-      max-width: 540px; } }
-  @media (min-width: 768px) {
+      max-width: 1000px; } }
+  @media (min-width: 1000px) {
     .container {
       max-width: 1300px; } }
   @media (min-width: 1440px) {
@@ -464,9 +464,9 @@ pre {
 
 @media (min-width: 576px) {
   .container, .container-sm {
-    max-width: 540px; } }
+    max-width: 1000px; } }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .container, .container-sm, .container-md {
     max-width: 1300px; } }
 
@@ -781,7 +781,7 @@ pre {
   .offset-sm-11 {
     margin-left: 91.66667%; } }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .col-md {
     flex-basis: 0;
     flex-grow: 1;
@@ -1357,7 +1357,7 @@ pre {
     .table-responsive-sm > .table-bordered {
       border: 0; } }
 
-@media (max-width: 767.98px) {
+@media (max-width: 999.98px) {
   .table-responsive-md {
     display: block;
     width: 100%;
@@ -2268,7 +2268,7 @@ input[type="button"].btn-block {
     right: 0;
     left: auto; } }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .dropdown-menu-md-left {
     right: auto;
     left: 0; }
@@ -3144,13 +3144,13 @@ input[type="button"].btn-block {
     .navbar-expand-sm .navbar-toggler {
       display: none; } }
 
-@media (max-width: 767.98px) {
+@media (max-width: 999.98px) {
   .navbar-expand-md > .container,
   .navbar-expand-md > .container-fluid, .navbar-expand-md > .container-sm, .navbar-expand-md > .container-md, .navbar-expand-md > .container-lg, .navbar-expand-md > .container-xl {
     padding-right: 0;
     padding-left: 0; } }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .navbar-expand-md {
     flex-flow: row nowrap;
     justify-content: flex-start; }
@@ -3926,7 +3926,7 @@ input[type="button"].btn-block {
         margin-left: -1px;
         border-left-width: 1px; } }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .list-group-horizontal-md {
     flex-direction: row; }
     .list-group-horizontal-md .list-group-item:first-child {
@@ -4926,7 +4926,7 @@ button.bg-dark:focus {
   .d-sm-inline-flex {
     display: inline-flex !important; } }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .d-md-none {
     display: none !important; }
   .d-md-inline {
@@ -5212,7 +5212,7 @@ button.bg-dark:focus {
   .align-self-sm-stretch {
     align-self: stretch !important; } }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .flex-md-row {
     flex-direction: row !important; }
   .flex-md-column {
@@ -5439,7 +5439,7 @@ button.bg-dark:focus {
   .float-sm-none {
     float: none !important; } }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .float-md-left {
     float: left !important; }
   .float-md-right {
@@ -6192,7 +6192,7 @@ button.bg-dark:focus {
   .mx-sm-auto {
     margin-left: auto !important; } }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .m-md-0 {
     margin: 0 !important; }
   .mt-md-0,
@@ -6988,7 +6988,7 @@ button.bg-dark:focus {
   .text-sm-center {
     text-align: center !important; } }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .text-md-left {
     text-align: left !important; }
   .text-md-right {
@@ -7287,6 +7287,9 @@ p {
   display: none;
   border-bottom: 1px solid #eeeeee; }
 
+.header-page__bottom {
+  position: relative; }
+
 .header-page__item-small {
   display: flex;
   align-items: center;
@@ -7432,21 +7435,24 @@ p {
   align-items: center;
   justify-content: center;
   padding: 20px 0;
-  padding-left: 30px;
+  text-align: center;
   background-color: #E5F2FA; }
 
-.callback::before {
-  content: "";
-  position: absolute;
-  top: 18px;
-  left: 10px;
-  display: block;
-  width: 25px;
-  height: 25px;
-  background-image: url(../img/clock.png);
-  background-size: 25px;
-  background-position: center;
-  background-repeat: no-repeat; }
+@media (min-width: 1100px) {
+  .callback {
+    padding-left: 30px; }
+  .callback::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 10px;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/clock.png);
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat; } }
 
 .callback-link {
   font-size: 14px;
@@ -7462,28 +7468,25 @@ p {
 .phone {
   position: relative;
   padding: 29px 0;
-  padding-left: 20px;
+  text-align: center;
   cursor: pointer; }
-
-.phone::before {
-  content: "";
-  position: absolute;
-  top: 30px;
-  left: -5px;
-  display: block;
-  width: 18px;
-  height: 18px;
-  background-image: url(../img/phone-icon.png);
-  background-size: 15px;
-  background-position: center;
-  background-repeat: no-repeat; }
 
 @media (min-width: 1100px) {
   .phone {
     padding: 29px 0;
     padding-left: 20px; }
   .phone::before {
-    left: -5px; } }
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: -5px;
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-image: url(../img/phone-icon.png);
+    background-size: 15px;
+    background-position: center;
+    background-repeat: no-repeat; } }
 
 @media (min-width: 1440px) {
   .phone {
