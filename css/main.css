@@ -7315,7 +7315,7 @@ p {
 .swipe-link {
   position: absolute;
   top: 30px;
-  right: 0;
+  right: 15px;
   display: block; }
 
 @media (min-width: 1000px) {
@@ -7392,7 +7392,7 @@ p {
   border: none;
   border-radius: 0; }
 
-.search .submit {
+.search__form .submit {
   position: absolute;
   right: 0;
   top: 0px;
@@ -7408,10 +7408,10 @@ p {
   cursor: pointer;
   overflow: hidden; }
 
-.search .submit:hover {
+.search__form .submit:hover {
   border-color: #80bdff; }
 
-.submit::before {
+.search__form .submit::before {
   content: "";
   position: absolute;
   left: 0;
