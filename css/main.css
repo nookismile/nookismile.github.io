@@ -7797,7 +7797,8 @@ p {
 
 @media (min-width: 768px) {
   .video-block__item:first-child {
-    padding-right: 0; }
+    padding-right: 0;
+    padding-left: 0; }
   .video-block__info-inner {
     border-left: none; } }
 
