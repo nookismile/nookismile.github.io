@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/mmenu.css">
     <link rel="stylesheet" href="css/main.css">
-    
-    <title>Artiteq - Главная</title>
+    <link rel="stylesheet" href="css/nice-select.css">
+  
+    <title>Главная - Artiteq</title>
 </head>
 <body>
   <div class="full">
@@ -36,7 +37,7 @@
                                       </form>
                                   </div>
                                   <div class="callback col-lg-2 col-md-2">
-                                      <a class="callback-link magic-link" href="#">Заказать звонок</a>
+                                      <a class="callback-link magic-link js-modal" href="#callback">Заказать звонок</a>
                                   </div>
                               </div>
                           </div>
@@ -313,7 +314,7 @@
     </div>
   </section>
     
-  <section class="section section--no-padding">
+  <section class="section section--no-padding section--margin">
     <div class="about-section">
       <div class="container">
         <div class="sticker">О компании</div>
@@ -591,35 +592,26 @@
   
   <nav id="menu">
       <ul>
-        <li>
-               <form class="search__form">
-                                          <input class="form-control" type="text" placeholder="Поиск:" aria-label="Search">
-                                          <button class="submit" type="submit"></button>
-                                      </form>
-      
+          <li>
+              <form class="search__form">
+                  <input class="form-control" type="text" placeholder="Поиск:" aria-label="Search">
+                  <button class="submit" type="submit"></button>
+              </form>
           </li>
           <li>
               <a href="#">Продукция</a>
           </li>
           <li>
-              <a href="#">
-                                              О компании
-                                          </a>
+              <a href="#">О компании</a>
           </li>
           <li>
-              <a href="#">
-                                             Услуги
-                                          </a>
+              <a href="#">Услуги</a>
           </li>
           <li>
-              <a href="#">
-                                              Галерея
-                                          </a>
+              <a href="#">Галерея</a>
           </li>
           <li>
-              <a href="#">
-                                              Контакты
-                                          </a>
+              <a href="#">Контакты</a>
           </li>
       </ul>
   </nav>
@@ -630,6 +622,35 @@
   <!--<script src="js/main.min.js"></script>-->
   <script src="js/mmenu.js"></script>
   <script src="js/my.js"></script>
+  <script src="js/jquery.time-to.js"></script>
+  <script src="js/jquery.nice-select.min.js"></script>
+  <script src="js/jquery.inputmask.min.js"></script>
+  <div class="overlay-modal" id="js-overlay"></div>
+      <div class="modal" id="callback">
+          <div class="modal-wrapper">
+              <form class="modal-form">
+                  <fieldset>
+                      <legend class="modal-form__title">
+                          Обратный звонок
+                      </legend>
+                      <ul class="form-list form-list-modal">
+                          <li class="form-list-item">
+                              <input class="form-input" type="text" name="name" id="name-modal" placeholder="Ваше имя:">
+                          </li>
+                          <li class="form-list-item">
+                              <input class="form-input" type="tel" name="phone" id="phone-modal" placeholder="Телефон:">
+                          </li>
+                      </ul>
+                  </fieldset>
+                  <div class="consent">
+                      Отправляя данные, вы соглашаетесь
+                      <br>на <a href="#" class="consent-link">обработку персональных данных</a>
+                  </div>
+                  <button class="btn-gradient" type="submit">Отправить</button>
+              </form>
+          </div>
+          <button href="#" class="close-btn js-modal-close" type="button"></button>
+      </div>
   </div>
 </body>
 </html>
