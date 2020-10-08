@@ -1,2443 +1,1717 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-
 <head>
-  <meta charset="utf-8">
-  <title>Карточка товара - 7 погод</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="css/slick.css">
-  <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
-  <link rel="stylesheet" href="css/lightgallery.css">
-  <link rel="stylesheet" href="css/mmenu.css">
-
-</head>
-
-<body class="page">
-  <div class="full">
-   <header class="page-header">
-      <div class="header-top">
-        <div class="wrapper">
-          <div class="header-top__inner">
-            <div class="hat-mobile">
-              <ul class="hat-mobile-list">
-                <li class="hat-mobile-list__item hat-mobile-list__item--logo">
-                  <a href="#">
-                    <img src="img/logo.png" width="212" height="40">
-                  </a>
-                </li>
-                <li class="hat-mobile-list__item hat-mobile-list__catalog">
-                  <a class="hat-mobile-catalog" href="#catalog">
-                      Каталог
-                  </a>
-                </li>
-                <li class="hat-mobile-list__item">
-                  <a href="#" class="cart__wrapper">
-                    <div class="cart__wrapper-item cart__icon">
-                    </div>
-                  </a>
-                </li>
-                <li class="hat-mobile-list__item">
-                  <div class="your-city">
-                    <span>Москва</span>
-                  </div>
-                </li>
-              </ul>
-              <ul class="hat-mobile-list">
-              <li class="hat-mobile-list__item">
-                  <a class="hat-mobile-cart" href="#menu">
-                    <div class="swaip"><span></span>
-                    </div>
-                  </a>
-                </li>
-                 <li class="hat-mobile-list__item" id="icons-mobile">
-                  <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
-                </li>
-                <li class="hat-mobile-list__item" id="address-mobile">
-                  <i class="fa fa-map-marker" aria-hidden="true"></i>
-                </li>
-                <li class="hat-mobile-list__item" id="callback-mobile">
-                  <a href="#"><i class="fa fa-phone" aria-hidden="true"></i></a>
-                </li>
-<!--
-                <li class="hat-mobile-list__item" id="trigger">
-                  <a href="#">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                  </a>
-                </li>
--->
-              </ul>
-              <div class="list-mobile" id="icons-mobile-info">
-                <div class="icons__wrapper">
-                <a href="#" class="icons__copy">
-                </a>
-                <a href="#" class="icons__favourites">
-                </a>
-              </div>
-              </div>
-              <div class="list-mobile" id="contact-mobile">
-                <ul class="list-mobile-item">
-                  <li><a href="tel:84953748507">+7 495 374-85-07</a>
-                  </li>
-                  <li><a href="tel:88005006907">+7 800 500-69-07</a>
-                  </li>
-                  <li><a href="#callback" class="btn js-modal">Обратный звонок</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="list-mobile" id="address-mobile-info">
-                <div class="address-mobile">
-                <div>г. Москва, ул. Полярная 39
-                <br>м. Медведково <a class="magic-link" href="#">карта</a>
-              </div>
-              <div>
-                <a href="mailto:info@7pogod.ru">info@7pogod.ru</a>
-              </div>
-                </div>
-              </div>
-              <div class="search-wrapper theme-default small-screen search-wrapper--mobile" id="search-hidden">
-                <form method="get" action="#">
-                  <div class="search-box search-box--mobile">
-                    <div class="search-key-box">
-                      <input type="text" placeholder="Введите запрос:" maxlength="50" autocomplete="off" value="" id="search_query--mobile" name="query">
-                      <input type="hidden" name="word" value="">
-                      <input type="hidden" name="category_id" value="">
-                    </div>
-                    <div class="search-right">
-                      <button class="submit" type="submit"></button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-            <div class="navigation">
-              <nav class="main-nav">
-                <ul class="menu-list">
-                  <li class="menu-list_item magic-item"><a href="#">О компании</a>
-                  </li>
-                  <li class="menu-list_item magic-item"><a href="#">Сервис</a>
-                  </li>
-                  <li class="menu-list_item magic-item"><a href="#">Доставка и оплата</a>
-                  </li>
-                  <li class="menu-list_item magic-item"><a href="#">Контакты</a>
-                  </li>
-                  <li class="menu-list_item drop-item">
-                    <span class="drop-link">
-                      <span class="drop-link__item"></span>
-                    <span class="drop-link__item"></span>
-                    <span class="drop-link__item"></span>
-                    </span>
-                    <ul class="menu-more">
-                      <li class="menu-more__item magic-item"><a href="#">Доставка и оплата</a>
-                      </li>
-                      <li class="menu-more__item magic-item"><a href="#">Доставка и оплата</a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            <div class="header-city">
-              <div class="your-city">
-                <span class="your-city__mark"></span>
-                Ваш город: <span>Москва</span>
-              </div>
-              <div class="callback-wrapper">
-                <a class="btn js-modal" href="#callback">Обратный звонок</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="wrapper">
-        <div class="header-middle">
-          <div class="header-middle__item logo">
-            <a href="#">
-              <img src="img/logo.png" width="212" height="40">
-            </a>
-          </div>
-          <div class="header-middle__item header-contacts">
-            <div class="phone">
-              <a class="phone-link" href="tel:84957804147"><strong>+7 495 374-85-07</strong></a>
-              <a class="phone-link" href="tel:84957804147"><strong>+7 800 500-69-07</strong></a>
-              <div class="hours">Пн - Пт с 9:00 до 18:00 Мск</div>
-            </div>
-            <div class="address">
-              <div class="address-info">г. Москва, ул. Полярная 39
-                <br>м. Медведково <a class="magic-link" href="#">карта</a>
-              </div>
-              <div class="email-wrapper">
-                <a class="email magic-link" href="mailto:info@7pogod.ru">info@7pogod.ru</a>
-              </div>
-            </div>
-            <div class="icons">
-              <div class="icons__wrapper">
-                <a href="#" class="icons__copy">
-                </a>
-                <a href="#" class="icons__favourites">
-                </a>
-              </div>
-            </div>
-            <div class="cart">
-              <a href="#" class="cart__wrapper">
-                <div class="cart__wrapper-item cart__icon">
-                </div>
-                <div class="cart__wrapper-item cart__link">
-                  Ваш заказ
-                </div>
-              </a>
-            </div>
-            <div class="search-box">
-              <div class="search-box__item">
-                <form class="search__form" method="post">
-                  <input type="hidden" name="action" value="fast-search">
-                  <input class="query" name="query" type="text" placeholder="Поиск среди 10 000 товаров. Введите запрос:" value="">
-                  <button class="submit" type="submit"></button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="header-bottom">
-        <div class="wrapper">
-          <div class="header-bottom__item catalog-btn">
-            <div class="catalog-btn__inner">
-              <div class="catalog-btn__item"><a href="#catalog" class="catalog-link js-modal">Каталог товаров<span class="hamb-icon clearfix"><span></span></span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="header-bottom__item">
-            <nav class="catalog-navigation">
-              <ul class="catalog-list">
-                <li class="catalog-list__item catalog-list__item--cond"><a href="#">Кондиционирование, холодоснабжение</a>
-                </li>
-                <li class="catalog-list__item catalog-list__item--warm"><a href="#">Отопление, обогрев</a>
-                </li>
-                <li class="catalog-list__item catalog-list__item--vent"><a href="#">Вентиляция, воздуховоды</a>
-                </li>
-                <li class="catalog-list__item catalog-list__item--dry"><a href="#">Осушение</a>
-                </li>
-                <li class="catalog-list__item catalog-list__item--wet"><a href="#">Увлажнение</a>
-                </li>
-                <li class="catalog-list__item drop-item">
-                  <span class="drop-link drop-link--light">
-                    <span class="drop-link__item"></span>
-                  <span class="drop-link__item"></span>
-                  <span class="drop-link__item"></span>
-                  </span>
-                  <ul class="menu-more-catalog">
-                    <li class="more-catalog__item more-catalog__item--boil"><a href="#">Водонагреватели, бойлеры</a>
-                    </li>
-                    <li class="more-catalog__item more-catalog__item--boil"><a href="#">Водонагреватели, бойлеры</a>
-                    </li>
-                    <li class="more-catalog__item more-catalog__item--boil"><a href="#">Водонагреватели, бойлеры</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </header>
-    <main class="page-main">
-      <div class="breadcrumbs-wrapper">
-        <div class="wrapper">
-          <ul class="breadcrumbs">
-            <li><a href="#">Главная</a>
-            </li>
-            <li><a href="#">Кондиционирование, холодоснабжение</a>
-            </li>
-            <li class="breadcrumbs__color"><a href="#">Отдельные блоки кондиционера</a>
-            </li>
-            <li><span>Наружный блок Electrolux EACO-14 FMI/N3</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="wrapper">
-        <div class="inner-title">Наружный блок Electrolux EACO-14 FMI/N3</div>
-        <div class="product-top">
-          <div class="product-top__item product-top__slider">
-            <div class="slider-product-wrapper">
-              <div class="slider-product">
-                <div class="slider-product__item">
-                  <a href="img/slider-prod1.png" class="lightgallery-link">
-                    <img src="img/slider-prod1.png">
-                  </a>
-                </div>
-                <div class="slider-product__item">
-                  <a href="img/slider-prod1.png" class="lightgallery-link">
-                    <img src="img/slider-prod1.png">
-                  </a>
-                </div>
-                <div class="slider-product__item">
-                  <a href="img/slider-prod1.png" class="lightgallery-link">
-                    <img src="img/slider-prod1.png">
-                  </a>
-                </div>
-                <div class="slider-product__item">
-                  <a href="img/slider-prod1.png" class="lightgallery-link">
-                    <img src="img/slider-prod1.png">
-                  </a>
-                </div>
-                <div class="slider-product__item">
-                  <a href="img/slider-prod1.png" class="lightgallery-link">
-                    <img src="img/slider-prod1.png">
-                  </a>
-                </div>
-              </div>
-              <div class="arrows-main arrows-main--product"></div>
-              <div class="slider-for-block">
-                <div class="slider-thumb">
-                  <div class="slider-thumb__item">
-                    <img src="img/slider-prod2.png">
-                  </div>
-                  <div class="slider-thumb__item">
-                    <img src="img/slider-prod2.png">
-                  </div>
-                  <div class="slider-thumb__item">
-                    <img src="img/slider-prod2.png">
-                  </div>
-                  <div class="slider-thumb__item">
-                    <img src="img/slider-prod2.png">
-                  </div>
-                  <div class="slider-thumb__item">
-                    <img src="img/slider-prod2.png">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="product-top__item product-top__description">
-             <div class="product-top__logo"><img src="img/logo5.png" alt=""></div> 
-            <div class="product-top__row product-top-border">
-              <div class="product-top__inventory">
-                Артикул: <span>4019453</span>
-              </div>
-             <div class="product-top__score product-top__score--mobile">
-                <div class="review-stars">
-                  <input id="star-4" type="radio" name="stars">
-                  <label title="Отлично" for="star-4">
-                    <i class="fa fa-star"></i>
-                  </label>
-                  <input id="star-3" type="radio" name="stars">
-                  <label title="Хорошо" for="star-3">
-                    <i class="fa fa-star"></i>
-                  </label>
-                  <input id="star-2" type="radio" name="stars" checked="checked">
-                  <label title="Нормально" for="star-2">
-                    <i class="fa fa-star"></i>
-                  </label>
-                  <input id="star-1" type="radio" name="stars">
-                  <label title="Плохо" for="star-1">
-                    <i class="fa fa-star"></i>
-                  </label>
-                  <input id="star-0" type="radio" name="stars">
-                  <label title="Ужасно" for="star-0">
-                    <i class="fa fa-star"></i>
-                  </label>
-                </div>
-                <div class="score">Оценка товара: 4.3 из 5</div>
-                <div class="score">Голосов: <a class="magic-link" href="#">27</a>
-                </div>
-              </div>
-            </div>
-            <div class="product-top__row">
-               <div class="product-top__price">
-                <div class="product-top__price--wrapper">
-                  <div class="price price--present">
-                    58 206 руб
-                  </div>
-                  <div class="price price--old">
-                    70 000 руб
-                  </div>
-                </div>
-                <div class="count">
-                  <div class="amount-block">
-                    <input type="text" class="amount-filed" value="1" data-id="14">
-                  </div>
-                  <span class="plus"><i class="fa fa-angle-up" aria-hidden="true"></i></span>
-                  <span class="minus"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
-                </div>
-                <div class="stock stock--green">В наличии</div>
-                <a class="btn btn--orange">Товар аналог</a>
-              </div>
-              <div class="product-top__score">
-                <div class="review-stars">
-                  <input id="star-4" type="radio" name="stars">
-                  <label title="Отлично" for="star-4">
-                    <i class="fa fa-star"></i>
-                  </label>
-                  <input id="star-3" type="radio" name="stars">
-                  <label title="Хорошо" for="star-3">
-                    <i class="fa fa-star"></i>
-                  </label>
-                  <input id="star-2" type="radio" name="stars" checked="checked">
-                  <label title="Нормально" for="star-2">
-                    <i class="fa fa-star"></i>
-                  </label>
-                  <input id="star-1" type="radio" name="stars">
-                  <label title="Плохо" for="star-1">
-                    <i class="fa fa-star"></i>
-                  </label>
-                  <input id="star-0" type="radio" name="stars">
-                  <label title="Ужасно" for="star-0">
-                    <i class="fa fa-star"></i>
-                  </label>
-                </div>
-                <div class="score">Оценка товара: 4.3 из 5</div>
-                <div class="score">Голосов: <a class="magic-link" href="#">27</a>
-                </div>
-              </div>
-            </div>
-            <div class="product-top__row">
-              <div class="product-details">
-                <div class="product-details__item">
-                  <a class="btn btn--cart  btn--big" href="#">В корзину</a>
-                  <a class="btn-oneclick" href="#">Заказать в 1 клик</a>
-                  <div class="icons-links">
-                    <a href="#" class="icons-copy">
-                      Сравнить
-                    </a>
-                    <a href="#" class="icons-favourites">
-                      В избранное
-                    </a>
-                  </div>
-                  <div class="another">
-                    <a class="product-analog" href="#">Аналогичные товары</a>
-                    <a class="product-blocks" href="#">Отдельные блоки кондиционера</a>
-                  </div>
-                </div>
-                <div class="product-details__item">
-                  <div class="dop">
-                    <div class="dop__title">Дополнительно:</div>
-                    <ul class="dop-list">
-                      <li class="dop-list__item">Гарантия: <span>36 мес.</span>
-                      </li>
-                      <li class="dop-list__item">Страна-производитель: <span>Китай</span>
-                      </li>
-                      <li class="dop-list__item">Доставка по Москве — <span>600 руб от 2 дней</span>
-                      </li>
-                      <li class="dop-list__item">Доставка по Москве — <span>600 руб + тариф ТК, от 3 дней</span>
-                      </li>
-                      <li class="dop-list__item">Самовывоз — <span>бесплатно. Москва, ул. Малыгина д.2 кор.2</span>
-                      </li>
-                    </ul>
-                    <a href="#" class="dop__pay">Полные условия оплаты и доставки</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="product-bottom">
-          <div class="tabs-wrapper">
-            <div class="tabs-detail">
-              <div class="tabs-detail__title">
-                <div class="wrapper">
-                  <div class="tabs-info clearfix">
-                    <span class="active" data-id="31">Характеристики</span>
-                    <span data-id="32">Описание</span>
-                    <span data-id="33">Инструкции и файлы</span>
-                    <span data-id="34">Отзывы (3)</span>
-                  </div>
-                </div>
-              </div>
-              <div class="wrapper">
-                <div class="tabs-info-wrapper">
-                  <div class="active tab-info" data-id="31">
-                    <div class="text">
-                      <div class="text__item">
-                        <div class="property">
-                          <strong>Технические характеристики</strong>
-                          <span><label>Серия</label><span>Super Match</span></span>
-                          <span><label>Тип кондиционера</label><span>мульти-сплит система</span></span>
-                          <span><label>Количество подключаемых внутренних блоков</label><span>2</span></span>
-                          <span><label>Установка</label><span>настенная</span></span>
-                          <span><label>Инверторное управление</label><span>Да</span></span>
-                          <span><label>Площадь обслуживания</label><span>30-40 кв.м.</span></span>
-                          <span><label>Мощность охлаждения</label><span>4.1 кВт</span></span>
-                          <span><label>Мощность обогрева</label><span>4.4 кВт</span></span>
-                          <span><label>Потребляемая мощность при охлаждении</label><span>1.3 кВт</span></span>
-                          <span><label>Потребляемая мощность при обогреве</label><span>1.2 кВт</span></span>
-                          <span><label>Допустимая темп. наружного воздуха (охлаждение), °C</label><span>от +10 до +43</span></span>
-                          <span><label>Допустимая темп. наружного воздуха (обогрев), °C</label><span>от -15 до +23</span></span>
-                          <span><label>Объем рециркулируемого воздуха, м³/ч</label><span>450</span></span>
-                          <span><label>Электропитание</label><span>220-240V</span></span>
-                          <span><label>Уровень шума, дБ</label><span>56-56</span></span>
-                          <span><label>Назначение</label><span>универсальное</span></span>
-                        </div>
-                      </div>
-                      <div class="text__item">
-                        <div class="property">
-                          <strong>Фармакологическое действие</strong>
-                          <span><label>Автоматический режим работы:</label><span>Super Match</span></span>
-                          <span><label>Режимы работы:</label><span>мульти-сплит система</span></span>
-                          <span><label>Регулировки направления воздушного потока:</label><span>2</span></span>
-                          <span><label>Авторестарт</label><span>настенная</span></span>
-                          <span><label>Самодиагностика</label><span>Да</span></span>
-                          
-                          <strong>Особенности</strong>
-                          <span><label>Ночной режим работы:</label><span>Super Match</span></span>
-                          <span><label>Запоминание настроек:</label><span>мульти-сплит система</span></span>
-                          <span><label>Теплый пуск:</label><span>2</span></span>
-                          <span><label>Особенности:</label><span>настенная</span></span>
-                          
-                          <strong>Управление</strong>
-                          <span><label>Ночной режим работы:</label><span>Super Match</span></span>
-                          <span><label>Запоминание настроек:</label><span>мульти-сплит система</span></span>
-                          <span><label>Теплый пуск:</label><span>2</span></span>
-                          <span><label>Особенности:</label><span>настенная</span></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="tab-info" data-id="32">
-                   описание
-                  </div>
-                  <div class="tab-info" data-id="33">
-                    инструкции
-                  </div>
-                  <div class="tab-info" data-id="34">
-                   отзывы
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <section class="screen">
-        <div class="wrapper">
-          <div class="title-block">
-            <div class="title">Рекомендуемые товары
-            </div>
-            <div class="title-block__item">
-              <a class="link magic-link--dark" href="#">Посмотреть все</a>
-            </div>
-          </div>
-          <div class="slider-rec">
-            <div class="slider-rec__item">
-              <div class="card">
-                <div class="sticker-wrapper">
-                  <div class="sticker sticker--new">Новинки</div>
-                  <div class="sticker sticker--sale">Скидка 40%</div>
-                </div>
-                <div class="review-stars-wrapper">
-                  <div class="review-stars">
-                    <input id="star-4" type="radio" name="stars">
-                    <label title="Отлично" for="star-4">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-3" type="radio" name="stars">
-                    <label title="Хорошо" for="star-3">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-2" type="radio" name="stars" checked="checked">
-                    <label title="Нормально" for="star-2">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-1" type="radio" name="stars">
-                    <label title="Плохо" for="star-1">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-0" type="radio" name="stars">
-                    <label title="Ужасно" for="star-0">
-                      <i class="fa fa-star"></i>
-                    </label>
-                  </div>
-                </div>
-                <div class="card__img">
-                  <a href="#">
-                    <img src="img/prod11.png">
-                  </a>
-                </div>
-                <div class="card__info">
-                  <div class="card__info-wrapper">
-                    <div class="card__title">
-                      <a class="magic-link-reverse" href="#">Настенный кондиционер General Climate</a>
-                    </div>
-                    <div class="card__table">
-                      <div class="card__row">
-                        <div class="card__col">
-                          Мощность
-                        </div>
-                        <div class="card__col">
-                          2000 - 2000 Вт
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col">
-                          Гарантия
-                        </div>
-                        <div class="card__col">
-                          1 год
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col card__col--color">
-                          Артикул
-                        </div>
-                        <div class="card__col card__col--color">
-                          08784
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card__price">
-                      <div class="price">
-                        122 355 руб
-                      </div>
-                      <div class="price price--old">
-                        2 355 руб
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card__icons">
-                    <div class="icons__wrapper">
-                      <a href="#" class="icons__copy">
-                      </a>
-                      <a href="#" class="icons__favourites">
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <a class="btn btn--cart" href="#">В корзину</a>
-              </div>
-            </div>
-            <div class="slider-rec__item">
-              <div class="card">
-                <div class="sticker-wrapper">
-                  <div class="sticker sticker--new">Новинки</div>
-                </div>
-                <div class="review-stars-wrapper">
-                  <div class="review-stars">
-                    <input id="star-4" type="radio" name="stars">
-                    <label title="Отлично" for="star-4">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-3" type="radio" name="stars">
-                    <label title="Хорошо" for="star-3">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-2" type="radio" name="stars" checked="checked">
-                    <label title="Нормально" for="star-2">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-1" type="radio" name="stars">
-                    <label title="Плохо" for="star-1">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-0" type="radio" name="stars">
-                    <label title="Ужасно" for="star-0">
-                      <i class="fa fa-star"></i>
-                    </label>
-                  </div>
-                </div>
-                <div class="card__img">
-                  <a href="#">
-                    <img src="img/prod12.png">
-                  </a>
-                </div>
-                <div class="card__info">
-                  <div class="card__info-wrapper">
-                    <div class="card__title">
-                      <a class="magic-link-reverse" href="#">Водонагреватель накопительный HEATLEADER</a>
-                    </div>
-                    <div class="card__table">
-                      <div class="card__row">
-                        <div class="card__col">
-                          Мощность
-                        </div>
-                        <div class="card__col">
-                          2000 - 2000 Вт
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col">
-                          Гарантия
-                        </div>
-                        <div class="card__col">
-                          1 год
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col card__col--color">
-                          Артикул
-                        </div>
-                        <div class="card__col card__col--color">
-                          08784
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card__price">
-                      <div class="price">
-                        122 355 руб
-                      </div>
-                      <div class="price price--old">
-                        2 355 руб
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card__icons">
-                    <div class="icons__wrapper">
-                      <a href="#" class="icons__copy">
-                      </a>
-                      <a href="#" class="icons__favourites">
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <a class="btn btn--cart" href="#">В корзину</a>
-              </div>
-            </div>
-            <div class="slider-rec__item">
-              <div class="card">
-                <div class="sticker-wrapper">
-                  <div class="sticker sticker--new">Новинки</div>
-                  <div class="sticker sticker--sale">Скидка 40%</div>
-                </div>
-                <div class="review-stars-wrapper">
-                  <div class="review-stars">
-                    <input id="star-4" type="radio" name="stars">
-                    <label title="Отлично" for="star-4">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-3" type="radio" name="stars">
-                    <label title="Хорошо" for="star-3">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-2" type="radio" name="stars" checked="checked">
-                    <label title="Нормально" for="star-2">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-1" type="radio" name="stars">
-                    <label title="Плохо" for="star-1">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-0" type="radio" name="stars">
-                    <label title="Ужасно" for="star-0">
-                      <i class="fa fa-star"></i>
-                    </label>
-                  </div>
-                </div>
-                <div class="card__img">
-                  <a href="#">
-                    <img src="img/prod13.png">
-                  </a>
-                </div>
-                <div class="card__info">
-                  <div class="card__info-wrapper">
-                    <div class="card__title">
-                      <a class="magic-link-reverse" href="#">Душевая кабина Oporto Shower 8139</a>
-                    </div>
-                    <div class="card__table">
-                      <div class="card__row">
-                        <div class="card__col">
-                          Мощность
-                        </div>
-                        <div class="card__col">
-                          2000 - 2000 Вт
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col">
-                          Гарантия
-                        </div>
-                        <div class="card__col">
-                          1 год
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col card__col--color">
-                          Артикул
-                        </div>
-                        <div class="card__col card__col--color">
-                          08784
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card__price">
-                      <div class="price">
-                        122 355 руб
-                      </div>
-                      <div class="price price--old">
-                        2 355 руб
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card__icons">
-                    <div class="icons__wrapper">
-                      <a href="#" class="icons__copy">
-                      </a>
-                      <a href="#" class="icons__favourites">
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <a class="btn btn--cart" href="#">В корзину</a>
-              </div>
-            </div>
-            <div class="slider-rec__item">
-              <div class="card">
-                <div class="sticker-wrapper">
-                  <div class="sticker sticker--new">Новинки</div>
-                  <div class="sticker sticker--sale">Скидка 40%</div>
-                </div>
-                <div class="review-stars-wrapper">
-                  <div class="review-stars">
-                    <input id="star-4" type="radio" name="stars">
-                    <label title="Отлично" for="star-4">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-3" type="radio" name="stars">
-                    <label title="Хорошо" for="star-3">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-2" type="radio" name="stars" checked="checked">
-                    <label title="Нормально" for="star-2">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-1" type="radio" name="stars">
-                    <label title="Плохо" for="star-1">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-0" type="radio" name="stars">
-                    <label title="Ужасно" for="star-0">
-                      <i class="fa fa-star"></i>
-                    </label>
-                  </div>
-                </div>
-                <div class="card__img">
-                  <a href="#">
-                    <img src="img/prod14.png">
-                  </a>
-                </div>
-                <div class="card__info">
-                  <div class="card__info-wrapper">
-                    <div class="card__title">
-                      <a class="magic-link-reverse" href="#">Настенный кондиционер General Climate GC/GU-EAR09HRN1-R</a>
-                    </div>
-                    <div class="card__table">
-                      <div class="card__row">
-                        <div class="card__col">
-                          Мощность
-                        </div>
-                        <div class="card__col">
-                          2000 - 2000 Вт
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col">
-                          Гарантия
-                        </div>
-                        <div class="card__col">
-                          1 год
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col card__col--color">
-                          Артикул
-                        </div>
-                        <div class="card__col card__col--color">
-                          08784
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card__price">
-                      <div class="price">
-                        122 355 руб
-                      </div>
-                      <div class="price price--old">
-                        2 355 руб
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card__icons">
-                    <div class="icons__wrapper">
-                      <a href="#" class="icons__copy">
-                      </a>
-                      <a href="#" class="icons__favourites">
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <a class="btn btn--cart" href="#">В корзину</a>
-              </div>
-            </div>
-            <div class="slider-rec__item">
-              <div class="card">
-                <div class="sticker-wrapper">
-                  <div class="sticker sticker--new">Новинки</div>
-                  <div class="sticker sticker--sale">Скидка 40%</div>
-                </div>
-                <div class="review-stars-wrapper">
-                  <div class="review-stars">
-                    <input id="star-4" type="radio" name="stars">
-                    <label title="Отлично" for="star-4">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-3" type="radio" name="stars">
-                    <label title="Хорошо" for="star-3">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-2" type="radio" name="stars" checked="checked">
-                    <label title="Нормально" for="star-2">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-1" type="radio" name="stars">
-                    <label title="Плохо" for="star-1">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-0" type="radio" name="stars">
-                    <label title="Ужасно" for="star-0">
-                      <i class="fa fa-star"></i>
-                    </label>
-                  </div>
-                </div>
-                <div class="card__img">
-                  <a href="#">
-                    <img src="img/prod1.png">
-                  </a>
-                </div>
-                <div class="card__info">
-                  <div class="card__info-wrapper">
-                    <div class="card__title">
-                      <a class="magic-link-reverse" href="#">Настенный кондиционер General Climate</a>
-                    </div>
-                    <div class="card__table">
-                      <div class="card__row">
-                        <div class="card__col">
-                          Мощность
-                        </div>
-                        <div class="card__col">
-                          2000 - 2000 Вт
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col">
-                          Гарантия
-                        </div>
-                        <div class="card__col">
-                          1 год
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col card__col--color">
-                          Артикул
-                        </div>
-                        <div class="card__col card__col--color">
-                          08784
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card__price">
-                      <div class="price">
-                        122 355 руб
-                      </div>
-                      <div class="price price--old">
-                        2 355 руб
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card__icons">
-                    <div class="icons__wrapper">
-                      <a href="#" class="icons__copy">
-                      </a>
-                      <a href="#" class="icons__favourites">
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <a class="btn btn--cart" href="#">В корзину</a>
-              </div>
-            </div>
-            <div class="slider-rec__item">
-              <div class="card">
-                <div class="sticker-wrapper">
-                  <div class="sticker sticker--new">Новинки</div>
-                  <div class="sticker sticker--sale">Скидка 40%</div>
-                </div>
-                <div class="review-stars-wrapper">
-                  <div class="review-stars">
-                    <input id="star-4" type="radio" name="stars">
-                    <label title="Отлично" for="star-4">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-3" type="radio" name="stars">
-                    <label title="Хорошо" for="star-3">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-2" type="radio" name="stars" checked="checked">
-                    <label title="Нормально" for="star-2">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-1" type="radio" name="stars">
-                    <label title="Плохо" for="star-1">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-0" type="radio" name="stars">
-                    <label title="Ужасно" for="star-0">
-                      <i class="fa fa-star"></i>
-                    </label>
-                  </div>
-                </div>
-                <div class="card__img">
-                  <a href="#">
-                    <img src="img/prod1.png">
-                  </a>
-                </div>
-                <div class="card__info">
-                  <div class="card__info-wrapper">
-                    <div class="card__title">
-                      <a class="magic-link-reverse" href="#">Настенный кондиционер General Climate</a>
-                    </div>
-                    <div class="card__table">
-                      <div class="card__row">
-                        <div class="card__col">
-                          Мощность
-                        </div>
-                        <div class="card__col">
-                          2000 - 2000 Вт
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col">
-                          Гарантия
-                        </div>
-                        <div class="card__col">
-                          1 год
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col card__col--color">
-                          Артикул
-                        </div>
-                        <div class="card__col card__col--color">
-                          08784
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card__price">
-                      <div class="price">
-                        122 355 руб
-                      </div>
-                      <div class="price price--old">
-                        2 355 руб
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card__icons">
-                    <div class="icons__wrapper">
-                      <a href="#" class="icons__copy">
-                      </a>
-                      <a href="#" class="icons__favourites">
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <a class="btn btn--cart" href="#">В корзину</a>
-              </div>
-            </div>
-          </div>
-          <div class="arrows-wrapper">
-            <div class="arrows-main arrows-main--rec">
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="screen">
-        <div class="wrapper">
-          <div class="title-block">
-            <div class="title">Похожие товары
-            </div>
-            <div class="title-block__item">
-              <a class="link magic-link--dark" href="#">Посмотреть все</a>
-            </div>
-          </div>
-          <div class="slider-similar">
-            <div class="slider-similar__item">
-              <div class="card">
-                <div class="sticker-wrapper">
-                  <div class="sticker sticker--new">Новинки</div>
-                  <div class="sticker sticker--sale">Скидка 40%</div>
-                </div>
-                <div class="review-stars-wrapper">
-                  <div class="review-stars">
-                    <input id="star-4" type="radio" name="stars">
-                    <label title="Отлично" for="star-4">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-3" type="radio" name="stars">
-                    <label title="Хорошо" for="star-3">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-2" type="radio" name="stars" checked="checked">
-                    <label title="Нормально" for="star-2">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-1" type="radio" name="stars">
-                    <label title="Плохо" for="star-1">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-0" type="radio" name="stars">
-                    <label title="Ужасно" for="star-0">
-                      <i class="fa fa-star"></i>
-                    </label>
-                  </div>
-                </div>
-                <div class="card__img">
-                  <a href="#">
-                    <img src="img/prod11.png">
-                  </a>
-                </div>
-                <div class="card__info">
-                  <div class="card__info-wrapper">
-                    <div class="card__title">
-                      <a class="magic-link-reverse" href="#">Настенный кондиционер General Climate</a>
-                    </div>
-                    <div class="card__table">
-                      <div class="card__row">
-                        <div class="card__col">
-                          Мощность
-                        </div>
-                        <div class="card__col">
-                          2000 - 2000 Вт
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col">
-                          Гарантия
-                        </div>
-                        <div class="card__col">
-                          1 год
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col card__col--color">
-                          Артикул
-                        </div>
-                        <div class="card__col card__col--color">
-                          08784
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card__price">
-                      <div class="price">
-                        122 355 руб
-                      </div>
-                      <div class="price price--old">
-                        2 355 руб
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card__icons">
-                    <div class="icons__wrapper">
-                      <a href="#" class="icons__copy">
-                      </a>
-                      <a href="#" class="icons__favourites">
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <a class="btn btn--cart" href="#">В корзину</a>
-              </div>
-            </div>
-            <div class="slider-similar__item">
-              <div class="card">
-                <div class="sticker-wrapper">
-                  <div class="sticker sticker--new">Новинки</div>
-                </div>
-                <div class="review-stars-wrapper">
-                  <div class="review-stars">
-                    <input id="star-4" type="radio" name="stars">
-                    <label title="Отлично" for="star-4">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-3" type="radio" name="stars">
-                    <label title="Хорошо" for="star-3">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-2" type="radio" name="stars" checked="checked">
-                    <label title="Нормально" for="star-2">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-1" type="radio" name="stars">
-                    <label title="Плохо" for="star-1">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-0" type="radio" name="stars">
-                    <label title="Ужасно" for="star-0">
-                      <i class="fa fa-star"></i>
-                    </label>
-                  </div>
-                </div>
-                <div class="card__img">
-                  <a href="#">
-                    <img src="img/prod12.png">
-                  </a>
-                </div>
-                <div class="card__info">
-                  <div class="card__info-wrapper">
-                    <div class="card__title">
-                      <a class="magic-link-reverse" href="#">Водонагреватель накопительный HEATLEADER</a>
-                    </div>
-                    <div class="card__table">
-                      <div class="card__row">
-                        <div class="card__col">
-                          Мощность
-                        </div>
-                        <div class="card__col">
-                          2000 - 2000 Вт
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col">
-                          Гарантия
-                        </div>
-                        <div class="card__col">
-                          1 год
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col card__col--color">
-                          Артикул
-                        </div>
-                        <div class="card__col card__col--color">
-                          08784
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card__price">
-                      <div class="price">
-                        122 355 руб
-                      </div>
-                      <div class="price price--old">
-                        2 355 руб
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card__icons">
-                    <div class="icons__wrapper">
-                      <a href="#" class="icons__copy">
-                      </a>
-                      <a href="#" class="icons__favourites">
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <a class="btn btn--cart" href="#">В корзину</a>
-              </div>
-            </div>
-            <div class="slider-similar__item">
-              <div class="card">
-                <div class="sticker-wrapper">
-                  <div class="sticker sticker--new">Новинки</div>
-                  <div class="sticker sticker--sale">Скидка 40%</div>
-                </div>
-                <div class="review-stars-wrapper">
-                  <div class="review-stars">
-                    <input id="star-4" type="radio" name="stars">
-                    <label title="Отлично" for="star-4">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-3" type="radio" name="stars">
-                    <label title="Хорошо" for="star-3">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-2" type="radio" name="stars" checked="checked">
-                    <label title="Нормально" for="star-2">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-1" type="radio" name="stars">
-                    <label title="Плохо" for="star-1">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-0" type="radio" name="stars">
-                    <label title="Ужасно" for="star-0">
-                      <i class="fa fa-star"></i>
-                    </label>
-                  </div>
-                </div>
-                <div class="card__img">
-                  <a href="#">
-                    <img src="img/prod13.png">
-                  </a>
-                </div>
-                <div class="card__info">
-                  <div class="card__info-wrapper">
-                    <div class="card__title">
-                      <a class="magic-link-reverse" href="#">Душевая кабина Oporto Shower 8139</a>
-                    </div>
-                    <div class="card__table">
-                      <div class="card__row">
-                        <div class="card__col">
-                          Мощность
-                        </div>
-                        <div class="card__col">
-                          2000 - 2000 Вт
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col">
-                          Гарантия
-                        </div>
-                        <div class="card__col">
-                          1 год
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col card__col--color">
-                          Артикул
-                        </div>
-                        <div class="card__col card__col--color">
-                          08784
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card__price">
-                      <div class="price">
-                        122 355 руб
-                      </div>
-                      <div class="price price--old">
-                        2 355 руб
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card__icons">
-                    <div class="icons__wrapper">
-                      <a href="#" class="icons__copy">
-                      </a>
-                      <a href="#" class="icons__favourites">
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <a class="btn btn--cart" href="#">В корзину</a>
-              </div>
-            </div>
-            <div class="slider-similar__item">
-              <div class="card">
-                <div class="sticker-wrapper">
-                  <div class="sticker sticker--new">Новинки</div>
-                  <div class="sticker sticker--sale">Скидка 40%</div>
-                </div>
-                <div class="review-stars-wrapper">
-                  <div class="review-stars">
-                    <input id="star-4" type="radio" name="stars">
-                    <label title="Отлично" for="star-4">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-3" type="radio" name="stars">
-                    <label title="Хорошо" for="star-3">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-2" type="radio" name="stars" checked="checked">
-                    <label title="Нормально" for="star-2">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-1" type="radio" name="stars">
-                    <label title="Плохо" for="star-1">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-0" type="radio" name="stars">
-                    <label title="Ужасно" for="star-0">
-                      <i class="fa fa-star"></i>
-                    </label>
-                  </div>
-                </div>
-                <div class="card__img">
-                  <a href="#">
-                    <img src="img/prod14.png">
-                  </a>
-                </div>
-                <div class="card__info">
-                  <div class="card__info-wrapper">
-                    <div class="card__title">
-                      <a class="magic-link-reverse" href="#">Настенный кондиционер General Climate GC/GU-EAR09HRN1-R</a>
-                    </div>
-                    <div class="card__table">
-                      <div class="card__row">
-                        <div class="card__col">
-                          Мощность
-                        </div>
-                        <div class="card__col">
-                          2000 - 2000 Вт
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col">
-                          Гарантия
-                        </div>
-                        <div class="card__col">
-                          1 год
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col card__col--color">
-                          Артикул
-                        </div>
-                        <div class="card__col card__col--color">
-                          08784
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card__price">
-                      <div class="price">
-                        122 355 руб
-                      </div>
-                      <div class="price price--old">
-                        2 355 руб
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card__icons">
-                    <div class="icons__wrapper">
-                      <a href="#" class="icons__copy">
-                      </a>
-                      <a href="#" class="icons__favourites">
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <a class="btn btn--cart" href="#">В корзину</a>
-              </div>
-            </div>
-            <div class="slider-similar__item">
-              <div class="card">
-                <div class="sticker-wrapper">
-                  <div class="sticker sticker--new">Новинки</div>
-                  <div class="sticker sticker--sale">Скидка 40%</div>
-                </div>
-                <div class="review-stars-wrapper">
-                  <div class="review-stars">
-                    <input id="star-4" type="radio" name="stars">
-                    <label title="Отлично" for="star-4">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-3" type="radio" name="stars">
-                    <label title="Хорошо" for="star-3">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-2" type="radio" name="stars" checked="checked">
-                    <label title="Нормально" for="star-2">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-1" type="radio" name="stars">
-                    <label title="Плохо" for="star-1">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-0" type="radio" name="stars">
-                    <label title="Ужасно" for="star-0">
-                      <i class="fa fa-star"></i>
-                    </label>
-                  </div>
-                </div>
-                <div class="card__img">
-                  <a href="#">
-                    <img src="img/prod1.png">
-                  </a>
-                </div>
-                <div class="card__info">
-                  <div class="card__info-wrapper">
-                    <div class="card__title">
-                      <a class="magic-link-reverse" href="#">Настенный кондиционер General Climate</a>
-                    </div>
-                    <div class="card__table">
-                      <div class="card__row">
-                        <div class="card__col">
-                          Мощность
-                        </div>
-                        <div class="card__col">
-                          2000 - 2000 Вт
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col">
-                          Гарантия
-                        </div>
-                        <div class="card__col">
-                          1 год
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col card__col--color">
-                          Артикул
-                        </div>
-                        <div class="card__col card__col--color">
-                          08784
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card__price">
-                      <div class="price">
-                        122 355 руб
-                      </div>
-                      <div class="price price--old">
-                        2 355 руб
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card__icons">
-                    <div class="icons__wrapper">
-                      <a href="#" class="icons__copy">
-                      </a>
-                      <a href="#" class="icons__favourites">
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <a class="btn btn--cart" href="#">В корзину</a>
-              </div>
-            </div>
-            <div class="slider-similar__item">
-              <div class="card">
-                <div class="sticker-wrapper">
-                  <div class="sticker sticker--new">Новинки</div>
-                  <div class="sticker sticker--sale">Скидка 40%</div>
-                </div>
-                <div class="review-stars-wrapper">
-                  <div class="review-stars">
-                    <input id="star-4" type="radio" name="stars">
-                    <label title="Отлично" for="star-4">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-3" type="radio" name="stars">
-                    <label title="Хорошо" for="star-3">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-2" type="radio" name="stars" checked="checked">
-                    <label title="Нормально" for="star-2">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-1" type="radio" name="stars">
-                    <label title="Плохо" for="star-1">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-0" type="radio" name="stars">
-                    <label title="Ужасно" for="star-0">
-                      <i class="fa fa-star"></i>
-                    </label>
-                  </div>
-                </div>
-                <div class="card__img">
-                  <a href="#">
-                    <img src="img/prod1.png">
-                  </a>
-                </div>
-                <div class="card__info">
-                  <div class="card__info-wrapper">
-                    <div class="card__title">
-                      <a class="magic-link-reverse" href="#">Настенный кондиционер General Climate</a>
-                    </div>
-                    <div class="card__table">
-                      <div class="card__row">
-                        <div class="card__col">
-                          Мощность
-                        </div>
-                        <div class="card__col">
-                          2000 - 2000 Вт
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col">
-                          Гарантия
-                        </div>
-                        <div class="card__col">
-                          1 год
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col card__col--color">
-                          Артикул
-                        </div>
-                        <div class="card__col card__col--color">
-                          08784
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card__price">
-                      <div class="price">
-                        122 355 руб
-                      </div>
-                      <div class="price price--old">
-                        2 355 руб
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card__icons">
-                    <div class="icons__wrapper">
-                      <a href="#" class="icons__copy">
-                      </a>
-                      <a href="#" class="icons__favourites">
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <a class="btn btn--cart" href="#">В корзину</a>
-              </div>
-            </div>
-          </div>
-          <div class="arrows-wrapper">
-            <div class="arrows-main arrows-main--similar">
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="screen">
-        <div class="wrapper">
-          <div class="title-block">
-            <div class="title">Вы просматривали
-            </div>
-            <div class="title-block__item">
-              <a class="link magic-link--dark" href="#">Посмотреть все</a>
-            </div>
-          </div>
-          <div class="slider-seen">
-            <div class="slider-seen__item">
-              <div class="card">
-                <div class="sticker-wrapper">
-                  <div class="sticker sticker--new">Новинки</div>
-                  <div class="sticker sticker--sale">Скидка 40%</div>
-                </div>
-                <div class="review-stars-wrapper">
-                  <div class="review-stars">
-                    <input id="star-4" type="radio" name="stars">
-                    <label title="Отлично" for="star-4">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-3" type="radio" name="stars">
-                    <label title="Хорошо" for="star-3">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-2" type="radio" name="stars" checked="checked">
-                    <label title="Нормально" for="star-2">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-1" type="radio" name="stars">
-                    <label title="Плохо" for="star-1">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-0" type="radio" name="stars">
-                    <label title="Ужасно" for="star-0">
-                      <i class="fa fa-star"></i>
-                    </label>
-                  </div>
-                </div>
-                <div class="card__img">
-                  <a href="#">
-                    <img src="img/prod11.png">
-                  </a>
-                </div>
-                <div class="card__info">
-                  <div class="card__info-wrapper">
-                    <div class="card__title">
-                      <a class="magic-link-reverse" href="#">Настенный кондиционер General Climate</a>
-                    </div>
-                    <div class="card__table">
-                      <div class="card__row">
-                        <div class="card__col">
-                          Мощность
-                        </div>
-                        <div class="card__col">
-                          2000 - 2000 Вт
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col">
-                          Гарантия
-                        </div>
-                        <div class="card__col">
-                          1 год
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col card__col--color">
-                          Артикул
-                        </div>
-                        <div class="card__col card__col--color">
-                          08784
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card__price">
-                      <div class="price">
-                        122 355 руб
-                      </div>
-                      <div class="price price--old">
-                        2 355 руб
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card__icons">
-                    <div class="icons__wrapper">
-                      <a href="#" class="icons__copy">
-                      </a>
-                      <a href="#" class="icons__favourites">
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <a class="btn btn--cart" href="#">В корзину</a>
-              </div>
-            </div>
-            <div class="slider-seen__item">
-              <div class="card">
-                <div class="sticker-wrapper">
-                  <div class="sticker sticker--new">Новинки</div>
-                </div>
-                <div class="review-stars-wrapper">
-                  <div class="review-stars">
-                    <input id="star-4" type="radio" name="stars">
-                    <label title="Отлично" for="star-4">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-3" type="radio" name="stars">
-                    <label title="Хорошо" for="star-3">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-2" type="radio" name="stars" checked="checked">
-                    <label title="Нормально" for="star-2">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-1" type="radio" name="stars">
-                    <label title="Плохо" for="star-1">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-0" type="radio" name="stars">
-                    <label title="Ужасно" for="star-0">
-                      <i class="fa fa-star"></i>
-                    </label>
-                  </div>
-                </div>
-                <div class="card__img">
-                  <a href="#">
-                    <img src="img/prod12.png">
-                  </a>
-                </div>
-                <div class="card__info">
-                  <div class="card__info-wrapper">
-                    <div class="card__title">
-                      <a class="magic-link-reverse" href="#">Водонагреватель накопительный HEATLEADER</a>
-                    </div>
-                    <div class="card__table">
-                      <div class="card__row">
-                        <div class="card__col">
-                          Мощность
-                        </div>
-                        <div class="card__col">
-                          2000 - 2000 Вт
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col">
-                          Гарантия
-                        </div>
-                        <div class="card__col">
-                          1 год
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col card__col--color">
-                          Артикул
-                        </div>
-                        <div class="card__col card__col--color">
-                          08784
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card__price">
-                      <div class="price">
-                        122 355 руб
-                      </div>
-                      <div class="price price--old">
-                        2 355 руб
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card__icons">
-                    <div class="icons__wrapper">
-                      <a href="#" class="icons__copy">
-                      </a>
-                      <a href="#" class="icons__favourites">
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <a class="btn btn--cart" href="#">В корзину</a>
-              </div>
-            </div>
-            <div class="slider-seen__item">
-              <div class="card">
-                <div class="sticker-wrapper">
-                  <div class="sticker sticker--new">Новинки</div>
-                  <div class="sticker sticker--sale">Скидка 40%</div>
-                </div>
-                <div class="review-stars-wrapper">
-                  <div class="review-stars">
-                    <input id="star-4" type="radio" name="stars">
-                    <label title="Отлично" for="star-4">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-3" type="radio" name="stars">
-                    <label title="Хорошо" for="star-3">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-2" type="radio" name="stars" checked="checked">
-                    <label title="Нормально" for="star-2">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-1" type="radio" name="stars">
-                    <label title="Плохо" for="star-1">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-0" type="radio" name="stars">
-                    <label title="Ужасно" for="star-0">
-                      <i class="fa fa-star"></i>
-                    </label>
-                  </div>
-                </div>
-                <div class="card__img">
-                  <a href="#">
-                    <img src="img/prod13.png">
-                  </a>
-                </div>
-                <div class="card__info">
-                  <div class="card__info-wrapper">
-                    <div class="card__title">
-                      <a class="magic-link-reverse" href="#">Душевая кабина Oporto Shower 8139</a>
-                    </div>
-                    <div class="card__table">
-                      <div class="card__row">
-                        <div class="card__col">
-                          Мощность
-                        </div>
-                        <div class="card__col">
-                          2000 - 2000 Вт
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col">
-                          Гарантия
-                        </div>
-                        <div class="card__col">
-                          1 год
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col card__col--color">
-                          Артикул
-                        </div>
-                        <div class="card__col card__col--color">
-                          08784
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card__price">
-                      <div class="price">
-                        122 355 руб
-                      </div>
-                      <div class="price price--old">
-                        2 355 руб
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card__icons">
-                    <div class="icons__wrapper">
-                      <a href="#" class="icons__copy">
-                      </a>
-                      <a href="#" class="icons__favourites">
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <a class="btn btn--cart" href="#">В корзину</a>
-              </div>
-            </div>
-            <div class="slider-seen__item">
-              <div class="card">
-                <div class="sticker-wrapper">
-                  <div class="sticker sticker--new">Новинки</div>
-                  <div class="sticker sticker--sale">Скидка 40%</div>
-                </div>
-                <div class="review-stars-wrapper">
-                  <div class="review-stars">
-                    <input id="star-4" type="radio" name="stars">
-                    <label title="Отлично" for="star-4">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-3" type="radio" name="stars">
-                    <label title="Хорошо" for="star-3">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-2" type="radio" name="stars" checked="checked">
-                    <label title="Нормально" for="star-2">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-1" type="radio" name="stars">
-                    <label title="Плохо" for="star-1">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-0" type="radio" name="stars">
-                    <label title="Ужасно" for="star-0">
-                      <i class="fa fa-star"></i>
-                    </label>
-                  </div>
-                </div>
-                <div class="card__img">
-                  <a href="#">
-                    <img src="img/prod14.png">
-                  </a>
-                </div>
-                <div class="card__info">
-                  <div class="card__info-wrapper">
-                    <div class="card__title">
-                      <a class="magic-link-reverse" href="#">Настенный кондиционер General Climate GC/GU-EAR09HRN1-R</a>
-                    </div>
-                    <div class="card__table">
-                      <div class="card__row">
-                        <div class="card__col">
-                          Мощность
-                        </div>
-                        <div class="card__col">
-                          2000 - 2000 Вт
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col">
-                          Гарантия
-                        </div>
-                        <div class="card__col">
-                          1 год
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col card__col--color">
-                          Артикул
-                        </div>
-                        <div class="card__col card__col--color">
-                          08784
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card__price">
-                      <div class="price">
-                        122 355 руб
-                      </div>
-                      <div class="price price--old">
-                        2 355 руб
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card__icons">
-                    <div class="icons__wrapper">
-                      <a href="#" class="icons__copy">
-                      </a>
-                      <a href="#" class="icons__favourites">
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <a class="btn btn--cart" href="#">В корзину</a>
-              </div>
-            </div>
-            <div class="slider-seen__item">
-              <div class="card">
-                <div class="sticker-wrapper">
-                  <div class="sticker sticker--new">Новинки</div>
-                  <div class="sticker sticker--sale">Скидка 40%</div>
-                </div>
-                <div class="review-stars-wrapper">
-                  <div class="review-stars">
-                    <input id="star-4" type="radio" name="stars">
-                    <label title="Отлично" for="star-4">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-3" type="radio" name="stars">
-                    <label title="Хорошо" for="star-3">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-2" type="radio" name="stars" checked="checked">
-                    <label title="Нормально" for="star-2">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-1" type="radio" name="stars">
-                    <label title="Плохо" for="star-1">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-0" type="radio" name="stars">
-                    <label title="Ужасно" for="star-0">
-                      <i class="fa fa-star"></i>
-                    </label>
-                  </div>
-                </div>
-                <div class="card__img">
-                  <a href="#">
-                    <img src="img/prod1.png">
-                  </a>
-                </div>
-                <div class="card__info">
-                  <div class="card__info-wrapper">
-                    <div class="card__title">
-                      <a class="magic-link-reverse" href="#">Настенный кондиционер General Climate</a>
-                    </div>
-                    <div class="card__table">
-                      <div class="card__row">
-                        <div class="card__col">
-                          Мощность
-                        </div>
-                        <div class="card__col">
-                          2000 - 2000 Вт
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col">
-                          Гарантия
-                        </div>
-                        <div class="card__col">
-                          1 год
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col card__col--color">
-                          Артикул
-                        </div>
-                        <div class="card__col card__col--color">
-                          08784
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card__price">
-                      <div class="price">
-                        122 355 руб
-                      </div>
-                      <div class="price price--old">
-                        2 355 руб
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card__icons">
-                    <div class="icons__wrapper">
-                      <a href="#" class="icons__copy">
-                      </a>
-                      <a href="#" class="icons__favourites">
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <a class="btn btn--cart" href="#">В корзину</a>
-              </div>
-            </div>
-            <div class="slider-seen__item">
-              <div class="card">
-                <div class="sticker-wrapper">
-                  <div class="sticker sticker--new">Новинки</div>
-                  <div class="sticker sticker--sale">Скидка 40%</div>
-                </div>
-                <div class="review-stars-wrapper">
-                  <div class="review-stars">
-                    <input id="star-4" type="radio" name="stars">
-                    <label title="Отлично" for="star-4">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-3" type="radio" name="stars">
-                    <label title="Хорошо" for="star-3">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-2" type="radio" name="stars" checked="checked">
-                    <label title="Нормально" for="star-2">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-1" type="radio" name="stars">
-                    <label title="Плохо" for="star-1">
-                      <i class="fa fa-star"></i>
-                    </label>
-                    <input id="star-0" type="radio" name="stars">
-                    <label title="Ужасно" for="star-0">
-                      <i class="fa fa-star"></i>
-                    </label>
-                  </div>
-                </div>
-                <div class="card__img">
-                  <a href="#">
-                    <img src="img/prod1.png">
-                  </a>
-                </div>
-                <div class="card__info">
-                  <div class="card__info-wrapper">
-                    <div class="card__title">
-                      <a class="magic-link-reverse" href="#">Настенный кондиционер General Climate</a>
-                    </div>
-                    <div class="card__table">
-                      <div class="card__row">
-                        <div class="card__col">
-                          Мощность
-                        </div>
-                        <div class="card__col">
-                          2000 - 2000 Вт
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col">
-                          Гарантия
-                        </div>
-                        <div class="card__col">
-                          1 год
-                        </div>
-                      </div>
-                      <div class="card__row">
-                        <div class="card__col card__col--color">
-                          Артикул
-                        </div>
-                        <div class="card__col card__col--color">
-                          08784
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card__price">
-                      <div class="price">
-                        122 355 руб
-                      </div>
-                      <div class="price price--old">
-                        2 355 руб
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card__icons">
-                    <div class="icons__wrapper">
-                      <a href="#" class="icons__copy">
-                      </a>
-                      <a href="#" class="icons__favourites">
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <a class="btn btn--cart" href="#">В корзину</a>
-              </div>
-            </div>
-          </div>
-          <div class="arrows-wrapper">
-            <div class="arrows-main arrows-main--seen">
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="page-footer">
-      <div class="wrapper">
-        <div class="footer-top">
-          <div class="footer-top__item">
-            <div class="logo-footer">
-              <a href="#">
-                <img src="img/logo-footer.png" width="212" height="40">
-              </a>
-            </div>
-            <div class="footer-top__contacts">
-              <div class="phone-footer">
-                <a class="phone-link" href="tel:84953748507"> +7 495 374-85-07</a>
-                <a class="phone-link" href="tel:88005006907"> +7 800 500-69-07</a>
-                <div class="hours hours--light">Пн - Пт с 9:00 до 18:00 Мск</div>
-              </div>
-              <div class="address-footer">
-                <div class="address-info address-info--light">г. Москва, ул. Полярная 39
-                  <br>м. Медведково <a class="magic-link magic-link--light" href="#">карта</a>
-                </div>
-                <dic class="email-footer-wrapper magic-link magic-link--light">
-                  <a class="email-footer" href="#">info@7pogod.ru</a>
-                </dic>
-              </div>
-            </div>
-          </div>
-          <div class="footer-top__item">
-            <div class="footer-menu">
-              <p class="title-list">Компания</p>
-              <ul class="footer-menu-list">
-                <li class="footer-menu-list__item"><a href="#">О компании</a>
-                </li>
-                <li class="footer-menu-list__item"><a href="#">Доставка и оплата</a>
-                </li>
-                <li class="footer-menu-list__item"><a href="#">Наша работа</a>
-                </li>
-                <li class="footer-menu-list__item"><a href="#">Сертификаты</a>
-                </li>
-                <li class="footer-menu-list__item"><a href="#">Блог</a>
-                </li>
-                <li class="footer-menu-list__item"><a href="#">Контакты</a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer-menu">
-              <p class="title-list">Каталог продукции</p>
-              <ul class="footer-menu-list">
-                <li class="footer-menu-list__item"><a href="#">Кондиционирование, холодоснабжение</a>
-                </li>
-                <li class="footer-menu-list__item"><a href="#">Отопление, обогрев</a>
-                </li>
-                <li class="footer-menu-list__item"><a href="#">Вентиляция, воздуховоды</a>
-                </li>
-                <li class="footer-menu-list__item"><a href="#">Осушение, увлажнение</a>
-                </li>
-                <li class="footer-menu-list__item"><a href="#">Водонагреватели, бойлеры</a>
-                </li>
-                <li class="footer-menu-list__item"><a href="#">Сантехника, водоснабжение</a>
-                </li>
-                <li class="footer-menu-list__item"><a href="#">Оборудование, техника</a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer-menu">
-              <p class="title-list">Сервис</p>
-              <ul class="footer-menu-list">
-                <li class="footer-menu-list__item"><a href="#">Обслуживание кондиционеров</a>
-                </li>
-                <li class="footer-menu-list__item"><a href="#">Монтаж кондиционеров</a>
-                </li>
-                <li class="footer-menu-list__item"><a href="#">Монтаж тепловых завес</a>
-                </li>
-                <li class="footer-menu-list__item"><a href="#">Монтаж фанкойлов</a>
-                </li>
-                <li class="footer-menu-list__item"><a href="#">Устнаовка вентиляционных систем</a>
-                </li>
-                <li class="footer-menu-list__item"><a href="#">Монтаж воздухонагревателей на отработанном масле</a>
-                </li>
-                <li class="footer-menu-list__item"><a href="#">Установка водонагревателей</a>
-                </li>
-                <li class="footer-menu-list__item"><a href="#">Монтаж котлов и систем отопления</a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer-menu">
-              <p class="title-yandex">Мы на Яндекс.Маркет</p>
-              <a class="link-yandex" href="#" target="_blank">
-                <img src="img/yandex.png">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="wrapper">
-          <ul class="author-list">
-            <li class="author-list__item">
-              <p class="author-list__text">© 2017-2020 ООО «7ПОГОД.РУ». Все права защищены.</p>
-              <a class="author-list__link magic-link" href="#">Политика конфиденциальности</a>
-            </li>
-            <li class="author-list__item">
-              <p class="author-list__text">Информация на сайте не является офертой и носит исключительно информационный характер.</p>
-            </li>
-            <li class="author-list__item wesma">
-              <div class="wesma-link clearfix" href="#">
-                <p class="wesma-link__tagline">
-                  Разработка сайта:
-                  <a href="https://wesma.ru/" target="_blank">
-                    Wesma
-                  </a>
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-  </div>
-
-
-
-  <div class="overlay-modal" id="js-overlay"></div>
-  <div class="modal" id="callback">
-    <div class="modal__wrapper">
-      <form class="modal__form">
-        <fieldset>
-          <legend class="modal__form-title">
-            Обратный звонок
-          </legend>
-          <ul class="form-list form-list--modal">
-            <li class="form-list__item">
-              <input class="form-input" type="text" name="name" id="name-modal" placeholder="Ваше имя:">
-            </li>
-            <li class="form-list__item">
-              <input class="form-input" type="tel" name="phone" id="phone-modal" placeholder="Телефон:">
-            </li>
-          </ul>
-        </fieldset>
-        <div class="consent">
-          Отправляя данные, вы соглашаетесь
-          <br>на <a href="#" class="consent__link">обработку персональных данных</a>
-        </div>
-        <button class="btn btn--modal" type="submit">Отправить</button>
-
-      </form>
-    </div>
-    <button class="close-btn js-modal-close" type="button"></button>
-  </div>
-  <div class="modal modal--catalog scroll-list" id="catalog">
-    <div class="modal-catalog-wrapper">
-      <div class="masonry-grid">
-        <div class="modal-menu">
-          <ul class="catalog-menu clearfix">
-            <li class="catalog-menu__item">
-              <div class="catalog-menu__wrapper">
-                <p class="catalog-menu__title">Котлы отопления</p>
-                <ul class="catalog-menu-list">
-                  <li class="catalog-menu-list__item"><a href="#">Газовые котлы отопления</a>
-                  </li>
-                  <li class="catalog-menu-list__item"><a href="#">Дизельные котлы отопления</a>
-                  </li>
-                  <li class="catalog-menu-list__item"><a href="#">Электрические котлы отопления</a>
-                  </li>
-                  <li class="catalog-menu-list__item"><a href="#">Котлы на отработанном масле</a>
-                  </li>
-                  <li class="catalog-menu-list__item"><a href="#">Котлы со сменной горелкой</a>
-                  </li>
-                  <li class="catalog-menu-list__item"><a href="#">Твердотопливные котлы</a>
-                  </li>
-                  <li class="catalog-menu-list__item"><a href="#">Пеллетные котлы</a>
-                  </li>
-                  <li class="catalog-menu-list__item"><a href="#">Комплектующие к котлам</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="catalog-menu__item">
-              <div class="catalog-menu__wrapper">
-                <p class="catalog-menu__title">Горелки для котлов отопления</p>
-                <ul class="catalog-menu-list">
-                  <li class="catalog-menu-list__item"><a href="#">Горелки для котлов отопления</a>
-                  </li>
-                  <li class="catalog-menu-list__item"><a href="#">Газовые горелки</a>
-                  </li>
-                  <li class="catalog-menu-list__item"><a href="#">Дизельные горелки</a>
-                  </li>
-                  <li class="catalog-menu-list__item"><a href="#">Универсальные горелки</a>
-                  </li>
-                  <li class="catalog-menu-list__item"><a href="#">Пеллетные горелки</a>
-                  </li>
-                  <li class="catalog-menu-list__item"><a href="#">Мазутные горелки</a>
-                  </li>
-                  <li class="catalog-menu-list__item"><a href="#">Горелки на отработанном масле</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="catalog-menu__wrapper">
-                <p class="catalog-menu__title">Горелки для котлов отопления</p>
-                <ul class="catalog-menu-list">
-                  <li class="catalog-menu-list__item"><a href="#">Горелки для котлов отопления</a>
-                  </li>
-                  <li class="catalog-menu-list__item"><a href="#">Газовые горелки</a>
-                  </li>
-                  <li class="catalog-menu-list__item"><a href="#">Дизельные горелки</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="catalog-menu__item">
-              <div class="catalog-menu__wrapper">
-                <p class="catalog-menu__title">Котлы отопления</p>
-                <ul class="catalog-menu-list">
-                  <li class="catalog-menu-list__item"><a href="#">Электрические котлы отопления</a>
-                  </li>
-                  <li class="catalog-menu-list__item"><a href="#">Водяные тепловые завесы</a>
-                  </li>
-                  <li class="catalog-menu-list__item"><a href="#">Газовые епловые завесы</a>
-                  </li>
-                  <li class="catalog-menu-list__item"><a href="#">Воздушные завесы без тепла</a>
-                  </li>
-                  <li class="catalog-menu-list__item"><a href="#">Комплектующие к котлам</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="catalog-menu__wrapper">
-                <p class="catalog-menu__title">Котлы отопления</p>
-                <ul class="catalog-menu-list">
-                  <li class="catalog-menu-list__item"><a href="#">Электрические котлы отопления</a>
-                  </li>
-                  <li class="catalog-menu-list__item"><a href="#">Водяные тепловые завесы</a>
-                  </li>
-                  <li class="catalog-menu-list__item"><a href="#">Газовые епловые завесы</a>
-                  </li>
-                  <li class="catalog-menu-list__item"><a href="#">Воздушные завесы без тепла</a>
-                  </li>
-                  <li class="catalog-menu-list__item"><a href="#">Комплектующие к котлам</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="catalog-menu__item">
-              <div class="catalog-menu__wrapper">
-                <p class="catalog-menu__title">Котлы отопления</p>
-                <ul class="catalog-menu-list">
-                  <li class="catalog-menu-list__item"><a href="#">Газовые котлы отопления</a>
-                  </li>
-                  <li class="catalog-menu-list__item"><a href="#">Дизельные котлы отопления</a>
-                  </li>
-                  <li class="catalog-menu-list__item"><a href="#">Электрические котлы отопления</a>
-                  </li>
-                  <li class="catalog-menu-list__item"><a href="#">Котлы на отработанном масле</a>
-                  </li>
-                  <li class="catalog-menu-list__item"><a href="#">Котлы со сменной горелкой</a>
-                  </li>
-                  <li class="catalog-menu-list__item"><a href="#">Твердотопливные котлы</a>
-                  </li>
-                  <li class="catalog-menu-list__item"><a href="#">Пеллетные котлы</a>
-                  </li>
-                  <li class="catalog-menu-list__item"><a href="#">Комплектующие к котлам</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <button class="close-btn js-modal-close" type="button"></button>
-  </div>
-
-
-
-
-
-
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/migrate.js"></script>
-  <script src="js/jquery.inputmask.min.js"></script>
-  <script src="js/slick.min.js"></script>
-  <!--  <script src="js/jquery.stellar.min.js"></script>-->
-  <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-  <script src="js/lightgallery.min.js"></script>
-  <script src="js/mmenu.js"></script>
-  <script src="js/readmore.min.js"></script>
-<script src="js/custom.js"></script>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/mmenu.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/nice-select.css">
   
-  <script>
-    
-     if (screen.width <= '700') {
-  $('.text').readmore({
-      moreLink: '<button class="spoiler magic-link--dark" type="button">Показать еще</button>',
-      lessLink: '<button class="spoiler magic-link--dark" type="button">Скрыть</button>',
-      collapsedHeight: 500,
-      speed: 100
-    });
+    <title>Карточка товара - Artiteq</title>
+</head>
+<body>
+  <div class="full">
+  <header class="header-page">
+      <div class="header-page__top">
+          <div class="header-page__inner container">
+              <div class="row">
+                  <div class="col-lg-2 col-md-2">
+                      <div class="header-page__item-small">
+                          <div class="email-wrapper">
+                              <a class="email" href="mailto:info@arti teq.ru">info@arti teq.ru</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-10 col-md-10">
+                      <div class="header-page__item-big">
+                          <div class="container-fluid">
+                              <div class="row">
+                                  <div class="search col-lg-10 col-md-10">
+                                      <form class="search__form">
+                                          <input class="form-control" type="text" placeholder="Поиск:" aria-label="Search">
+                                          <button class="submit" type="submit"></button>
+                                      </form>
+                                  </div>
+                                  <div class="callback col-lg-2 col-md-2">
+                                      <a class="callback-link magic-link js-modal" href="#callback">Заказать звонок</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="header-page__bottom">
+          <div class="header-page__inner container">
+              <div class="row">
+                  <div class="col-lg-2 col-md-2 col-sm-6">
+                      <div class="header-page__item-small">
+                          <div class="logo">
+                              <a href="#">
+                                  <img src="../img/logo.svg" alt="">
+                              </a>
+                          </div>
+                      </div>
+                   </div>
+                  <div class="col-lg-10 col-md-10">
+                      <div class="header-page__item-big">
+                          <div class="row">
+                              <div class="phone col-lg-3 col-md-2">
+                                  <a class="phone-link" href="tel:84957374224">+7(495)737-42-24</a>
+                                  <div class="hours">Пн-Пт 10:00 - 19:00</div>
+                              </div>
+                              <nav class="col-lg-9 col-md-10" id="navbarSupportedContent">
+                                  <ul class="catalog-menu-list">
+                                      <li class="catalog-menu-list__item">
+                                          <a href="#">
+                                              <span class="catalog-menu-list__item-img">
+                          <img src="img/shopping-cart.png" alt=""></span>
+                                              Продукция
+                                          </a>
+                                      </li>
+                                      <li class="catalog-menu-list__item">
+                                          <a href="#">
+                                              <span class="catalog-menu-list__item-img">
+                          <img src="img/company.png" alt=""></span>
+                                              О компании
+                                          </a>
+                                      </li>
+                                      <li class="catalog-menu-list__item">
+                                          <a href="#">
+                                              <span class="catalog-menu-list__item-img">
+                          <img src="img/desktop.png" alt=""></span>
+                                              Услуги
+                                          </a>
+                                      </li>
+                                      <li class="catalog-menu-list__item">
+                                          <a href="#">
+                                              <span class="catalog-menu-list__item-img">
+                          <img src="img/gallery.png" alt=""></span>
+                                              Галерея
+                                          </a>
+                                      </li>
+                                      <li class="catalog-menu-list__item">
+                                          <a href="#">
+                                              <span class="catalog-menu-list__item-img">
+                          <img src="img/contacts.png" alt=""></span>
+                                              Контакты
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </nav>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <a class="swipe-link" href="#menu">
+                          <div class="swipe">
+                              <span></span>
+                          </div>
+                      </a>
+      </div>
+  </header>
+    <main>
+       <div class="breadcrumbs">
+           <div class="container">
+               <div class="breadcrumbs-container">
+                   <ul class="breadcrumbs-list">
+                       <li class="breadcrumbs-list__item"><a href="#">Главная</a>
+                       </li>
+                       <li class="breadcrumbs-list__item"><span>Рельсовые системы</span>
+                       </li>
+                   </ul>
+                   <div class="back-btn">
+                       <a href="#">
+                       Назад
+                     </a>
+                   </div>
+               </div>
+           </div>
+       </div>
+       <div class="product-wrapper">
+           <div class="container">
+       
+               <div class="title-block">
+                   <div class="title-block__item">
+                       <div class="title">
+                           Рельс галерейный “Класик”
+                       </div>
+                   </div>
+                   <div class="title-block__item">
+                       <div class="rate-wrapper">
+                           <div class="rate">
+                               <div class="rate__item">
+                                   <i class="fa fa-star" aria-hidden="true"></i>
+                               </div>
+                               <div class="rate__item">
+                                   <i class="fa fa-star" aria-hidden="true"></i>
+                               </div>
+                               <div class="rate__item">
+                                   <i class="fa fa-star" aria-hidden="true"></i>
+                               </div>
+                               <div class="rate__item">
+                                   <i class="fa fa-star" aria-hidden="true"></i>
+                               </div>
+                               <div class="rate__item">
+                                   <i class="fa fa-star" aria-hidden="true"></i>
+                               </div>
+                           </div>
+                           <div class="rate-number">
+                               (234)
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="product-info row">
+                   <div class="product-info__item col-lg-2 col-md-2 d-sm-none d-md-block">
+                       <div class="slider-thumb">
+                           <div class="slider-thumb__item">
+                               <div class="slider-thumb__item-img">
+                                   <img src="/img/slide2.png" alt="">
+                               </div>
+                           </div>
+                           <div class="slider-thumb__item">
+                               <div class="slider-thumb__item-img">
+                                   <img src="/img/slide3.png" alt="">
+                               </div>
+                           </div>
+                           <div class="slider-thumb__item">
+                               <div class="slider-thumb__item-img">
+                                   <img src="/img/slide4.png" alt="">
+                               </div>
+                           </div>
+                           <div class="slider-thumb__item">
+                               <div class="slider-thumb__item-img">
+                                   <img src="/img/slide2.png" alt="">
+                               </div>
+                           </div>
+                           <div class="slider-thumb__item">
+                               <div class="slider-thumb__item-img">
+                                   <img src="/img/slide3.png" alt="">
+                               </div>
+                           </div>
+                           <div class="slider-thumb__item">
+                               <div class="slider-thumb__item-img">
+                                   <img src="/img/slide4.png" alt="">
+                               </div>
+                           </div>
+                           <div class="slider-thumb__item">
+                               <div class="slider-thumb__item-img">
+                                   <img src="/img/slide2.png" alt="">
+                               </div>
+                           </div>
+                       </div>
+       
+                   </div>
+                   <div class="product-info__item col-lg-5 col-md-5 col-sm-12">
+                       <div class="slider-product">
+                           <div class="slider-product__item">
+                               <a href="img/slide1.png" class="lightgallery-link">
+                                   <img src="img/slide1.png" alt="">
+                               </a>
+                           </div>
+                           <div class="slider-product__item">
+                               <a href="img/slide1.png" class="lightgallery-link">
+                                   <img src="img/slide1.png" alt="">
+                               </a>
+                           </div>
+                           <div class="slider-product__item">
+                               <a href="img/slide1.png" class="lightgallery-link">
+                                   <img src="img/slide1.png" alt="">
+                               </a>
+                           </div>
+                           <div class="slider-product__item">
+                               <a href="img/slide1.png" class="lightgallery-link">
+                                   <img src="img/slide1.png" alt="">
+                               </a>
+                           </div>
+                           <div class="slider-product__item">
+                               <a href="img/slide1.png" class="lightgallery-link">
+                                   <img src="img/slide1.png" alt="">
+                               </a>
+                           </div>
+                           <div class="slider-product__item">
+                               <a href="img/slide1.png" class="lightgallery-link">
+                                   <img src="img/slide1.png" alt="">
+                               </a>
+                           </div>
+                           <div class="slider-product__item">
+                               <a href="img/slide1.png" class="lightgallery-link">
+                                   <img src="img/slide1.png" alt="">
+                               </a>
+                           </div>
+                       </div>
+                       <div class="slider-dots slider-dots--product"></div>
+                   </div>
+                   <div class="col-lg-5 col-md-5">
+                       <div class="count-block">
+                           <div class="count-block__sale">
+                               <div class="count-block__sale-item">
+                                   <div class="sticker-sale">
+                                       Скидка до -40%
+                                   </div>
+                               </div>
+                               <div class="count-block__sale-item">
+                                   <p>
+                                       Предложение заканчивается в ближайшее время
+                                   </p>
+                               </div>
+                           </div>
+                           <div class="count-block__inner">
+                               <div class="count-block__inner" id="count">
+                               </div>
+                           </div>
+                       </div>
+                       <div class="info-block">
+                           <div class="info-block__item">
+                               <div class="price price--product">
+                                   от 568 ₽
+                               </div>
+                           </div>
+                           <div class="info-block__item">
+                               <div class="icons-block">
+                                   <div class="icons-block__item">
+                                       <a href="#">
+                                           <img src="/img/share-icon.png" alt="">
+                                       </a>
+                                   </div>
+                                   <div class="icons-block__item">
+                                       <a href="#">
+                                           <img src="/img/fav-icon.png" alt="">
+                                       </a>
+                                   </div>
+                                   <div class="icons-block__item">
+                                       <a href="#">
+                                           <img src="/img/main-icon.png" alt="">
+                                       </a>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="text-block">
+                           <p>
+                               Одна из самой компактной подвесных систем которая доступна на рынке. эта система, не смотря на свои минимальные размеры, отлично справляется со своей задачей. Обратите внимание, что минимальное расстояние от потолка составляет 15 мм.
+                           </p>
+                       </div>
+                       <div class="property">
+                           <div class="property__item">
+                               <div class="property__item-name">
+                                   Производитель
+                               </div>
+                               <div class="property__item-descr">
+                                   Ниадермик Фарма
+                               </div>
+                           </div>
+                           <div class="property__item">
+                               <div class="property__item-name">
+                                   Цвет
+                               </div>
+                               <div class="property__item-descr">
+                                   Белый, серый
+                               </div>
+                           </div>
+                           <div class="property__item">
+                               <div class="property__item-name">
+                                   Максимальная нагрузка
+                               </div>
+                               <div class="property__item-descr">
+                                   20 кг
+                               </div>
+                           </div>
+                           <div class="property__item">
+                               <div class="property__item-name">
+                                   Тип монтажа
+                               </div>
+                               <div class="property__item-descr">
+                                   Стена
+                               </div>
+                           </div>
+                       </div>
+                       <div class="see-more">
+                           <a class="see-more__link" href="#product-tabs">Посмотреть все</a>
+                       </div>
+                       <div class="btn-wrapper btn-wrapper--product">
+                           <div class="btn-wrapper__item">
+                               <a class="btn-gradient js-modal" href="#calc">Рассчитать стоимость</a>
+                           </div>
+                           <div class="btn-wrapper__item">
+                               <div class="select-block">
+                                   <select name="choice-acs">
+                                       <option selected="" disabled="">Выбрать аксессуары</option>
+                                       <option>Выбрать аксессуар 1</option>
+                                       <option>Выбрать аксессуар 2</option>
+                                       <option>Выбрать аксессуар 3</option>
+                                       <option>Выбрать аксессуар 4</option>
+                                   </select>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+       <section class="section section--light">
+         <div class="guide-block container">
+           <div class="title title--center">
+             Как собрать
+           </div>
+           <div class="guide">
+              <div class="guide__item">
+                <div class="guide__item-img">
+                   <img src="/img/feat1.png" alt="">
+                </div>
+                <div class="guide__item-descr">
+                       К стене, вплотную к потолку,
+       приложить соединитель 
+       и с
+       помощью карандаша поставить
+       метку для высверления
+       отверстия в стене
+                 </div>
+             </div>
+       <div class="guide__item">
+                <div class="guide__item-img">
+                   <img src="/img/feat2.png" alt="">
+                </div>
+                <div class="guide__item-descr">
+                   Прикрепить соединитель
+       саморезами к стене
+       через каждые 40 см
+                       </div>
+             </div>
+             <div class="guide__item">
+                <div class="guide__item-img">
+                   <img src="/img/feat3.png" alt="">
+                </div>
+                <div class="guide__item-descr">
+                           Установить рельс на
+       соединитель, вдавив его
+       до щелчка
+                     </div>
+             </div>
+             <div class="guide__item">
+                <div class="guide__item-img">
+                   <img src="/img/feat4.png" alt="">
+                </div>
+                <div class="guide__item-descr">
+                            Если конструкция системы подвеса предполагает длину более 
+       3 пог. м., то рельсы скрепляются между собой при помощи соединителя таким образом, чтобы в месте стыка рельсов монтировался
+       соединитель и каждый изрельсов
+       прищелкивался к данному соединителю
+                        </div>
+             </div>
+       <div class="guide__item">
+                <div class="guide__item-img">
+                   <img src="/img/feat5.png" alt="">
+                </div>
+                <div class="guide__item-descr">
+                            Вставить в рельс с торца леску с помощью наконечника
+       "Слайдер", далее на нее надеть
+       крючок, зафиксировав его на
+       нужной высоте с помощью
+       винтового зажима.
+       Закрыть рельс, заглушками
+       с двух сторон. При
+       необходимости рельс возможно
+       укоротить с помощью ножовки.
+                           </div>
+             </div>
+           </div>
+         </div>
+       </section>
 
-  }
-    
-  </script>
+      <section class="section">
+          <div class="accessories">
+              <div class="container">
+                  <div class="title">
+                      Выберите аксессуары
+                  </div>
+                  <div class="tagline">
+                      Выберите необходимое количетсво и длину подвеса (лески/тросика) и крюк под нужную нагрузку
+                  </div>
+      
+                  <div class="choice-acc row">
+                      <div class="choice-acc__item col-lg-4">
+                          <ul class="choice-acc__thumb">
+                              <li data-id="113" class="active">
+                                  <img src="../img/acs1.png">
+                              </li>
+                              <li data-id="114">
+                                  <img src="../img/acs2.png">
+                              </li>
+                              <li data-id="115">
+                                  <img src="../img/acs3.png">
+                              </li>
+                              <li data-id="116">
+                                  <img src="../img/acs4.png">
+                              </li>
+                              <li data-id="117">
+                                  <img src="../img/acs1.png">
+                              </li>
+                              <li data-id="118">
+                                  <img src="../img/acs2.png">
+                              </li>
+                              <li data-id="119">
+                                  <img src="../img/acs3.png">
+                              </li>
+                              <li data-id="120">
+                                  <img src="../img/acs4.png">
+                              </li>
+                              <li data-id="121">
+                                  <img src="../img/acs1.png">
+                              </li>
+                              <li data-id="122">
+                                  <img src="../img/acs2.png">
+                              </li>
+                              <li data-id="123">
+                                  <img src="../img/acs3.png">
+                              </li>
+                              <li data-id="124">
+                                  <img src="../img/acs4.png">
+                              </li>
+                              <li data-id="125">
+                                  <img src="../img/acs1.png">
+                              </li>
+                              <li data-id="126">
+                                  <img src="../img/acs2.png">
+                              </li>
+                              <li data-id="127">
+                                  <img src="../img/acs3.png">
+                              </li>
+                              <li data-id="128">
+                                  <img src="../img/acs4.png">
+                              </li>
+                          </ul>
+                      </div>
+                      <div class="choice-acc__item col-lg-8">
+                          <div class="choice-acc__descr row active" data-id="113">
+      
+                              <div class="choice-acc__img col-lg-6">
+                                  <div>
+                                      <img src="../img/acs.png">
+                                  </div>
+      
+                              </div>
+                              <div class="choice-acc__info col-lg-6">
+                                  <div class="title">
+                                      Соединитель удлиннитель Клик
+                                  </div>
+                                  <div class="info-block">
+                                      <div class="info-block__item">
+                                          <div class="price price--product">
+                                              от 568 ₽
+                                          </div>
+                                      </div>
+                                      <div class="info-block__item">
+                                          <div class="number">
+                                              <span>Артикул:</span> 9856687
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="text-block">
+                                      <p>
+                                          <strong>Является крепежным элементом</strong>
+                                      </p>
+                                  </div>
+                                  <div class="dop-info">
+                                      <span>
+                                   <strong>Является крепежным элементом</strong> 
+                                 </span>
+                                      <ul class="dop-info__list">
+                                          <li>на рельс длиной 200 см. - 5 шт.</li>
+                                          <li>на рельс длиной 300 см. - 7 шт.</li>
+                                      </ul>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="choice-acc__descr row" data-id="114">
+                              <div class="choice-acc__img col-lg-6">
+                                  <div>
+                                      <img src="../img/acs.png">
+                                  </div>
+                              </div>
+                              <div class="choice-acc__info col-lg-6">
+                                  <div class="title">
+                                      Соединитель удлиннитель Клик 1
+                                  </div>
+                                  <div class="info-block">
+                                      <div class="info-block__item">
+                                          <div class="price price--product">
+                                              от 568 ₽
+                                          </div>
+                                      </div>
+                                      <div class="info-block__item">
+                                          <div class="number">
+                                              <span>Артикул:</span> 9856687
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="text-block">
+                                      <p>
+                                          <strong>Является крепежным элементом</strong>
+                                      </p>
+                                  </div>
+                                  <div class="dop-info">
+                                      <span>
+                                   <strong>Является крепежным элементом</strong> 
+                                 </span>
+                                      <ul class="dop-info__list">
+                                          <li>на рельс длиной 200 см. - 5 шт.</li>
+                                          <li>на рельс длиной 300 см. - 7 шт.</li>
+                                      </ul>
+                                  </div>
+                              </div>
+                          </div>
+      
+      
+      
+      
+      
+      
+      
+      
+                      </div>
+      
+      
+                  </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+              </div>
+          </div>
+      </section>
+      <div class="container">
+      <div class="product-tabs" id="product-tabs">
+                  <div class="product-tabs__name">
+                    <div class="product-tabs__name-item active" data-id="tab1">
+                      Характеристики
+                    </div>
+                    <div class="product-tabs__name-item" data-id="tab2">
+                      Отзывы 
+                    </div>
+                    <div class="product-tabs__name-item" data-id="tab3">
+                      Описание
+                    </div>
+                    <div class="product-tabs__name-item" data-id="tab4">
+                      Возврат
+                    </div>
+                    <div class="product-tabs__name-item" data-id="tab5">
+                      Доставка и оплата
+                    </div>
+                  </div>
+                  <div class="product-tabs__info">
+                    <div class="product-tabs__info-item active" data-id="tab1">
+                      <div class="row">
+                       <div class="col-lg-7 col-md-7 col-sm-12">
+                        <div class="property-product">
+                        <div class="property-product__item">
+                          <div class="property-product__item-name">
+                            Страна-производитель
+                          </div>
+                          <div class="property-product__item-descr">
+                            Artiteq
+                          </div>
+                        </div>
+                        <div class="property-product__item">
+                          <div class="property-product__item-name">
+                            Фирма-производитель
+                          </div>
+                          <div class="property-product__item-descr">
+                            Ambiance
+                          </div>
+                        </div>
+                          <div class="property-product__item">
+                          <div class="property-product__item-name">
+                            Максимальная нагрузка
+                          </div>
+                          <div class="property-product__item-descr">
+                            Россия
+                          </div>
+                        </div>
+                          <div class="property-product__item">
+                          <div class="property-product__item-name">
+                           Тип монтажа
+                          </div>
+                          <div class="property-product__item-descr">
+                            Потолок
+                          </div>
+                        </div>
+               <div class="property-product__item">
+                          <div class="property-product__item-name">
+                           Материал
+                          </div>
+                          <div class="property-product__item-descr">
+                            Аллюминий
+                          </div>
+                        </div>
+                           <div class="property-product__item">
+                          <div class="property-product__item-name">
+                           Длина профиля
+                          </div>
+                          <div class="property-product__item-descr">
+                            200-300 мм
+                          </div>
+                        </div>
+                          <div class="property-product__item">
+                          <div class="property-product__item-name">
+                           Гарантия 
+                          </div>
+                          <div class="property-product__item-descr">
+                            10 лет
+                          </div>
+                        </div>
+                          <div class="property-product__item">
+                          <div class="property-product__item-name">
+                           Цвет
+                          </div>
+                          <div class="property-product__item-descr">
+                            белый, серый
+                          </div>
+                        </div>
+                      </div>
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-12">
+                         <div class="form-block">
+                            <div class="form-block__inner">
+                              <div class="form-block__title">У вас остались вопросы?</div>
+                              <div class="form-block__tagline">Заполните форму ниже и мы свяжемся с вами в течении минуты.</div>
+                              <form class="main-form">
+                                <fieldset>
+                                  <ul class="form-list">
+                                    <li class="form-list__item">
+                                     <div class="form-magic">
+                                      <input type="text" class="form-magic__input" placeholder="Ваше имя:" name="name" id='name' required />
+                                      <label for="name" class="form-magic__label">Ваше имя:</label>
+                                    </div>
+                                    </li>
+                                    <li class="form-list__item">
+                                      <div class="form-magic">
+                                      <input type="tel" class="form-magic__input" placeholder="Ваш телефон:" name="phone" id='name' required />
+                                      <label for="phone" class="form-magic__label">Ваш телефон:</label>
+                                    </div>
+                                    </li>
+                                    <li class="form-list__item">
+                                      <div class="form-magic">
+                                      <input type="email" class="form-magic__input" placeholder="Ваш e-mail:" name="email" id='name' required />
+                                      <label for="email" class="form-magic__label">Ваш e-mail:</label>
+                                    </div>
+                                    </li>
+                                  </ul>
+                                </fieldset>
+                                <button class="btn-gradient" type="submit">Позвони мне</button>
+                                <div class="consent">
+                                        Отправляя данные, вы соглашаетесь на обработку персональных данных
+                                      </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      
+                    </div>
+                    <div class="product-tabs__info-item" data-id="tab2">
+                      Состав
+                    </div>
+                    <div class="product-tabs__info-item" data-id="tab3">
+                      Описание
+                    </div>
+                     <div class="product-tabs__info-item" data-id="tab4">
+                      Описание
+                    </div>
+                     <div class="product-tabs__info-item" data-id="tab5">
+                      Описание
+                    </div>
+                  </div>
+                </div>
+      </div>
+       <section class="section section--blue">
+           <div class="category-section">
+               <div class="container">
+                   <div class="title-block">
+                       <div class="title-block__item">
+                           <div class="main-title">
+                               Похожие товары
+                           </div>
+                       </div>
+                       <div class="title-block__item">
+                           <div class="arrow-main arrow-main--similar"></div>
+                       </div>
+                   </div>
+                    <div class="category-slider-wrapper">
+                       <div class="similar-slider">
+                           <div class="similar-slider__item">
+                               <div class="product-card-min">
+                                 <a href="#"></a>
+                                 <div class="product-card-min__img">
+                                   <img src="../img/product7.png" alt="">
+                                 </div>
+                                 <div class="product-card-min__info">
+                                   <div class="product-card-min__title">
+                                     Рельс галерейный “Класик”
+                                   </div>
+                                 </div>
+                             </div>
+                           </div>
+         <div class="similar-slider__item">
+                               <div class="product-card-min">
+                                 <a href="#"></a>
+                                 <div class="product-card-min__img">
+                                   <img src="../img/product8.png" alt="">
+                                 </div>
+                                 <div class="product-card-min__info">
+                                   <div class="product-card-min__title">
+                                     Рельс галерейный “Класик”
+                                   </div>
+                                 </div>
+                             </div>
+                           </div>
+                         <div class="similar-slider__item">
+                               <div class="product-card-min">
+                                 <a href="#"></a>
+                                 <div class="product-card-min__img">
+                                   <img src="../img/product9.png" alt="">
+                                 </div>
+                                 <div class="product-card-min__info">
+                                   <div class="product-card-min__title">
+                                     Рельс галерейный “Класик”
+                                   </div>
+                                 </div>
+                             </div>
+                           </div>
+                         <div class="similar-slider__item">
+                               <div class="product-card-min">
+                                 <a href="#"></a>
+                                 <div class="product-card-min__img">
+                                   <img src="../img/product7.png" alt="">
+                                 </div>
+                                 <div class="product-card-min__info">
+                                   <div class="product-card-min__title">
+                                     Рельс галерейный “Класик”
+                                   </div>
+                                 </div>
+                             </div>
+                           </div>
+                         <div class="similar-slider__item">
+                               <div class="product-card-min">
+                                 <a href="#"></a>
+                                 <div class="product-card-min__img">
+                                   <img src="../img/product7.png" alt="">
+                                 </div>
+                                 <div class="product-card-min__info">
+                                   <div class="product-card-min__title">
+                                     Рельс галерейный “Класик”
+                                   </div>
+                                 </div>
+                             </div>
+                           </div>
+                         <div class="similar-slider__item">
+                               <div class="product-card-min">
+                                 <a href="#"></a>
+                                 <div class="product-card-min__img">
+                                   <img src="../img/product8.png" alt="">
+                                 </div>
+                                 <div class="product-card-min__info">
+                                   <div class="product-card-min__title">
+                                     Рельс галерейный “Класик”
+                                   </div>
+                                 </div>
+                             </div>
+                           </div>
+                         <div class="similar-slider__item">
+                               <div class="product-card-min">
+                                 <a href="#"></a>
+                                 <div class="product-card-min__img">
+                                   <img src="../img/product9.png" alt="">
+                                 </div>
+                                 <div class="product-card-min__info">
+                                   <div class="product-card-min__title">
+                                     Рельс галерейный “Класик”
+                                   </div>
+                                 </div>
+                             </div>
+                           </div>
+                         <div class="similar-slider__item">
+                               <div class="product-card-min">
+                                 <a href="#"></a>
+                                 <div class="product-card-min__img">
+                                   <img src="../img/product7.png" alt="">
+                                 </div>
+                                 <div class="product-card-min__info">
+                                   <div class="product-card-min__title">
+                                     Рельс галерейный “Класик”
+                                   </div>
+                                 </div>
+                             </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </section>
+       <section class="section section--blue">
+           <div class="category-section">
+               <div class="container">
+                   <div class="title-block">
+                       <div class="title-block__item">
+                           <div class="main-title">
+                               Вы уже смотрели
+                           </div>
+                       </div>
+                       <div class="title-block__item">
+                           <div class="arrow-main arrow-main--seen"></div>
+                       </div>
+                   </div>
+                    <div class="category-slider-wrapper">
+                       <div class="seen-slider">
+                           <div class="seen-slider__item">
+                               <div class="product-card-min">
+                                 <a href="#"></a>
+                                 <div class="product-card-min__img">
+                                   <img src="../img/product7.png" alt="">
+                                 </div>
+                                 <div class="product-card-min__info">
+                                   <div class="product-card-min__title">
+                                     Рельс галерейный “Класик”
+                                   </div>
+                                 </div>
+                             </div>
+                           </div>
+         <div class="seen-slider__item">
+                               <div class="product-card-min">
+                                 <a href="#"></a>
+                                 <div class="product-card-min__img">
+                                   <img src="../img/product8.png" alt="">
+                                 </div>
+                                 <div class="product-card-min__info">
+                                   <div class="product-card-min__title">
+                                     Рельс галерейный “Класик”
+                                   </div>
+                                 </div>
+                             </div>
+                           </div>
+                         <div class="seen-slider__item">
+                               <div class="product-card-min">
+                                 <a href="#"></a>
+                                 <div class="product-card-min__img">
+                                   <img src="../img/product9.png" alt="">
+                                 </div>
+                                 <div class="product-card-min__info">
+                                   <div class="product-card-min__title">
+                                     Рельс галерейный “Класик”
+                                   </div>
+                                 </div>
+                             </div>
+                           </div>
+                         <div class="seen-slider__item">
+                               <div class="product-card-min">
+                                 <a href="#"></a>
+                                 <div class="product-card-min__img">
+                                   <img src="../img/product7.png" alt="">
+                                 </div>
+                                 <div class="product-card-min__info">
+                                   <div class="product-card-min__title">
+                                     Рельс галерейный “Класик”
+                                   </div>
+                                 </div>
+                             </div>
+                           </div>
+                         <div class="seen-slider__item">
+                               <div class="product-card-min">
+                                 <a href="#"></a>
+                                 <div class="product-card-min__img">
+                                   <img src="../img/product7.png" alt="">
+                                 </div>
+                                 <div class="product-card-min__info">
+                                   <div class="product-card-min__title">
+                                     Рельс галерейный “Класик”
+                                   </div>
+                                 </div>
+                             </div>
+                           </div>
+                         <div class="seen-slider__item">
+                               <div class="product-card-min">
+                                 <a href="#"></a>
+                                 <div class="product-card-min__img">
+                                   <img src="../img/product8.png" alt="">
+                                 </div>
+                                 <div class="product-card-min__info">
+                                   <div class="product-card-min__title">
+                                     Рельс галерейный “Класик”
+                                   </div>
+                                 </div>
+                             </div>
+                           </div>
+                         <div class="seen-slider__item">
+                               <div class="product-card-min">
+                                 <a href="#"></a>
+                                 <div class="product-card-min__img">
+                                   <img src="../img/product9.png" alt="">
+                                 </div>
+                                 <div class="product-card-min__info">
+                                   <div class="product-card-min__title">
+                                     Рельс галерейный “Класик”
+                                   </div>
+                                 </div>
+                             </div>
+                           </div>
+                         <div class="seen-slider__item">
+                               <div class="product-card-min">
+                                 <a href="#"></a>
+                                 <div class="product-card-min__img">
+                                   <img src="../img/product7.png" alt="">
+                                 </div>
+                                 <div class="product-card-min__info">
+                                   <div class="product-card-min__title">
+                                     Рельс галерейный “Класик”
+                                   </div>
+                                 </div>
+                             </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </section>
+      
+    </main>
+     <footer class="footer-page">
+         <div class="footer">
+             <div class="container">
+                 <div class="footer__top">
+                     <div class="row">
+                         <div class="col-lg-9 col-md-9">
+                             <div class="footer-list row">
+                                 <div class="footer-list__item col-lg-3 col-md-3 col-sm-6">
+                                     <div class="logo">
+                                         <a href="#">
+                                             <img src="../img/logo.svg" alt="">
+                                         </a>
+                                     </div>
+                                 </div>
+                                 <div class="footer-list__item col-lg-3 col-md-3 col-sm-6">
+                                     <div class="contact">
+                                         <div class="contact__title">
+                                             Адрес
+                                         </div>
+                                         <div class="contact__info">
+                                             г. Москва Духовской переулок,
+                                             <br>дом 17, строение 11
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div class="footer-list__item col-lg-3 col-md-3 col-sm-6">
+                                     <div class="contact">
+                                         <div class="contact__title">
+                                             Телефон и почта
+                                         </div>
+                                         <div class="contact__info">
+                                             <a href="tel:84956496637">+7 (495) 649-66-37</a>
+                                             <a href="mailto:info@arti teq.ru">info@arti teq.ru</a>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div class="footer-list__item col-lg-3 col-md-3 col-sm-6">
+                                     <div class="contact">
+                                         <div class="contact__title">
+                                             График работы
+                                         </div>
+                                         <div class="contact__info">
+                                             Пн-Пт 10:00 - 19:00
+                                             <br>Сб-вс выходной
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="col-lg-3 col-md-3">
+                             <div class="btn-container">
+                                 <a class="btn-gradient" href="#">Оставить заявку</a>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="footer__bottom">
+                     <div class="footer__info row">
+                         <div class="footer__info-item col-lg-4 col-md-4">
+                             <div class="copyright">© «Artiteq» 2020г Все права защищены.</div>
+                         </div>
+                         <div class="footer__info-item col-lg-4 col-md-4">
+                             <a href="#" class="privacy magic-link">Политика конфиденциальности</a>
+                         </div>
+                         <div class="footer__info-item col-lg-4 col-md-4">
+                             <div class="author">Разработка сайта -
+                                 <a href="https://wesma.ru/" target="_blank">
+                                     <img src="/img/wesma.png" alt="">
+                                 </a>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </footer>
+     
+     <nav id="menu">
+         <ul>
+             <li>
+                 <form class="search__form">
+                     <input class="form-control" type="text" placeholder="Поиск:" aria-label="Search">
+                     <button class="submit" type="submit"></button>
+                 </form>
+             </li>
+             <li>
+                 <a href="#">Продукция</a>
+             </li>
+             <li>
+                 <a href="#">О компании</a>
+             </li>
+             <li>
+                 <a href="#">Услуги</a>
+             </li>
+             <li>
+                 <a href="#">Галерея</a>
+             </li>
+             <li>
+                 <a href="#">Контакты</a>
+             </li>
+         </ul>
+     </nav>
+     
+     
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="js/slick.min.js"></script>
+     <!--<script src="js/main.min.js"></script>-->
+     <script src="js/mmenu.js"></script>
+     <script src="js/my.js"></script>
+     <script src="js/jquery.time-to.js"></script>
+     <script src="js/jquery.nice-select.min.js"></script>
+     <script src="js/jquery.inputmask.min.js"></script>
+     <div class="overlay" id="js-overlay"></div>
+     <div class="modal" id="callback">
+         <div class="modal__wrapper">
+             <form class="modal__form">
+                 <fieldset>
+                     <legend class="modal__form-title">
+                         Обратный звонок
+                     </legend>
+                     <ul class="form-list form-list--modal">
+                         <li class="form-list__item">
+                             <input class="form-input" type="text" name="name" id="name-modal" placeholder="Ваше имя:">
+                         </li>
+                         <li class="form-list__item">
+                             <input class="form-input" type="tel" name="phone" id="phone-modal" placeholder="Телефон:">
+                         </li>
+                     </ul>
+                 </fieldset>
+                 <div class="consent">
+                     Отправляя данные, вы соглашаетесь
+                     <br>на <a href="#" class="consent__link">обработку персональных данных</a>
+                 </div>
+                 <button class="btn-gradient" type="submit">Отправить</button>
+             </form>
+         </div>
+         <button href="#" class="close-btn js-modal-close" type="button"></button>
+     </div>
+      <div class="modal modal--calc" id="calc">
+     <div class="calc">
+           <div class="container">
+             <div class="calc__wrap">
+               <div class="close-btn js-modal-close"></div>
+               <div class="calc__item calc__item--one">
+                 <div class="calc__head head-calc"><span>1</span>Выберите необходимый цвет профиля и его длину:</div>
+                 <div class="calc__group">
+                   <div class="calc__option option-calc">
+                     <div class="option-calc__column option-calc__column--one">
+                       <div class="option-calc__iamge">
+                         <img src="./img/calc-image-1.png" alt="" />
+                       </div>
+                     </div>
+                     <div class="option-calc__column option-calc__column--two">
+                       <div class="option-calc__name">Белый</div>
+     
+                       <div class="option-calc__row row-calc">
+                         <div class="row-calc__text">Длина<span>200</span> см</div>
+                         <div class="row-calc__counter counter">
+                           <div class="counter__name">Кол-во</div>
+                           <div class="counter__group">
+                             <div class="counter__add"></div>
+                             <input class="counter__input" type="number" value="1" />
+                             <div class="counter__subtract"></div>
+                           </div>
+                           <div class="counter__amount">шт</div>
+                         </div>
+                       </div>
+     
+                       <div class="option-calc__row row-calc">
+                         <div class="row-calc__text">Длина<span>200</span> см</div>
+                         <div class="row-calc__counter counter">
+                           <div class="counter__name">Кол-во</div>
+                           <div class="counter__group">
+                             <div class="counter__add"></div>
+                             <input class="counter__input" type="number" value="1" />
+                             <div class="counter__subtract"></div>
+                           </div>
+                           <div class="counter__amount">шт</div>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+     
+                   <div class="calc__option option-calc">
+                     <div class="option-calc__column option-calc__column--one">
+                       <img src="./img/calc-image-2.png" alt="" />
+                     </div>
+                     <div class="option-calc__column option-calc__column--two">
+                       <div class="option-calc__name">Белый грунт под покраску</div>
+                       <div class="option-calc__row row-calc">
+                         <div class="row-calc__text">Длина<span>200</span> см</div>
+                         <div class="row-calc__counter counter">
+                           <div class="counter__name">Кол-во</div>
+                           <div class="counter__group">
+                             <div class="counter__add"></div>
+                             <input class="counter__input" type="number" value="1" />
+                             <div class="counter__subtract"></div>
+                           </div>
+                           <div class="counter__amount">шт</div>
+                         </div>
+                       </div>
+                       <div class="option-calc__row row-calc">
+                         <div class="row-calc__text">Длина<span>200</span> см</div>
+                         <div class="row-calc__counter counter">
+                           <div class="counter__name">Кол-во</div>
+                           <div class="counter__group">
+                             <div class="counter__add"></div>
+                             <input class="counter__input" type="number" value="1" />
+                             <div class="counter__subtract"></div>
+                           </div>
+                           <div class="counter__amount">шт</div>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+     
+                   <div class="calc__option option-calc">
+                     <div class="option-calc__column option-calc__column--one">
+                       <img src="./img/calc-image-3.png" alt="" />
+                     </div>
+                     <div class="option-calc__column option-calc__column--two">
+                       <div class="option-calc__name">Аллюминий</div>
+     
+                       <div class="option-calc__row row-calc">
+                         <div class="row-calc__text">Длина<span>200</span> см</div>
+                         <div class="row-calc__counter counter">
+                           <div class="counter__name">Кол-во</div>
+                           <div class="counter__group">
+                             <div class="counter__add"></div>
+                             <input class="counter__input" type="number" value="1" />
+                             <div class="counter__subtract"></div>
+                           </div>
+                           <div class="counter__amount">шт</div>
+                         </div>
+                       </div>
+     
+                       <div class="option-calc__row">
+                         <div class="row-calc__text">Длина<span>200</span> см</div>
+                         <div class="row-calc__counter counter">
+                           <div class="counter__name">Кол-во</div>
+                           <div class="counter__group">
+                             <div class="counter__add"></div>
+                             <input class="counter__input" type="number" value="1" />
+                             <div class="counter__subtract"></div>
+                           </div>
+                           <div class="counter__amount">шт</div>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+     
+               <div class="calc__item calc__item--two">
+                 <div class="calc__head head-calc"><span>2</span>Выбор аксессуаров:</div>
+     
+                 <div class="calc__group">
+                   <div class="calc__wrapper">
+                     <div class="calc__option option-calc">
+                       <div class="option-calc__column option-calc__column--one">
+                         <div class="option-calc__iamge">
+                           <img src="./img/calc-image-4.png" alt="" />
+                         </div>
+                       </div>
+                       <div class="option-calc__column option-calc__column--two">
+                         <div class="option-calc__name">Соединитель удлинитель</div>
+     
+                         <div class="option-calc__row row-calc">
+                           <div class="row-calc__counter counter">
+                             <div class="counter__name">Кол-во</div>
+                             <div class="counter__group">
+                               <div class="counter__add"></div>
+                               <input class="counter__input" type="number" value="1" />
+                               <div class="counter__subtract"></div>
+                             </div>
+                             <div class="counter__amount">шт</div>
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+     
+                   <div class="calc__wrapper">
+                     <div class="calc__option option-calc">
+                       <div class="option-calc__column option-calc__column--one">
+                         <div class="option-calc__iamge">
+                           <img src="./img/calc-image-5.png" alt="" />
+                         </div>
+                       </div>
+                       <div class="option-calc__column option-calc__column--two">
+                         <div class="option-calc__name">Торцевые заглушки</div>
+     
+                         <div class="option-calc__row row-calc">
+                           <div class="row-calc__counter counter">
+                             <div class="counter__name">Белый</div>
+                             <div class="counter__group">
+                               <div class="counter__add"></div>
+                               <input class="counter__input" type="number" value="1" />
+                               <div class="counter__subtract"></div>
+                             </div>
+                             <div class="counter__amount">шт</div>
+                           </div>
+                         </div>
+     
+                         <div class="option-calc__row row-calc">
+                           <div class="row-calc__counter counter">
+                             <div class="counter__name">Серый</div>
+                             <div class="counter__group">
+                               <div class="counter__add"></div>
+                               <input class="counter__input" type="number" value="1" />
+                               <div class="counter__subtract"></div>
+                             </div>
+                             <div class="counter__amount">шт</div>
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+     
+                   <div class="calc__wrapper">
+                     <div class="calc__option option-calc">
+                       <div class="option-calc__column option-calc__column--one">
+                         <div class="option-calc__iamge">
+                           <img src="./img/calc-image-6.png" alt="" />
+                         </div>
+                       </div>
+                       <div class="option-calc__column option-calc__column--two">
+                         <div class="option-calc__name">Угловые соединения</div>
+     
+                         <div class="option-calc__row row-calc">
+                           <div class="row-calc__counter counter">
+                             <div class="counter__name">Белый</div>
+                             <div class="counter__group">
+                               <div class="counter__add"></div>
+                               <input class="counter__input" type="number" value="1" />
+                               <div class="counter__subtract"></div>
+                             </div>
+                             <div class="counter__amount">шт</div>
+                           </div>
+                         </div>
+     
+                         <div class="option-calc__row row-calc">
+                           <div class="row-calc__counter counter">
+                             <div class="counter__name">Серый</div>
+                             <div class="counter__group">
+                               <div class="counter__add"></div>
+                               <input class="counter__input" type="number" value="1" />
+                               <div class="counter__subtract"></div>
+                             </div>
+                             <div class="counter__amount">шт</div>
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+     
+                   <div class="calc__wrapper">
+                     <div class="calc__option option-calc">
+                       <div class="option-calc__column option-calc__column--one">
+                         <div class="option-calc__iamge">
+                           <img src="./img/calc-image-6.png" alt="" />
+                         </div>
+                       </div>
+                       <div class="option-calc__column option-calc__column--two">
+                         <div class="option-calc__name">Дюбель</div>
+     
+                         <div class="option-calc__row row-calc">
+                           <div class="row-calc__counter counter">
+                             <div class="counter__name">Кол-во</div>
+                             <div class="counter__group">
+                               <div class="counter__add"></div>
+                               <input class="counter__input" type="number" value="1" />
+                               <div class="counter__subtract"></div>
+                             </div>
+                             <div class="counter__amount">шт</div>
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+     
+                   <div class="calc__wrapper">
+                     <div class="calc__option option-calc">
+                       <div class="option-calc__column option-calc__column--one">
+                         <div class="option-calc__iamge">
+                           <img src="./img/calc-image-7.png" alt="" />
+                         </div>
+                       </div>
+                       <div class="option-calc__column option-calc__column--two">
+                         <div class="option-calc__name">Угловые соединения</div>
+     
+                         <div class="option-calc__row row-calc">
+                           <div class="row-calc__counter counter">
+                             <div class="counter__name">Белый</div>
+                             <div class="counter__group">
+                               <div class="counter__add"></div>
+                               <input class="counter__input" type="number" value="1" />
+                               <div class="counter__subtract"></div>
+                             </div>
+                             <div class="counter__amount">шт</div>
+                           </div>
+                         </div>
+     
+                         <div class="option-calc__row row-calc">
+                           <div class="row-calc__counter counter">
+                             <div class="counter__name">Серый</div>
+                             <div class="counter__group">
+                               <div class="counter__add"></div>
+                               <input class="counter__input" type="number" value="1" />
+                               <div class="counter__subtract"></div>
+                             </div>
+                             <div class="counter__amount">шт</div>
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+     
+               <div class="calc__item calc__item--three">
+                 <div class="calc__head head-calc"><span>3</span>Выбор лесок/тросиков:</div>
+                 <div class="calc__group">
+                   <div class="calc__option option-calc">
+                     <div class="option-calc__column option-calc__column--one">
+                       <div class="option-calc__iamge">
+                         <img src="./img/cacl-image-11.png" alt="" />
+                       </div>
+                     </div>
+                     <div class="option-calc__column option-calc__column--two">
+                       <div class="option-calc__name">Леска (1 мм) <span>нагрузка 10 кг</span></div>
+     
+                       <div class="option-calc__row row-calc js-row-calc">
+                         <div class="row-calc__select selcet">
+                           <div class="selcet__type">Тип</div>
+                           <select name="" id="">
+                             <option value="">Твистер</option>
+                             <option value="">Твистер-1</option>
+                             <option value="">Твистер-2</option>
+                             <option value="">Твистер-3</option>
+                           </select>
+                           <div class="selcet__amount">шт</div>
+                         </div>
+     
+                         <div class="row-calc__counter counter">
+                           <div class="counter__name">Длина:</div>
+                           <div class="counter__group">
+                             <div class="counter__add"></div>
+                             <input class="counter__input" type="number" value="1" />
+                             <div class="counter__subtract"></div>
+                           </div>
+                           <div class="counter__amount">см</div>
+                         </div>
+                         <div class="row-calc__counter counter">
+                           <div class="counter__name">Кол-во</div>
+                           <div class="counter__group">
+                             <div class="counter__add"></div>
+                             <input class="counter__input" type="number" value="1" />
+                             <div class="counter__subtract"></div>
+                           </div>
+                           <div class="counter__amount">шт</div>
+                         </div>
+                       </div>
+     
+                       <div class="option-calc__more">
+                         <div class="option-calc__add-more"><span></span> Выбрать ещё</div>
+                       </div>
+                     </div>
+                   </div>
+     
+                   <div class="calc__option option-calc">
+                     <div class="option-calc__column option-calc__column--one">
+                       <div class="option-calc__iamge">
+                         <img src="./img/cacl-image-11.png" alt="" />
+                       </div>
+                     </div>
+                     <div class="option-calc__column option-calc__column--two">
+                       <div class="option-calc__name">Леска (2 мм) <span>нагрузка 15 кг</span></div>
+     
+                       <div class="option-calc__row row-calc js-row-calc">
+                         <div class="row-calc__select selcet">
+                           <div class="selcet__type">Тип</div>
+                           <select name="" id="">
+                             <option value="">Твистер</option>
+                             <option value="">Твистер-1</option>
+                             <option value="">Твистер-2</option>
+                             <option value="">Твистер-3</option>
+                           </select>
+                           <div class="selcet__amount">шт</div>
+                         </div>
+     
+                         <div class="row-calc__counter counter">
+                           <div class="counter__name">Длина:</div>
+                           <div class="counter__group">
+                             <div class="counter__add"></div>
+                             <input class="counter__input" type="number" value="1" />
+                             <div class="counter__subtract"></div>
+                           </div>
+                           <div class="counter__amount">см</div>
+                         </div>
+                         <div class="row-calc__counter counter">
+                           <div class="counter__name">Кол-во</div>
+                           <div class="counter__group">
+                             <div class="counter__add"></div>
+                             <input class="counter__input" type="number" value="1" />
+                             <div class="counter__subtract"></div>
+                           </div>
+                           <div class="counter__amount">шт</div>
+                         </div>
+                       </div>
+     
+                       <div class="option-calc__more">
+                         <div class="option-calc__add-more"><span></span> Выбрать ещё</div>
+                       </div>
+                     </div>
+                   </div>
+     
+                   <div class="calc__option option-calc">
+                     <div class="option-calc__column option-calc__column--one">
+                       <div class="option-calc__iamge">
+                         <img src="./img/cacl-image-11.png" alt="" />
+                       </div>
+                     </div>
+                     <div class="option-calc__column option-calc__column--two">
+                       <div class="option-calc__name">Леска (2 мм) <span>нагрузка 15 кг</span></div>
+     
+                       <div class="option-calc__row row-calc js-row-calc">
+                         <div class="row-calc__select selcet">
+                           <div class="selcet__type">Тип</div>
+                           <select name="" id="">
+                             <option value="">Твистер</option>
+                             <option value="">Твистер-1</option>
+                             <option value="">Твистер-2</option>
+                             <option value="">Твистер-3</option>
+                           </select>
+                           <div class="selcet__amount">шт</div>
+                         </div>
+     
+                         <div class="row-calc__counter counter">
+                           <div class="counter__name">Длина:</div>
+                           <div class="counter__group">
+                             <div class="counter__add"></div>
+                             <input class="counter__input" type="number" value="1" />
+                             <div class="counter__subtract"></div>
+                           </div>
+                           <div class="counter__amount">см</div>
+                         </div>
+                         <div class="row-calc__counter counter">
+                           <div class="counter__name">Кол-во</div>
+                           <div class="counter__group">
+                             <div class="counter__add"></div>
+                             <input class="counter__input" type="number" value="1" />
+                             <div class="counter__subtract"></div>
+                           </div>
+                           <div class="counter__amount">шт</div>
+                         </div>
+                       </div>
+     
+                       <div class="option-calc__more">
+                         <div class="option-calc__add-more"><span></span> Выбрать ещё</div>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+     
+               <div class="calc__item calc__item--four">
+                 <div class="calc__head head-calc"><span>4</span>Выбор крюков:</div>
+                 <div class="calc__group">
+                   <div class="calc__option option-calc">
+                     <div class="option-calc__column option-calc__column--one">
+                       <input class="option-calc__input" type="checkbox" id="hook1" checked/>
+                       <label class="option-calc__checkbox" for="hook1">
+                         <span class="option-calc__checkmarck"></span>
+                       </label>
+                       <div class="option-calc__iamge">
+                         <img src="./img/cacl-image-12.png" alt="" />
+                       </div>
+                     </div>
+                     <div class="option-calc__column option-calc__column--two">
+                       <div class="option-calc__name">Крюк "Мини" (4 кг)</div>
+                       <div class="option-calc__row row-calc">
+                         <div class="row-calc__counter counter">
+                           <div class="counter__name">Кол-во</div>
+                           <div class="counter__group">
+                             <div class="counter__add"></div>
+                             <input class="counter__input" type="number" value="1" />
+                             <div class="counter__subtract"></div>
+                           </div>
+                           <div class="counter__amount">шт</div>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="calc__option option-calc">
+                     <div class="option-calc__column option-calc__column--one">
+                       <input class="option-calc__input" type="checkbox" id="hook2"/>
+                       <label class="option-calc__checkbox" for="hook2">
+                         <span class="option-calc__checkmarck"></span>
+                       </label>
+                       <div class="option-calc__iamge">
+                         <img src="./img/cacl-image-12.png" alt="" />
+                       </div>
+                     </div>
+                     <div class="option-calc__column option-calc__column--two">
+                       <div class="option-calc__name">Крюк "Мини" (4 кг)</div>
+     
+                       <div class="option-calc__row row-calc">
+                         <div class="row-calc__counter counter">
+                           <div class="counter__name">Кол-во</div>
+                           <div class="counter__group">
+                             <div class="counter__add"></div>
+                             <input class="counter__input" type="number" value="1" />
+                             <div class="counter__subtract"></div>
+                           </div>
+                           <div class="counter__amount">шт</div>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="calc__option option-calc">
+                     <div class="option-calc__column option-calc__column--one">
+                       <input class="option-calc__input" type="checkbox" id="hook3"/>
+                       <label class="option-calc__checkbox" for="hook3">
+                         <span class="option-calc__checkmarck"></span>
+                       </label>
+                       <div class="option-calc__iamge">
+                         <img src="./img/cacl-image-12.png" alt="" />
+                       </div>
+                     </div>
+                     <div class="option-calc__column option-calc__column--two">
+                       <div class="option-calc__name">Крюк "Мини" (4 кг)</div>
+                       <div class="option-calc__row row-calc">
+                         <div class="row-calc__counter counter">
+                           <div class="counter__name">Кол-во</div>
+                           <div class="counter__group">
+                             <div class="counter__add"></div>
+                             <input class="counter__input" type="number" value="1" />
+                             <div class="counter__subtract"></div>
+                           </div>
+                           <div class="counter__amount">шт</div>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="calc__option option-calc">
+                     <div class="option-calc__column option-calc__column--one">
+                       <input class="option-calc__input" type="checkbox" id="hook4"/>
+                       <label class="option-calc__checkbox" for="hook4">
+                         <span class="option-calc__checkmarck"></span>
+                       </label>
+                       <div class="option-calc__iamge">
+                         <img src="./img/cacl-image-12.png" alt="" />
+                       </div>
+                     </div>
+                     <div class="option-calc__column option-calc__column--two">
+                       <div class="option-calc__name">Крюк "Мини" (4 кг)</div>
+                       <div class="option-calc__row row-calc">
+                         <div class="row-calc__counter counter">
+                           <div class="counter__name">Кол-во</div>
+                           <div class="counter__group">
+                             <div class="counter__add"></div>
+                             <input class="counter__input" type="number" value="1" />
+                             <div class="counter__subtract"></div>
+                           </div>
+                           <div class="counter__amount">шт</div>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="calc__option option-calc">
+                     <div class="option-calc__column option-calc__column--one">
+                       <input class="option-calc__input" type="checkbox" id="hook5" />
+                       <label class="option-calc__checkbox" for="hook5">
+                         <span class="option-calc__checkmarck"></span>
+                       </label>
+                       <div class="option-calc__iamge">
+                         <img src="./img/cacl-image-12.png" alt="" />
+                       </div>
+                     </div>
+                     <div class="option-calc__column option-calc__column--two">
+                       <div class="option-calc__name">Крюк "Мини" (4 кг)</div>
+                       <div class="option-calc__row row-calc">
+                         <div class="row-calc__counter counter">
+                           <div class="counter__name">Кол-во</div>
+                           <div class="counter__group">
+                             <div class="counter__add"></div>
+                             <input class="counter__input" type="number" value="1" />
+                             <div class="counter__subtract"></div>
+                           </div>
+                           <div class="counter__amount">шт</div>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+               <div class="calc__item calc__item--five">
+                 <div class="calc__head head-calc"><span>5</span>Способ доставки:</div>
+                 <div class="calc__group">
+                   <div class="calc__option option-calc">
+                     <div class="option-calc__column option-calc__column--one">
+                       <label class="option-calc__radio">
+                         <input name="delivery" type="radio" checked/>
+                         <span class="option-calc__checkmarck"></span>
+                         Самовывоз
+                       </label>
+                       <label class="option-calc__radio">
+                         <input name="delivery" type="radio" />
+                         <span class="option-calc__checkmarck"></span>
+                         Доставка
+                       </label>
+                       <div class="option-calc__price">Общая стоимость: <span>1 052</span> ₽</div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+               <div class="calc__order">
+                 <button class="calc__button btn-gradient">Оформить заказ</button>
+               </div>
+             </div>
+           </div>
+         </div>
+     </div>
+  </div>
 </body>
-
 </html>
-
