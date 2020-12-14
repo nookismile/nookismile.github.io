@@ -46,8 +46,8 @@ let swiper = new Swiper(".main-slider", swiperOptions);
 let slider1 = new Swiper('.slider-left', {
   init : true ,
   slidesPerView : 'auto' ,
-  loop : true ,
-  loopedSlides : 0 ,
+  loop : true,
+  loopedSlides : 0,
   slidesPerGroup : 1 ,
   spaceBetween : 30,
     navigation: {

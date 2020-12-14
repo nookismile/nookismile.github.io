@@ -1,14 +1,14 @@
 @font-face {
-  font-family: "Roboto-Bold";
-  src: url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../Roboto-Bold.woff") format("woff");
+  font-family: "Roboto-Light";
+  src: url("../fonts/Roboto-Light.woff2") format("woff2"), url("../Roboto-Light.woff") format("woff");
   font-weight: weight;
   font-display: swap;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Roboto-Light";
-  src: url("../fonts/Roboto-Light.woff2") format("woff2"), url("../Roboto-Light.woff") format("woff");
+  font-family: "Roboto-Bold";
+  src: url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../Roboto-Bold.woff") format("woff");
   font-weight: weight;
   font-display: swap;
   font-style: normal;
@@ -74,6 +74,10 @@ main {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+button:focus {
+  outline: none;
 }
 
 .white-container {
@@ -1163,6 +1167,7 @@ span.magic-link:hover::before {
 
 @media (max-width: 1000px) {
   .photo-slider {
+    height: 650px;
     padding-left: 0;
   }
   .slider-left__slide {
@@ -1176,6 +1181,12 @@ span.magic-link:hover::before {
 @media (max-width: 600px) {
   .slider-left__slide {
     flex-wrap: wrap;
+  }
+  .slider-left__image {
+    order: 1;
+  }
+  .slider-left__wrap {
+    order: 2;
   }
 }
 
