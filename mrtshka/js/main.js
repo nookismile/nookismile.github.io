@@ -65,8 +65,6 @@ $(".swiper-slide-active").addClass("current");
 slider1.on("slideChangeTransitionStart", function() {
     $(".slider-left__slide").removeClass("current");
     $(".swiper-slide-active").addClass("current");
-
-
 })
 
 const swiper3 = new Swiper('.slider-gallery', {
