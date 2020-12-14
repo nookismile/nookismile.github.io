@@ -60,11 +60,11 @@ let slider1 = new Swiper('.slider-left', {
 
 //slider1.slideToLoop()
 
-$(".swiper-slide-active").addClass("current");
+$(".slider-left .swiper-slide-active").addClass("current");
 
 slider1.on("slideChangeTransitionEnd", function() {
-    $(".slider-left__slide").removeClass("current");
-    $(".swiper-slide-active").addClass("current");
+    $(".slider-left .slider-left__slide").removeClass("current");
+    $(".slider-left .swiper-slide-active").addClass("current");
 })
 
 const swiper3 = new Swiper('.slider-gallery', {
