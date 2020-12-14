@@ -1303,7 +1303,7 @@ span.magic-link:hover::before {
   flex-shrink: 1;
 }
 
-.slider-left__slide .slider-left__wrap {
+.slider-left__slide.swiper-slide-active .slider-left__wrap {
   opacity: 1;
   visibility: visible;
   width: 650px;
