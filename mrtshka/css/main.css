@@ -339,6 +339,11 @@ progress::-moz-progress-bar {
   stroke: #286E56;
 }
 
+.arrow-slider .swiper-button-prev:hover,
+.arrow-slider .swiper-button-next:hover {
+      border: 3px solid #08CC99;
+}
+
 .page-header {
   position: relative;
 }
