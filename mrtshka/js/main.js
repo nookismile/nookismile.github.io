@@ -62,7 +62,7 @@ let slider1 = new Swiper('.slider-left', {
 
 $(".swiper-slide-active").addClass("current");
 
-slider1.on("slideChangeTransitionStart", function() {
+slider1.on("slideChangeTransitionEnd", function() {
     $(".slider-left__slide").removeClass("current");
     $(".swiper-slide-active").addClass("current");
 })
