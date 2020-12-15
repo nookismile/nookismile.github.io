@@ -2385,25 +2385,25 @@ table {
     display: block;
     width: 18px;
     height: 18px;
-    background-image: url("../../img/twitter.png");
+    background-image: url("../img/twitter.png");
     background-size: auto;
     background-position: center;
     background-repeat: no-repeat;
 }
 .social-list__icon--fb {
-    background-image: url("../../img/facebook.png");
+    background-image: url("../img/facebook.png");
 }
 .social-list__icon--vk {
-    background-image: url("../../img/vk.png");
+    background-image: url("../img/vk.png");
 }
 .social-list__icon--inst {
-    background-image: url("../../img/inst.png");
+    background-image: url("../img/inst.png");
 }
 .social-list__icon--ok {
-    background-image: url("../../img/ok.png");
+    background-image: url("../img/ok.png");
 }
 .social-list__icon--youtube {
-    background-image: url("../../img/youtube.png");
+    background-image: url("../img/youtube.png");
 }
 .social-list__icon:hover {
     opacity: 0.5;
