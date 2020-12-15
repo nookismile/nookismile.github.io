@@ -59,7 +59,7 @@ let slider1 = new Swiper('.slider-left', {
 
 
 //slider1.slideToLoop()
-
+//
 $(".slider-left .swiper-slide-active").addClass("current");
 
 slider1.on("slideChangeTransition", function() {
