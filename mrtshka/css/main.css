@@ -293,6 +293,7 @@ progress::-moz-progress-bar {
     transition: border 0.3s linear;
 }
 
+/*
 .swiper-button-prev {
   background-image: url("../img/ar-prev.png");
   background-size: auto;
@@ -306,6 +307,7 @@ progress::-moz-progress-bar {
   background-position: center;
   background-repeat: no-repeat;
 }
+*/
 
 .swiper-button-prev svg,
 .swiper-button-next svg {
