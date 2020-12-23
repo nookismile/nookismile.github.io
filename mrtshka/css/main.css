@@ -1674,6 +1674,13 @@ table {
   .fold-content > table td:first-child {
     width: 100%;
   }
+  .fold-table > tbody > tr.view td:first-child:before,
+  .fold-table > tbody > tr.view th:first-child:before {
+    right: 10px;
+    width: 5px;
+    height: 5px;
+    margin-top: 0;
+  }
 }
 
 .info-block {
