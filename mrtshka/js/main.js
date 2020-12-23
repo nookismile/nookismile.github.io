@@ -252,3 +252,4 @@ $(".fold-table tr.view").on("click", function(){
 
 
 TweenMax.to('.services-list', 1.5, {scaleY: 1,  ease: Circ.easeOut });
+//# sourceMappingURL=main.js.map

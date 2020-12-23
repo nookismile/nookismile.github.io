@@ -1,30 +1,549 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    @include("templates/head.html")
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" href="css/nice-select.css">
+<link rel="stylesheet" href="css/mmenu.css">
+<link rel="stylesheet" href="css/main.css">
     <title>Главная - Mrtshka</title>
 
 </head>
 <body>
-  @include("templates/progress.html")
+  <progress max="100" value="0"></progress>
   <div class="full">
-  @include("templates/header.html")
-  @include("templates/main-screen.html")
+  <header class="page-header">
+    <div class="page-header__wrapper">
+        <div class="page-header__inner wrapper">
+            <div class="page-header__item">
+                <a href="#menu" class="mobile-menu">
+                    <span></span>
+                </a>
+                <div class="logo">
+    <a href="#">
+        <img src="img/logo.png" alt="">
+    </a>
+</div>
+            </div>
+            <div class="page-header__item">
+                <nav class="main-nav">
+  <ul class="main-menu">
+    <li class="main-menu__item"><a class="active" href="#">Главная</a></li>
+    <li class="main-menu__item"><a href="#">Об услугах</a></li>
+    <li class="main-menu__item"><a href="#">Наши центры</a></li>
+    <li class="main-menu__item"><a href="#">Контакты</a></li>
+  </ul>
+</nav>
+            </div>
+            <div class="page-header__item">
+                <div class="phone">
+    <a href="tel:88442242401">
+    <svg>
+        <use xlink:href="img/sprite.svg#icon-phone"></use>
+    </svg>
+      <span>+7 (8442) 24-24-01</span></a>
+</div>
+            </div>
+        </div>
+        <div class="phone">
+    <a href="tel:88442242401">
+    <svg>
+        <use xlink:href="img/sprite.svg#icon-phone"></use>
+    </svg>
+      <span>+7 (8442) 24-24-01</span></a>
+</div>
+    </div>
+</header>
+
+  <section class="main-section">
+    <div class="main-screen">
+        <div class="main-slider swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="main-slider__inner slide-inner" style="background-image:url('img/slide1.png')">
+                    <div class="main-slider__info wrapper">
+                    <div class="main-slider__title gs_reveal">
+                      Диагностика <br>в МРТшке
+                    </div>
+                    <div class="main-slider__tagline gs_reveal">
+                      Мощное оборудование экспертного и высокого классов от европейских, корейских производителей.
+                    </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="main-slider__inner slide-inner" style="background-image:url('img/slide1.png')">
+                    <div class="main-slider__info wrapper">
+                    <div class="main-slider__title">
+                      Диагностика <br>в МРТшке
+                    </div>
+                    <div class="main-slider__tagline">
+                      Мощное оборудование экспертного и высокого классов от европейских, корейских производителей.
+                    </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="main-slider__inner slide-inner" style="background-image:url('img/slide1.png')">
+                    <div class="main-slider__info wrapper">
+                    <div class="main-slider__title">
+                      Диагностика <br>в МРТшке
+                    </div>
+                    <div class="main-slider__tagline">
+                      Мощное оборудование экспертного и высокого классов от европейских, корейских производителей.
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              <div class="swiper-slide">
+                  <div class="main-slider__inner slide-inner" style="background-image:url('img/slide1.png')">
+                    <div class="main-slider__info wrapper">
+                    <div class="main-slider__title">
+                      Диагностика <br>в МРТшке
+                    </div>
+                    <div class="main-slider__tagline">
+                      Мощное оборудование экспертного и высокого классов от европейских, корейских производителей.
+                    </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+           <div class="swiper-pagination main-slider__pagination"></div>
+        </div>
+    </div>
+
+</section>
   <main class="page-main">
-  @include("templates/feauters.html")
-  @include("templates/services.html")
-  @include("templates/centers.html")
-<!--  @include("templates/review.html")-->
-  @include("templates/about.html")
-  @include("templates/links.html")
+   <section class="section">
+ <div class="white-container">
+ <div class="wrapper">
+  <ul class="feauters">
+    <li class="feauters__item">
+      <div class="feauters__card">
+        <svg>
+        <use xlink:href="img/sprite.svg#icon-feauters1"></use>
+        </svg>
+        <span>Высокоточная техника</span>
+      </div>
+    </li>
+    <li class="feauters__item">
+      <div class="feauters__card">
+        <svg>
+        <use xlink:href="img/sprite.svg#icon-feauters2"></use>
+        </svg>
+        <span>Экспертное качество описания</span>
+      </div>
+    </li>
+    <li class="feauters__item">
+      <div class="feauters__card">
+        <svg>
+        <use xlink:href="img/sprite.svg#icon-feauters3"></use>
+        </svg>
+        <span>Мы работаем профессионально</span>
+      </div>
+    </li>
+    <li class="feauters__item">
+      <div class="feauters__card">
+        <svg>
+        <use xlink:href="img/sprite.svg#icon-feauters4"></use>
+        </svg>
+        <span>Цена и качество Вас приятно удивят</span>
+      </div>
+    </li>
+  </ul>
+</div>
+   </div>
+</section>
+  <section class="section">
+    <div class="section__inner">
+        <div class="wrapper">
+            <div class="main-title main-title--light">
+                Наши услуги
+            </div>
+            <ul class="services-list">
+  <li class="services-list__item gs_reveal gs_reveal_fromLeft">
+    <div class="services-card">
+      <img src="img/services1.png" alt="">
+   <div class="services-card__info">
+    <div class="services-card__info-inner">
+     <a href="#"></a>
+       <div class="services-card__info-name">
+     <div class="services-card__title">
+     МРТ
+     </div>
+      <div class="services-card__tagline">
+      Магнитно-резонансная томография
+     </div>
+      </div>
+      <div class="services-card__icon">
+     <svg>
+        <use xlink:href="img/sprite.svg#icon-arrow"></use>
+    </svg>
+      </div>
+     </div>
+      </div>
+    </div>
+  </li>
+  <li class="services-list__item gs_reveal gs_reveal_fromRight">
+     <div class="services-card">
+      <img src="img/services2.png" alt="">
+   <div class="services-card__info">
+     <div class="services-card__info-inner">
+     <a href="#"></a>
+       <div class="services-card__info-name">
+     <div class="services-card__title">
+     УЗИ
+     </div>
+      <div class="services-card__tagline">
+      Ультразвуковое исследование
+     </div>
+      </div>
+      <div class="services-card__icon">
+     <svg>
+        <use xlink:href="img/sprite.svg#icon-arrow"></use>
+    </svg>
+      </div>
+     </div>
+      </div>
+    </div>
+  </li>
+</ul>
+        </div>
+    </div>
+</section>
+   <section class="section">
+ <div class="white-container">
+  <div class="section__inner">
+
+   <div class="wrapper">
+    <div class="main-title main-title--grey">
+      Наши центры
+     </div>
+     <ul class="place-list">
+    <li class="place-list__item">
+        <div class="text">
+            Сделать МРТ в центре "МРТшка" - значит получить на руки снимок высокого качества по доступной цене. У нас вы найдете прекрасный персонал, выгодные условия, отличный график работы, в котором нет выходных и перерывов. Вы можете приехать к нам в любое время и сделать диагностику 24 часа в сутки! Мы проводим данное исследование, используя мировые стандарты выполнения магнитно-резонансной томографии. Наши снимки одобряют врачи-хирурги по всему миру. МРТ (магнитно-резонансная томография) - это самый современный и самый информативный вид диагностики, в основе которого лежит компьютерная обработка импульсов, исходящих от тканей человеческого тела в магнитном поле. МРТ является методом, не связанным с воздействием ионизирующего излучения, вследствие чего отсутствует лучевая нагрузка на пациента и количество проведений исследований в динамике не ограничено.
+        </div>
+    </li>
+    <li class="place-list__item">
+        <div class="card">
+            <div class="card__img">
+                <img src="img/place1.png" alt="">
+            </div>
+            <div class="card__descr">
+            <div class="card__title">
+                МРТшка-Волгоград
+            </div>
+            <div class="card__info">
+                ул. Пролетарская, 24
+                <div class="card__phone">
+                    <a href="tel:88442242401">+7 (8442) 24-24-01</a>
+                </div>
+            </div>
+            <div class="card__link">
+                <a class="magic-link" href="#">Подробнее</a>
+            </div>
+          </div>
+        </div>
+    </li>
+    <li class="place-list__item">
+        <div class="card">
+            <div class="card__img">
+                <img src="img/place2.png" alt="">
+            </div>
+            <div class="card__descr">
+            <div class="card__title">
+                МРТшка-Волгоград
+            </div>
+            <div class="card__info">
+                ул. Энтузиастов, 11
+                <div class="card__phone">
+                    <a href="tel:88639291929">+7 (8639) 29-19-29</a>
+                    <a href="tel:89289021929">+7 (928) 902-19-29</a>
+                </div>
+            </div>
+            <div class="card__link">
+                <a class="magic-link" href="#">Подробнее</a>
+            </div>
+          </div>
+        </div>
+    </li>
+    <li class="place-list__item">
+        <div class="card">
+            <div class="card__img">
+                <img src="img/place3.png" alt="">
+            </div>
+            <div class="card__descr">
+               <div class="card__title">
+                МРТшка-Волжский
+            </div>
+              <div class="card__info">
+                пр. Ленина, 90ж
+                <div class="card__phone">
+                    <a href="tel:88443201201">+7 (8443) 201-201</a>
+                </div>
+            </div>
+            <div class="card__link">
+                <a class="magic-link" href="#">Подробнее</a>
+            </div>
+          </div>
+        </div>
+    </li>
+    <li class="place-list__item">
+        <div class="card">
+            <div class="card__img">
+                <img src="img/place4.png" alt="">
+            </div>
+            <div class="card__descr">
+            <div class="card__title">
+                МРТшка-Пермь
+            </div>
+            <div class="card__info">
+                бул. Гагарина, 32
+                <div class="card__phone">
+                    <a href="tel:83422640303">+7 (342) 264-03-03</a>
+                </div>
+            </div>
+            <div class="card__link">
+                <a class="magic-link" href="#">Подробнее</a>
+            </div>
+          </div>
+        </div>
+    </li>
+    <li class="place-list__item">
+        <div class="card">
+               <div class="card__img">
+                <img src="img/place5.png" alt="">
+            </div>
+            <div class="card__descr">
+            <div class="card__title">
+                МРТшка-Стерлитамак
+            </div>
+            <div class="card__info">
+                <div class="card__info">
+                    ул. Коммунистическая, 85а
+                    <div class="card__phone">
+                        <a href="tel:83473331333">+7 (3473) 33-13-33</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card__link">
+                <a class="magic-link" href="#">Подробнее</a>
+            </div>
+          </div>
+        </div>
+    </li>
+    <li class="place-list__item">
+        <div class="card">
+                <div class="card__img">
+                <img src="img/place6.png" alt="">
+            </div>
+            <div class="card__descr">
+            <div class="card__title">
+                МРТшка-Уфа
+            </div>
+            <div class="card__info">
+                ул. Ленина, 104/1
+                <div class="card__phone">
+                    <a href="tel:83472149090">+7 (347) 214-90-90</a>
+                </div>
+            </div>
+            <div class="card__link">
+                <a class="magic-link" href="#">Подробнее</a>
+            </div>
+          </div>
+        </div>
+    </li>
+</ul>
+ </div>
+   </div>
+  </div>
+</section>
+
+  <section class="section">
+ <div class="white-container white-container--bg">
+  <div class="section__inner">
+  <div class="about-section">
+   <div class="wrapper">
+     <div class="block">
+    <div class="block__item">
+    <div class="main-title main-title--grey">
+      О нашей компании
+     </div>
+     <div class="text">
+       <p>Центры диагностики «МРТшка» специализируются на предоставлении качественных медицинских услуг.</p>
+<p>Все наши диагностические центры оснащены современным оборудованием экспертного класса, в т.ч. МРТ с напряженностью поля 1,5 Тесла.</p>
+<p>Медицинский персонал наших центров имеет высокую квалификацию и обладает большим опытом в области диагностики. Мы объединяем врачей из разных регионов страны, что дает возможность развивать профессиональные навыки и знания сотрудников и решать сложные в диагностическом отношении случаи с помощью консилиума врачей.</p>
+<p>Мы создаем ощутимое качество для каждого посетителя: доступные цены и время работы, удобное расположение, профессиональное обслуживание, приятная и успокаивающая обстановка, современные методы диагностики.</p>
+     </div>
+      <a class="magic-link" href="#">Подробнее</a>
+      </div>
+      <div class="block__item">
+       <div class="block__img">
+<!--        <img class="block__content-border" src="img/border.png" alt="">-->
+        <div class="block__img-item" data-scrub="0.4">
+        <img class="block__content-img-big animate-img" src="img/foto1.png" alt="">
+         </div>
+          <div class="block__img-item" data-scrub="0.2">
+        <img class="block__content-img-small animate-img" src="img/foto2.png" alt="">
+         </div>
+        </div>
+      </div>
+     </div>
+ </div>
+  </div>
+   </div>
+  </div>
+</section>
+  <section class="section">
+ <div class="wrapper">
+  <ul class="links-list">
+  <li class="links-list__item">
+    <div class="link-block">
+      <a href="#"></a>
+      <svg>
+        <use xlink:href="img/sprite.svg#icon-conf"></use>
+      </svg>
+      <span>
+        Политика конфиденциальности
+      </span>
+    </div>
+  </li>
+  <li class="links-list__item">
+    <div class="link-block">
+      <a href="#"></a>
+      <svg>
+        <use xlink:href="img/sprite.svg#icon-safe"></use>
+      </svg>
+      <span>
+        Закон о защите прав потребителей
+      </span>
+    </div>
+  </li>
+  <li class="links-list__item">
+    <div class="link-block">
+      <a href="#"></a>
+      <svg>
+        <use xlink:href="img/sprite.svg#icon-rule"></use>
+      </svg>
+      <span>
+        Правила предоставления платных медицинских услуг
+      </span>
+    </div>
+  </li>
+  <li class="links-list__item">
+     <div class="link-block">
+      <a href="#"></a>
+      <svg>
+        <use xlink:href="img/sprite.svg#icon-laws"></use>
+      </svg>
+      <span>
+        Законы и нормативные акты
+      </span>
+    </div>
+  </li>
+  <li class="links-list__item">
+    <div class="link-block-vertical">
+    <img src="img/organs.png" alt="">
+    <a href="#">
+        Контролирующие органы
+      </a>
+    </div>
+  </li>
+</ul>
+  </div>
+</section>
   </main>
 
-  @include("templates/footer.html")
+  <footer class="page-footer">
+<div class="page-footer__wrapper wrapper">
+<div class="page-footer__wrapper-item">
+ <div class="page-footer__info">
+ <div class="page-footer__info-item">
+  <div class="copyright">© «Mrtshka» 2020г.</div>
+   </div>
+   <div class="page-footer__info-item">
+  <a class="page-footer__phone" href="tel:88442242401">+7 (8442) 24-24-01</a>
+   </div>
+  </div>
+  </div>
+<div class="page-footer__wrapper-item">
+<div class="page-footer__info">
+<ul class="social-list">
+   <li class="social-list__item">
+        <a class="social-list__icon social-list__icon--vk" href="#" aria-label="Вконтакте" target="_blank"></a>
+    </li>
+    <li class="social-list__item">
+        <a class="social-list__icon social-list__icon--fb" href="#" aria-label="Фейсбук" target="_blank"></a>
+    </li>
+     <li class="social-list__item">
+        <a class="social-list__icon social-list__icon--inst" href="#" aria-label="Инстаграм" target="_blank"></a>
+    </li>
+    <li class="social-list__item">
+        <a class="social-list__icon social-list__icon--ok" href="#" aria-label="Одноклассники" target="_blank"></a>
+    </li>
+     <li class="social-list__item">
+        <a class="social-list__icon social-list__icon--youtube" href="#" aria-label="Ютьюб" target="_blank"></a>
+    </li>
+</ul>
+
+ <div class="page-footer__text">
+ Информация, включая цены, предоставлена для ознакомления и не является публичной офертой ( ст. 435 ГК РФ, cт. 437 ГК РФ ).
+  </div>
+  </div>
+  </div>
+  </div>
+</footer>
+
 
   </div>
-  @include("templates/mmenu.html")
+  <nav class="nav-mobile" id="menu">
+    <ul id="panel-menu">
+        <li><a class="active" href="#">Главная</a>
+        </li>
+        <li><a href="#">Об услугах</a>
+            <ul>
+                <li><a class="active" href="">Услуги и цены</a>
+                </li>
+                <li><a href="">О центре</a>
+                </li>
+                <li><a href="">Команда</a>
+                </li>
+                <li><a href="">Оборудование</a>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#">Наши центры</a>
+        </li>
+        <li><a href="#">Контакты</a>
+        </li>
+    </ul>
+</nav>
 
-  @include("templates/scripts.html")
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>-->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!--
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/jquery.time-to.js"></script>
+<script src="js/adapt.js"></script>
+<script src="js/mhead.js"></script>
+<script src="js/readmore.min.js"></script>
+-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+<script src="js/jquery.nice-select.min.js"></script>
+<script src="js/mmenu.js"></script>
+<script src="js/main.js"></script>
+
+
   </body>
 </html>
 
