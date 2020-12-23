@@ -1,0 +1,43 @@
+.magic-box svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.magic-box svg line {
+  stroke-width: 1;
+  stroke: transparent;
+  fill: none;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+.magic-box:hover svg line {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+.magic-box svg line.top,
+.magic-box svg line.bottom {
+  stroke-dasharray: 330 240;
+}
+.magic-box svg line.left,
+.magic-box svg line.right {
+  stroke-dasharray: 525 329;
+}
+.magic-box:hover svg line.top {
+  -webkit-transform: translateX(-600px);
+          transform: translateX(-600px);
+}
+.magic-box:hover svg line.bottom {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.magic-box:hover svg line.left {
+  -webkit-transform: translateY(920px);
+          transform: translateY(920px);
+}
+.magic-box:hover svg line.right {
+  -webkit-transform: translateY(-861px);
+          transform: translateY(-861px);
+}
+.magic-box:hover svg line {
+  stroke: #41ad62;
+}

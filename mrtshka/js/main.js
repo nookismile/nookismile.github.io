@@ -59,21 +59,12 @@ let slider1 = new Swiper('.slider-left', {
 
 
 //slider1.slideToLoop()
-//
-$(".slider-left .swiper-slide-active").addClass("current");
 
-slider1.on("slideChangeTransition", function() {
-    $(".slider-left .slider-left__slide").removeClass("current");
-    $(".slider-left .swiper-slide-active").addClass("current");
-})
+$(".swiper-slide-active").addClass("current");
 
-
-$(".js-image").attr("src", `${$(".swiper-slide-active").prev().find("img").attr("src")}`);
-$(".js-text").text($(".swiper-slide-active").prev().find(".slider-left__text").text());
-
-slider1.on("slideChangeTransitionStart", function () {
-  $(".js-image").attr("src", `${$(".swiper-slide-active").prev().find("img").attr("src")}`);
-  $(".js-text").text($(".swiper-slide-active").prev().find(".slider-left__text").text());
+slider1.on("slideChangeTransitionEnd", function() {
+    $(".slider-left__slide").removeClass("current");
+    $(".swiper-slide-active").addClass("current");
 })
 
 const swiper3 = new Swiper('.slider-gallery', {
@@ -223,6 +214,7 @@ delSections.forEach(section => {
 
 $(document).ready(function () {
 
+
     // Mmenu
 
   $("#menu").mmenu({
@@ -260,4 +252,3 @@ $(".fold-table tr.view").on("click", function(){
 
 
 TweenMax.to('.services-list', 1.5, {scaleY: 1,  ease: Circ.easeOut });
-//# sourceMappingURL=main.js.map

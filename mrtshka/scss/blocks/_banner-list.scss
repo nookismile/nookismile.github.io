@@ -1,0 +1,17 @@
+.banner-list {
+  @include d-grid(repeat(4, 1fr), start);
+  grid-gap: 20px;
+  margin-bottom: 30px;
+}
+
+@media(max-width: 1000px) {
+  .banner-list {
+  grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 600px) {
+  .banner-list {
+  grid-template-columns: repeat(1, 1fr);
+  }
+}

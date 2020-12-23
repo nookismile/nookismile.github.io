@@ -1,0 +1,58 @@
+@mixin font-face($font-family, $url, $weight) {
+  @font-face {
+    font-family: "#{$font-family}";
+    src: url("../fonts/#{$url}.woff2") format("woff2"),
+    url("../#{$url}.woff") format("woff");
+    font-weight: #{weight};
+    font-display: swap;
+    font-style: normal;
+  }
+}
+
+@mixin d-flex($wrap, $direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin d-grid($t-columns, $align) {
+  display: grid;
+  grid-template-columns: $t-columns;
+  align-items: $align;
+}
+
+@mixin p-abs-center($margin) {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: $margin;
+}
+
+@mixin p-abs-left($left) {
+  position: absolute;
+  top: 0;
+  left: $left;
+}
+
+@mixin p-abs-right($right) {
+  position: absolute;
+  top: 0;
+  right: $right;
+}
+
+@mixin back {
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+    //pcSize - МАКЕТНЫЙ РАЗМЕР ШРИФТА //МИНИМАЛЬНЫЙ РАЗМЕР ШРИФТА/
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: $maxWidth - 320;
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}

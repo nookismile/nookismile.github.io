@@ -1,0 +1,43 @@
+.info-block {
+  margin-bottom: 40px;
+  padding: 10px;
+  background-color: $white;
+}
+
+.info-block__inner {
+  position: relative;
+  padding: 20px 30px;
+  border: 10px solid $grey;
+}
+
+.info-block__inner svg {
+  @include p-abs-right(20px);
+  top: 0;
+  bottom:0;
+  width: 48px;
+  height: 48px;
+  margin: auto;
+  fill: transparent;
+  stroke: $turq;
+}
+
+
+.info-block__title {
+  margin-bottom: 10px;
+  color: $dark;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.info-block__text {
+  color: $dark;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+@media(max-width: 800px) {
+    .info-block__inner svg {
+        display: none;
+    }
+}

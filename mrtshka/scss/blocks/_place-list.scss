@@ -1,0 +1,43 @@
+.place-list {
+  @include d-grid(repeat(4, 1fr), center);
+  grid-gap: 20px;
+}
+
+.place-list__item:nth-child(1) {
+  grid-column: span 2;
+}
+
+.place-list__item .card {
+  opacity: 0;
+}
+
+@media(max-width: 1000px) {
+  .place-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .place-list__item:nth-child(1) {
+    grid-column: span 3;
+  }
+}
+
+@media(max-width: 700px) {
+  .place-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .place-list__item:nth-child(1) {
+    grid-column: span 2;
+  }
+}
+
+
+@media(max-width: 500px) {
+  .place-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .place-list__item:nth-child(1) {
+    grid-column: span 1;
+  }
+}

@@ -1,34 +1,19 @@
 <header class="page-header">
     <div class="page-header__wrapper">
-    <div class="page-header__inner wrapper">
-        <div class="page-header__item">
-          <a href="#menu" class="mobile-menu">
-                <span></span>
-            </a>
-            <div class="logo">
-    <a href="#">
-        <img src="img/logo.png" alt="">
-    </a>
-</div>
+        <div class="page-header__inner wrapper">
+            <div class="page-header__item">
+                <a href="#menu" class="mobile-menu">
+                    <span></span>
+                </a>
+                @include("logo.html")
+            </div>
+            <div class="page-header__item">
+                @include("main-menu.html")
+            </div>
+            <div class="page-header__item">
+                @include("phone.html")
+            </div>
         </div>
-        <div class="page-header__item">
-          <nav class="main-nav">
-  <ul class="main-menu">
-    <li class="main-menu__item"><a class="active" href="#">Главная</a></li>
-    <li class="main-menu__item"><a href="#">Об услугах</a></li>
-    <li class="main-menu__item"><a href="#">Наши центры</a></li>
-    <li class="main-menu__item"><a href="#">Контакты</a></li>
-  </ul>
-</nav>
-       </div>
-        <div class="page-header__item">
-         <div class="phone">
-    <svg>
-        <use xlink:href="img/sprite.svg#icon-phone"></use>
-    </svg>
-    <a href="tel:88442242401">+7 (8442) 24-24-01</a>
-</div>
-        </div>
+        @include("phone.html")
     </div>
-  </div>
 </header>
