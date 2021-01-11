@@ -76608,7 +76608,7 @@ const appendRendererToDOMElement = (object, targetNode) => {
 
 class ThreeBackground {
   constructor() {
-    // Флаг, определяющий версию сцен: 
+    // Флаг, определяющий версию сцен:
     // - с рендерингом материалов на основе данных о свете:
     // isLightMode = false;
     // - с материалами THREE.MeshMatcapMaterial:
@@ -76670,7 +76670,7 @@ class ThreeBackground {
     if (has3dScene) {
       // Устанавливаем текущее состояние, соотвествующее разделу
       view3d.setState(object3dSchema[globalStateStorage.screenName], globalStateStorage.slideId);
-      
+
       // Добавляем слушателя кастомного события screenChanged
       document.body.addEventListener(`screenChanged`, (evt) => {
         updateGlobalState(evt);
@@ -76727,7 +76727,7 @@ class AbstractView {
   }
 
   construct() {
-    console.warn(`Класс AbstractView требует расширения. 
+    console.warn(`Класс AbstractView требует расширения.
       Метод construct необходимо переопределить в дочернем классе.`);
   }
 
@@ -76755,7 +76755,7 @@ class AbstractView {
 
     // Сначла запускаем ресайз, чтобы получить актуальные размеры
     this.startResize();
-    
+
     // Запускаем проигрываение сцены
     this.play();
 
@@ -76773,7 +76773,7 @@ class AbstractView {
   }
 
   startResize() {
-    // Так как рендер происходит в каждом фрейме, 
+    // Так как рендер происходит в каждом фрейме,
     // мы будем только сообщать объекту, что при следующем рендере нужно обновить размеры.
     // И не производим лишних промежуточных действий по событию resize
     this.onResize = () => {
@@ -76808,10 +76808,10 @@ class AbstractView {
       if (target.resizeInProgress) target.resize();
       // Рендерим
       target.render();
-  
+
       // Срасываем флаг, чтобы в следующем фрейме не выполнять лишних действий
       target.resizeInProgress = false;
-  
+
       // Проверяем, нужно ли продолжать перезапускать requestAnimationFrame
       if (!target.started || !target.playing) return;
 
@@ -76821,15 +76821,15 @@ class AbstractView {
       });
     };
 
-    // Сообщаем функции рендера, что нужно продолжать 
+    // Сообщаем функции рендера, что нужно продолжать
     // перезапускать requestAnimationFrame
     // и обрабатывать состояние resizeInProgress
     this.playing = true;
 
-    // Обновляем и рендерим сразу при запуске, чтобы получить первый кадр, 
+    // Обновляем и рендерим сразу при запуске, чтобы получить первый кадр,
     // не дожидаясь следующего фрейма
     this.render();
-    
+
     // Запускаем счетчик фреймов для рендера
     requestAnimationFrame(() => {
       onAnimationFrame(this);
@@ -76848,7 +76848,7 @@ class AbstractView {
   }
 
   resize() {
-    console.warn(`Класс AbstractView требует расширения. 
+    console.warn(`Класс AbstractView требует расширения.
       Метод resize необходимо переопределить в дочернем классе.`);
   }
 }
@@ -76932,14 +76932,14 @@ const changeState = (rig, stateName, substage, onComplete, enforce = false) => {
   }
 
   return new _utils_Tween__WEBPACK_IMPORTED_MODULE_0__["default"](
-    rig, 
+    rig,
     {
       depth: index * _camera_rig__WEBPACK_IMPORTED_MODULE_1__["cameraRigSettings"].deltaDepth,
       dollyLength: _camera_rig__WEBPACK_IMPORTED_MODULE_1__["cameraRigSettings"].distance,
       polePosition: radius,
       horizonAngle: index * _camera_rig__WEBPACK_IMPORTED_MODULE_1__["cameraRigSettings"].deltaHorizonAngle
-    }, 
-    duration, 
+    },
+    duration,
     onComplete
   );
 };
@@ -76965,26 +76965,26 @@ class CameraRigAddon {
     if (this.hasMousemoveHandler) {
       return;
     }
-  
+
     const {rig} = this;
     const mousemoveHandler = (event) => {
       let pX = event.pageX;
       let pY = event.pageY;
       const winW = window.innerWidth;
       const winH = window.innerWidth;
-  
+
       pX /= winW * 0.5;
       pX -= 1;
-  
+
       pY /= winH * 0.5;
       pY -= 1;
-  
+
       rig.targetAroundAngle = _camera_rig__WEBPACK_IMPORTED_MODULE_1__["cameraRigSettings"].aroundAmplitude * pX;
       rig.targetPitchAngle = _camera_rig__WEBPACK_IMPORTED_MODULE_1__["cameraRigSettings"].pitchAmplitude * pY;
     };
-  
+
     window.addEventListener(`mousemove`, mousemoveHandler);
-  
+
     // Сохраняем ссылку на слушателя,
     // чтобы иметь возможность удалить его
     this.mousemoveHandler = mousemoveHandler;
@@ -76994,16 +76994,16 @@ class CameraRigAddon {
 
   changeState(stateName, substage, onComplete, enforce = false) {
     this.tween = changeState(
-      this.rig, 
-      stateName, 
-      substage, 
+      this.rig,
+      stateName,
+      substage,
       () => {
         this.tween = null;
 
         if (typeof onComplete === `function`) {
           onComplete.call(null);
         }
-      }, 
+      },
       enforce
     );
 
@@ -77068,7 +77068,7 @@ class CameraRig {
   }
 
   construct() {
-    // 1.1. Части 
+    // 1.1. Части
     const root = new THREE.Group();
     const dollyBend = new THREE.Group();
     const poleHand = new THREE.Group();
@@ -77282,7 +77282,7 @@ class GradientBgStage extends _abstract_view__WEBPACK_IMPORTED_MODULE_0__["defau
 
     this.renderer = renderer;
     this.scene = scene;
-    this.camera = camera; 
+    this.camera = camera;
 
     this.addMesh();
   }
@@ -77291,7 +77291,7 @@ class GradientBgStage extends _abstract_view__WEBPACK_IMPORTED_MODULE_0__["defau
     const basicBackgroundColor = 0x060506;
     const centerBackgroundColor = 0x333130;
     const bgMesh = new THREE.Mesh(
-      new THREE.PlaneBufferGeometry(100, 100), 
+      new THREE.PlaneBufferGeometry(100, 100),
       new _materials_viewport_radial_gradient_material__WEBPACK_IMPORTED_MODULE_2__["default"](basicBackgroundColor, centerBackgroundColor)
     );
     this.bgMesh = bgMesh;
@@ -77330,7 +77330,7 @@ const loadTextures = (paths) => {
         }
       );
     })))
-      .then(() => { 
+      .then(() => {
         resolve(map);
       });
   });
@@ -77381,38 +77381,38 @@ class NoiseEffectMaterial extends THREE.RawShaderMaterial {
       vertexShader: _shaders_simple_vertex_shader__WEBPACK_IMPORTED_MODULE_0__["default"],
       fragmentShader: `
         precision mediump float;
-    
+
         uniform sampler2D tDiffuse;
         uniform float time;
         uniform float transitionProgress;
         uniform float noiseAmplitude;
         uniform float prevNoiseAmplitude;
         uniform float noiseSize;
-    
+
         varying vec2 vUv;
-    
+
         #define PI 3.14159265359
         #define PI_HALF 1.5707963267949
-    
+
         highp float rand(const in vec2 uv) {
           return fract(sin(dot(uv.xy, vec2(12.9898,78.233))) * 43758.5453123);
         }
-    
+
         void main() {
           vec4 texel = texture2D( tDiffuse, vUv );
-    
+
           float xNormalized = floor(gl_FragCoord.x / noiseSize);
           float yNormalized = floor(gl_FragCoord.y / noiseSize);
-    
+
           float amp = prevNoiseAmplitude + (noiseAmplitude - prevNoiseAmplitude) * sin(transitionProgress * PI_HALF);
-    
+
           float seedPeriod = 100.0;
           float seedFrequency = 1.0 / 12.0;
           float seed = floor(mod(time, seedPeriod) / seedFrequency);
           float mixFrequency = 0.002;
-    
+
           vec4 noiseColor = 0.08 * amp * vec4(rand(vec2(xNormalized * mixFrequency * seed, yNormalized * mixFrequency * seed)));
-    
+
           gl_FragColor = texel + noiseColor;
         }`
     });
@@ -77460,8 +77460,8 @@ __webpack_require__.r(__webpack_exports__);
 
 const THREE = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
 
-const versicolorMatcap = `/img/versicolorMatcap.png`;
-const darkMatcap = `/img/darkMatcap.png`;
+const versicolorMatcap = `img/versicolorMatcap.png`;
+const darkMatcap = `img/darkMatcap.png`;
 
 const getMatcapTexturesPaths = (isLightMode) => {
   const arr = [versicolorMatcap];
@@ -77486,11 +77486,11 @@ const constructMaterialsMap = (textures, isLightMode) => {
   })
   : new THREE.MeshPhongMaterial({
     color: 0x080808,
-    // Расчитываем цвет исходя из значений RBG: 
+    // Расчитываем цвет исходя из значений RBG:
     // уменьшаем яркость каждого из каналов с помощью коэффициента
     specular: new THREE.Color(`rgb(
-      ${Math.round(242 * factor)}, 
-      ${Math.round(244 * factor)}, 
+      ${Math.round(242 * factor)},
+      ${Math.round(244 * factor)},
       ${Math.round(250 * factor)})`),
     emissive: 0x0,
     shininess: 61 * 0.65,
@@ -77501,14 +77501,14 @@ const constructMaterialsMap = (textures, isLightMode) => {
   });
 
   texture = textures[versicolorMatcap];
-  map[_materials_object_material_type__WEBPACK_IMPORTED_MODULE_0__["default"].VERSICOLOR] = texture 
+  map[_materials_object_material_type__WEBPACK_IMPORTED_MODULE_0__["default"].VERSICOLOR] = texture
   ? new THREE.MeshMatcapMaterial({
     transparent: false,
     opacity: 1,
     matcap: texture,
     side: THREE.FrontSide,
     color: 0xffffff
-  }) 
+  })
   : map[_materials_object_material_type__WEBPACK_IMPORTED_MODULE_0__["default"].DEFAULT];
 
   return map;
@@ -77577,28 +77577,28 @@ class ViewportRadialGradientMaterial extends THREE.RawShaderMaterial {
       vertexShader: _shaders_simple_vertex_shader__WEBPACK_IMPORTED_MODULE_0__["default"],
       fragmentShader: `
         precision mediump float;
-    
+
         uniform sampler2D tDiffuse;
         uniform vec3 outerColor;
         uniform vec3 centerColor;
-    
+
         varying vec2 vUv;
-    
+
         highp vec3 smoothstepvec3(vec3 color0, vec3 color1, float edge0, float edge1, float x) {
           highp float ratio = smoothstep(edge0, edge1, x);
           return mix(color0, color1, ratio);
         }
-    
+
         void main() {
           vec4 texel = texture2D( tDiffuse, vUv );
-    
+
           float scale = 1.3;
           vec2 centeredUv = 2.0 * (vUv - vec2(0.5));
           centeredUv /= scale;
           float ratio = sqrt(centeredUv.x * centeredUv.x + centeredUv.y * centeredUv.y);
-    
+
           vec4 gradientColor = vec4(smoothstepvec3(centerColor, outerColor, 0.0, 1.0, ratio), 1.0);
-    
+
           gl_FragColor = gradientColor;
         }`
     });
@@ -77719,7 +77719,7 @@ class HatIntroStage extends _stage_group__WEBPACK_IMPORTED_MODULE_0__["default"]
 
   async loadWithMaterials(config) {
     const {stagePoleG} = this;
-    
+
     // ПИКИ
     // - Сразу исключаем пики из портретной версии обернув в группу
     const peaksOuterWrapper = new THREE.Group();
@@ -77799,7 +77799,7 @@ class KeyStage extends _stage_group__WEBPACK_IMPORTED_MODULE_0__["default"] {
     super.construct();
 
     // Группа для анимации вращения ключа
-    // Внутри мы разместим ключ под углом, 
+    // Внутри мы разместим ключ под углом,
     // а вращать будем группу относительно оси Y
     const keyPoleG = new THREE.Group();
 
@@ -77882,17 +77882,17 @@ const loadObjectModel = (key, config) => {
         return;
       }
 
-      const material = params.material === _materials_object_material_type__WEBPACK_IMPORTED_MODULE_3__["default"].PARSE 
+      const material = params.material === _materials_object_material_type__WEBPACK_IMPORTED_MODULE_3__["default"].PARSE
         ? null
-        : materialsMap[params.material || _materials_object_material_type__WEBPACK_IMPORTED_MODULE_3__["default"].DEFAULT] 
+        : materialsMap[params.material || _materials_object_material_type__WEBPACK_IMPORTED_MODULE_3__["default"].DEFAULT]
           || defaultMaterial;
 
       obj3d.traverse((child) => {
         if (child.isMesh) {
           // Если material отсутствует, парсим имена материалов в загруженных моделях
           // Делаем fallback - материал по умолчанию
-          const childMaterial = material 
-            || materialsMap[child.material.name || _materials_object_material_type__WEBPACK_IMPORTED_MODULE_3__["default"].DEFAULT] 
+          const childMaterial = material
+            || materialsMap[child.material.name || _materials_object_material_type__WEBPACK_IMPORTED_MODULE_3__["default"].DEFAULT]
             || defaultMaterial;
 
           if (childMaterial) {
@@ -77911,11 +77911,11 @@ const loadObjectModel = (key, config) => {
     switch (params.type) {
       case `gltf`:
         loadGltf(params, onGltfComplete);
-  
+
         break;
       default:
         loadObj(params, onComplete);
-  
+
         break;
     }
   });
@@ -78132,7 +78132,7 @@ class StageGroup extends THREE.Group {
   }
 
   constructParametric() {
-    // Здесь в дочерних классах нужно разместить 
+    // Здесь в дочерних классах нужно разместить
     // создание параметрических объектов с переданными в параметре материалами
   }
 
@@ -78150,7 +78150,7 @@ class StageGroup extends THREE.Group {
     }
 
     // 2)
-    // Здесь в дочерних классах можно добавить 
+    // Здесь в дочерних классах можно добавить
     // логику размещения объектов в зависимости от ориентации вьюпорта,
     // если она требуется
   }
@@ -78164,7 +78164,7 @@ class StageGroup extends THREE.Group {
     if (this.visible) {
       // Подразделы размещаются вокруг одной оси раздела.
       // При переходе между подразделами вращаем stagePoleG, где находятся подраздела
-      
+
       // Конвертируем значение из настроек в параметры 3D-группы
       this.stagePoleG.rotation.y = -this.rotationY;
     }
@@ -78254,7 +78254,7 @@ class StarAndWandStage extends _stage_group__WEBPACK_IMPORTED_MODULE_0__["defaul
 
   async loadWithMaterials(config) {
     const {stagePoleG} = this;
-    
+
     // ЗВЕЗДА
     const mesh = await Object(_load_object_model__WEBPACK_IMPORTED_MODULE_1__["default"])(`star`, config);
     const g = Object(_utils_object3d__WEBPACK_IMPORTED_MODULE_4__["addWithWrapperGroup"])(mesh, stagePoleG);
@@ -78328,7 +78328,7 @@ class ThreeSpheresStage extends _stage_group__WEBPACK_IMPORTED_MODULE_0__["defau
     mesh.scale.set(0.9, 0.9, 0.9);
     mesh.position.set(sphereXPositions[j], 190, -690);
 
-    // Дополнительные сферы, чтобы заполнить пространство, 
+    // Дополнительные сферы, чтобы заполнить пространство,
     // которое видно при переходе между сценами
     j += 1;
     mesh = meshes[j];
@@ -78461,7 +78461,7 @@ const createLightSources = () => {
     const sphere = new THREE.SphereBufferGeometry(5, 16, 8);
 
     // Сначала ставим 1-2 источника, чтобы осветить объекты и работать с ними: расставить в пространстве
-    // После того как поставили 1-2 сцены, подбираем интенсивности источников и их положение так, 
+    // После того как поставили 1-2 сцены, подбираем интенсивности источников и их положение так,
     // чтобы получить похожую на скетч картинку
     // Показываем дизайнеру или арт-директору. Если необходимо, попрваляем параметры
 
@@ -78506,7 +78506,7 @@ const createLightSources = () => {
 const addCameraRigToViewObject = (viewObject, rig) => {
   const {camera, scene} = viewObject;
 
-  // Сбрасываем коортинаты камеры, 
+  // Сбрасываем коортинаты камеры,
   // чтобы положение камеры полностью определялось ригом
   camera.position.set(0, 0, 0);
 
@@ -78540,10 +78540,10 @@ class Stages3DView extends _abstract_view__WEBPACK_IMPORTED_MODULE_1__["default"
 
     this.stateName = null;
     this.prevStateName = null;
-    
+
     // Флаг, сообщающий о необходимости обновить аниацию принудительно
     this.forceInvalidate = false;
-    
+
     // ВременнЫе параметры
     this.initiationTime = Date.now();
     this.startTime = 0;
@@ -78569,15 +78569,15 @@ class Stages3DView extends _abstract_view__WEBPACK_IMPORTED_MODULE_1__["default"
     if (!this.isLiteMode) {
       const {lightRoot} = createLightSources();
 
-      // Добавляем источники света к камере, 
-      // чтобы они двигались вместе с ней 
+      // Добавляем источники света к камере,
+      // чтобы они двигались вместе с ней
       // и освещали группы объектов, которые видны на экране
       camera.add(lightRoot);
     }
 
     this.renderer = renderer;
     this.scene = scene;
-    this.camera = camera; 
+    this.camera = camera;
 
     this.add3dStages();
   }
@@ -78604,7 +78604,7 @@ class Stages3DView extends _abstract_view__WEBPACK_IMPORTED_MODULE_1__["default"
       // По умолчанию скрываем группу
       // stage.visible = false;
 
-      // Добавляем везде: 
+      // Добавляем везде:
       // - на сцену с помощью родителя
       parent = parent || this.scene;
       parent.add(stage);
@@ -78706,7 +78706,7 @@ class Stages3DView extends _abstract_view__WEBPACK_IMPORTED_MODULE_1__["default"
   updateCamera(width, height) {
     const {camera} = this;
 
-    // Меняем настройки камеры, 
+    // Меняем настройки камеры,
     // чтобы в портретной ориентации уменьшить обзор и показать объекты крупнее
     if (width > height) {
       camera.fov = 35;
@@ -78723,7 +78723,7 @@ class Stages3DView extends _abstract_view__WEBPACK_IMPORTED_MODULE_1__["default"
       this.resizeTimeout = null;
     }
 
-    // Передаем данные об ориентации 
+    // Передаем данные об ориентации
     this.stages.forEach((stage) => {
       if (!stage) return;
 
@@ -78744,7 +78744,7 @@ class Stages3DView extends _abstract_view__WEBPACK_IMPORTED_MODULE_1__["default"
 
   play() {
     if (!this.stateName || !(this.hasStateObjects(this.stateName) || this.hasForceRender(this.stateName))) return;
-    
+
     this.startTime = Date.now();
     this.forceInvalidate = true;
 
@@ -78857,22 +78857,22 @@ class Stages3DView extends _abstract_view__WEBPACK_IMPORTED_MODULE_1__["default"
         stage.currentSubstage = -1;
       }
 
-      // Начинаем проигрывать анимацию и рендерить, 
+      // Начинаем проигрывать анимацию и рендерить,
       // если в новом разделе есть объекты
       doPause = false;
     }
 
-    // Начинаем проигрывать анимацию и рендерить, 
+    // Начинаем проигрывать анимацию и рендерить,
     // если в разделе есть принудительный рендер, например, для эффекта
     if (this.hasForceRender(stateName)) doPause = false;
 
     if (!doPause && this.started) {
       this.play();
-    } 
+    }
 
     this.changeStateTo(
-      stateName, 
-      stage ? stage.currentSubstage : -1, 
+      stateName,
+      stage ? stage.currentSubstage : -1,
       () => {
         // On complete:
 
@@ -78888,7 +78888,7 @@ class Stages3DView extends _abstract_view__WEBPACK_IMPORTED_MODULE_1__["default"
           stage.prevSubstage = null;
         }
 
-        // 2) Останавливаем анимацию и рендер, 
+        // 2) Останавливаем анимацию и рендер,
         // если в текущем разделе нет объектов
         if (doPause) {
           this.pause();
@@ -78896,7 +78896,7 @@ class Stages3DView extends _abstract_view__WEBPACK_IMPORTED_MODULE_1__["default"
 
         // 3) Очищаем массив Tween
         this.mainTween = null;
-      }, 
+      },
       (Date.now() - this.initiationTime) * 0.001 < 1.5
     );
   }
@@ -78916,7 +78916,7 @@ class Stages3DView extends _abstract_view__WEBPACK_IMPORTED_MODULE_1__["default"
     let hasTweenCallback = false;
     let tweens = [];
 
-    // Подразделы имеются только в мастер-классах, 
+    // Подразделы имеются только в мастер-классах,
     // поэтому связываем параметр substage напрямую с вращением stage5
     if (stage5.substages.length > 0) {
       newRotationY = Math.PI * 2 * (1 - (substage < 0 ? 0 : substage) / stage5.substages.length);
@@ -78938,10 +78938,10 @@ class Stages3DView extends _abstract_view__WEBPACK_IMPORTED_MODULE_1__["default"
       // Если значение вращения поменялось, создаем Tween
       if (newRotationY !== stage5.rotationY) {
         tweens.push(new _utils_Tween__WEBPACK_IMPORTED_MODULE_0__["default"](
-          stage5, 
-          { rotationY: newRotationY }, 
+          stage5,
+          { rotationY: newRotationY },
           // Если состояние обновить нужно немедленно, передаем длительность 0
-          enforce ? 0 : 1, 
+          enforce ? 0 : 1,
           // Чтобы избежать дублирования callback при использовании addOn,
           // вызываем callback, если его нет. Если addOn имеется, callback вызодвется после него
           this.addOn ? null : onComplete
@@ -78960,13 +78960,13 @@ class Stages3DView extends _abstract_view__WEBPACK_IMPORTED_MODULE_1__["default"
 
       tweens = tweens.concat(
         this.stages.map(
-          (stage, i) => (stage 
+          (stage, i) => (stage
             ? new _utils_Tween__WEBPACK_IMPORTED_MODULE_0__["default"](
-              stage.stagePoleG.position, 
+              stage.stagePoleG.position,
               {
                 x: -Math.max(0, i - currentIndex) * 3000
-              }, 
-              enforce ? 0 : 1.5) 
+              },
+              enforce ? 0 : 1.5)
             : null)
         )
         .filter((tw) => (tw && tw.params.length > 0))
@@ -79257,7 +79257,7 @@ class WebglEffectRenderController {
     // Управление дискретными именованными состояниями
     this.states = [`default`, `off`];
     this.stateName = null;
-    
+
     // Время для отрисовки эффекта
     this.timeStart = -1;
 
@@ -79272,10 +79272,10 @@ class WebglEffectRenderController {
     const effectMaterial = new _materials_noise_effect_material__WEBPACK_IMPORTED_MODULE_4__["default"](this.maxNoiseAmplitude);
 
     this.composer = constructComposer(
-      renderer, 
-      scene, 
-      camera, 
-      new _materials_viewport_radial_gradient_material__WEBPACK_IMPORTED_MODULE_3__["default"](basicBackgroundColor, centerBackgroundColor), 
+      renderer,
+      scene,
+      camera,
+      new _materials_viewport_radial_gradient_material__WEBPACK_IMPORTED_MODULE_3__["default"](basicBackgroundColor, centerBackgroundColor),
       effectMaterial
       );
     this.effectMaterial = effectMaterial;
@@ -79318,12 +79318,12 @@ class WebglEffectRenderController {
     if (!this.isStateValid(stateName) || this.stateName === stateName) {
       return;
     }
-    
+
     const material = this.effectMaterial;
 
     this.stateName = stateName;
 
-    // Сохраняем значение для предыдущего состояния, 
+    // Сохраняем значение для предыдущего состояния,
     // чтобы в шейдере расчитать промежуточное значение во время перехода
     material.uniforms.prevNoiseAmplitude.value = material.uniforms.noiseAmplitude.value;
     material.uniforms.noiseAmplitude.value = stateName === `off` ? 0 : this.maxNoiseAmplitude;
@@ -79360,8 +79360,8 @@ const createPlaneLayer = () => {
   // Также жестко прописываем размеры текстуры в геометрии
   const geometry = new THREE.PlaneBufferGeometry(1024, 512);
   const material = new THREE.MeshBasicMaterial({
-    color: 0xFFFFFF, 
-    map: texture, 
+    color: 0xFFFFFF,
+    map: texture,
     side: THREE.FrontSide
   });
 
@@ -79397,7 +79397,7 @@ class PlaneView extends _abstract_view__WEBPACK_IMPORTED_MODULE_0__["default"] {
     this.plane = plane;
     this.renderer = renderer;
     this.scene = scene;
-    this.camera = camera; 
+    this.camera = camera;
   }
 
   resize() {
@@ -79693,9 +79693,9 @@ class AnimatedNumbers {
       const numberStopCount = parseInt(number.dataset.animateCount, 10) || 0;
 
       this.startAnimationForNumber(
-        number, 
-        numberStopCount, 
-        this.duration + index * this.durationAttenuation, 
+        number,
+        numberStopCount,
+        this.duration + index * this.durationAttenuation,
         parseInt(number.dataset.animateFps, 10) || 12);
     });
   }
@@ -79843,13 +79843,13 @@ class FullPageScroll {
 
     this.wheelEvents.push(eventDetails);
     if (this.wheelEvents.length > 2) this.wheelEvents.shift();
-    
+
     if (prevEvent) {
-      if (prevEvent.direction === eventDetails.direction 
+      if (prevEvent.direction === eventDetails.direction
         && prevEvent.value >= eventDetails.value
         && eventDetails.timestamp < prevEvent.timestamp + 150) return;
     }
-    
+
     if (!this.scrollFlag) return;
 
     this.scrollFlag = false;
@@ -80094,7 +80094,7 @@ class Slider {
               'slideId': (this.activeIndex + 2) % 3
             }
           });
-          
+
           document.body.dispatchEvent(event);
         }
       },
@@ -80982,13 +80982,13 @@ class WhaleScene {
 
 
   loadImages() {
-    this.bodyImg.src         = `/img/whaleBody.png`;
-    this.finImg.src          = `/img/whaleFin.png`;
-    this.tailImg.src         = `/img/whaleTail.png`;
-    this.cloudLeftImg.src    = `/img/cloudLeft.png`;
-    this.cloudRightImg.src   = `/img/cloudRight.png`;
-    this.balloonLeftImg.src  = `/img/balloonLeft.png`;
-    this.balloonRightImg.src = `/img/balloonRight.png`;
+    this.bodyImg.src         = `img/whaleBody.png`;
+    this.finImg.src          = `img/whaleFin.png`;
+    this.tailImg.src         = `img/whaleTail.png`;
+    this.cloudLeftImg.src    = `img/cloudLeft.png`;
+    this.cloudRightImg.src   = `img/cloudRight.png`;
+    this.balloonLeftImg.src  = `img/balloonLeft.png`;
+    this.balloonRightImg.src = `img/balloonRight.png`;
   }
 
 
@@ -81053,7 +81053,7 @@ class WhaleScene {
     y *= hFactor;
 
     this.ctx.beginPath();
-    
+
 
     switch (type) {
       // small star
@@ -81557,7 +81557,7 @@ class WhaleScene {
     // Все движения второстепенных частей кроме плавника сдвигаем на одну небольшую величину.
     // Так словно эти части увлекаются движением корпуса и немного от него отстают.
     const whaleSecondaryPartsPhase = whalePeriod * 0.06;
-    
+
     const whaleTailAnimationTick = (from, to) => (progress) => {
       this.tailAngle = from + progress * (to - from);
     };
