@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -1 63 16">
+  <g>
+    <animateTransform attributeName="transform"
+                      type="translate"
+                      from="0"
+                      to="-10"
+                      values="0 0; -7 0; 7 0; 0 0"
+                      keyTimes="0; 0.25; 0.5; 1"
+                      dur="15s"
+                      repeatCount="indefinite"/>
+    <path d="M12.89,14.1H48.05" fill="none" stroke="#fff" stroke-miterlimit="10"/>
+  </g>
+  <animateTransform href="#cloudTwo"
+                    attributeName="transform"
+                    type="translate"
+                    from="0"
+                    to="-10"
+                    values="0 0; 5 0; -5 0; 0 0"
+                    keyTimes="0; 0.25; 0.5; 1"
+                    dur="15s"
+                    repeatCount="indefinite"/>
+  <path id="cloudTwo"
+        d="M0,8.63H17.86a8.63,8.63,0,0,1,17.27,0H57.75" fill="none" stroke="#fff"
+        stroke-miterlimit="10"/>
+</svg>

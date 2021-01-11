@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 0 74.61 50.69">
+  <g>
+    <animateTransform attributeName="transform"
+                      type="translate"
+                      from="0 0"
+                      to="-5 10"
+                      values="0 0; -10 0; 10 0; 0 0"
+                      keyTimes="0; 0.25; 0.5; 1"
+                      keySplines="0 0 0.59 1; 0.42 0 1 1; 0 0 0.59 1"
+                      calcMode="spline"
+                      dur="10s"
+                      repeatCount="indefinite"/>
+    <animateTransform attributeName="transform"
+                      type="skewX"
+                      from="0"
+                      to="-10"
+                      values="0; 10; -10; 0"
+                      keyTimes="0; 0.25; 0.5; 1"
+                      keySplines="0 0 0.59 1; 0.42 0 1 1; 0 0 0.59 1"
+                      calcMode="spline"
+                      dur="10s"
+                      additive="sum"
+                      repeatCount="indefinite"/>
+    <path d="M53,50.19V14.38" transform="translate(-39.42 0.5)" fill="none" stroke="#fff" stroke-miterlimit="10"/>
+    <path
+      d="M61.77,10.55A8.89,8.89,0,1,0,44.15,8.88a9.35,9.35,0,0,0,.1,1.33,10,10,0,0,1-1.73,7.55,13.11,13.11,0,1,0,21,0A9.22,9.22,0,0,1,61.77,10.55Z"
+      transform="translate(-39.42 0.5)" fill="none" stroke="#fff" stroke-miterlimit="10"/>
+  </g>
+</svg>
