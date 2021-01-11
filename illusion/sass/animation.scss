@@ -1,0 +1,479 @@
+.features-list {
+  &__item-feature {
+    transition: opacity 0.2s ease;
+  }
+
+  &__item-value {
+    transition: opacity 0.2s ease;
+  }
+
+  &.active {
+    .whiff {
+      animation-name: show-whiff;
+      animation-duration: 1.5s;
+      animation-iteration-count: 1;
+      animation-timing-function: cubic-bezier(0, 0, 0, 1);
+      animation-fill-mode: forwards;
+    }
+
+    .features-list__item {
+      &:nth-child(2) {
+        .whiff {
+          animation-delay: 0.1s;
+        }
+
+        .features-list__item-feature,
+        .features-list__item-value {
+          transition-delay: 0.2s;
+        }
+      }
+      &:nth-child(3) {
+        .whiff {
+          animation-delay: 0.2s;
+        }
+
+        .features-list__item-feature,
+        .features-list__item-value {
+          transition-delay: 0.3s;
+        }
+      }
+      &:nth-child(4) {
+        .whiff {
+          animation-delay: 0.35s;
+        }
+
+        .features-list__item-feature,
+        .features-list__item-value {
+          transition-delay: 0.4s;
+        }
+      }
+      &:nth-child(5) {
+        .whiff {
+          animation-delay: 0.5s;
+        }
+
+        .features-list__item-feature,
+        .features-list__item-value {
+          transition-delay: 0.55s;
+        }
+      }
+    }
+  }
+}
+
+
+.intro__title-line {
+  &::before {
+    transition: width 0.5s ease;
+  }
+
+  &.active .whiff {
+    animation-name: show-whiff-infinite;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.7s;
+    animation-timing-function: cubic-bezier(0, 0, 0, 1);
+    animation-fill-mode: forwards;
+  }
+}
+
+
+.main-menu {
+  transition: color 0.2s ease;
+}
+
+
+.main-menu--opened {
+  transition: opacity 0.15s ease;
+
+  &::before {
+    transition: transform 0.45s ease 0.15s;
+  }
+}
+
+
+.main-menu--opened-out {
+  .main-menu__link-text {
+    .slogan__word span {
+      transition: opacity 0.3s ease; 
+    }
+  }
+
+  .main-menu__link-icon {
+    transition: opacity 0.3s ease; 
+  }
+}
+
+
+.main-menu--opened.main-menu--active {
+  &::before {
+    transition: transform 0.35s ease;
+  }
+
+  .main-menu__link-icon {
+    transition: opacity 0.3s ease 0.25s; 
+  }
+}
+
+
+.main-menu__link {
+  transition: color 0.3s ease;
+}
+
+
+.main-menu__link {
+  &::before {
+    transition: opacity 0.2s ease;
+  }
+
+  svg {
+    transition: opacity 0.2s ease;
+  }
+}
+
+
+.main-menu__link-text {
+  transition: opacity 0.2s ease;
+}
+
+
+.main-menu__logo {
+  transition: opacity 0.3s ease;
+}
+
+
+.main-menu__social {
+  @media (max-width: $tablet) and (orientation: portrait) {
+    transition: opacity 0.2s ease;
+  }
+
+  @media (max-width: $tablet - 1) and (orientation: landscape) {
+    transition: opacity 0.2s ease;
+  }
+}
+
+
+.main-menu__toggler-line {
+  &,
+  &::before,
+  &::after {
+    transition: transform 0.3s ease;
+  }
+}
+
+
+.main-menu__link path {
+  transition: stroke 0.8s ease, fill 0.8s ease, stroke-dashoffset 0.8s ease;
+}
+
+
+.main-menu.main-menu--opened .main-menu__link path {
+  transition: none;
+}
+
+
+.show__link {
+  transition: opacity 0.3s ease;
+
+  .screen--show.active & {
+    transition-delay: 0.25s;
+
+    span::before {
+      transition: transform 0.3s cubic-bezier(0.34, 0, 0.2, 1) 0.45s;
+    }
+  }
+}
+
+
+.map__place {
+  span {
+    transition: opacity 0.3s ease-in-out;
+  }
+}
+
+
+.map__info {
+  svg {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  path {
+    transition: transform 1s cubic-bezier(0.16, 0.12, 0, 1.08);
+  }
+
+  span {
+    transition: opacity 0.3s ease;
+  }
+}
+
+
+.map__event {
+  transition: all 0.3s ease;
+
+  &::before {
+    transition: all 0.3s ease;
+  }
+
+  span {
+    transition: opacity 0.3s ease;
+  }
+}
+
+
+.modal {
+  transition: opacity 0.2s ease;
+}
+
+
+.modal__window,
+.modal__content {
+  transition: transform 0.55s cubic-bezier(0.37, 0, 0.13, 1);
+}
+
+
+.modal__content {
+  transition-duration: 0.6s;
+}
+
+
+.modal__block-event {
+  transition: transform 0.85s cubic-bezier(0.17, 0, 0.13, 1);
+}
+
+
+.page-header {
+  transition: color 0.3s ease;
+}
+
+
+.page-header__period {
+  transition: color 0.3s ease;
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    transition-property: color, opacity;
+  }
+
+  @media (max-width: $tablet - 1) and (orientation: landscape) {
+    transition-property: color, opacity;
+  }
+}
+
+
+.page-header__cart .btn {
+  transition: color 0.3s ease;
+}
+
+
+.page-header__logo {
+  transition: opacity 0.5s ease;
+}
+
+
+.page-header__cart {
+  &-number {
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .eye_apple,
+  .upper_eyelid {
+    transition: opacity 0.01s ease-in-out 0.3s;
+  }
+}
+
+
+.page-header__cart.updated .whiff {
+  animation-name: show-and-hide-whiff;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+
+.screen {
+  transition: opacity 0.7s ease-in-out;
+}
+
+
+.screen__scroller {
+  transition: all 0.3s ease;
+}
+
+
+.screen--hidden,
+.screen--deactivated {
+  .whiff {
+    transition: opacity 0.5s ease;
+  }
+}
+
+.tickets-block__control,
+.slider__control {
+  transition: color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+
+  &::before {
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  svg {
+    transition: transform 0.2s ease;
+  }
+}
+
+.screen--mc.active .slider__control {
+  transition: color 0.2s ease, transform 0.5s ease 0.55s, opacity 0.5s ease 0.55s;
+}
+
+.screen--tickets.active .tickets-block--form-opened .tickets-block__control {
+  transition: color 0.2s ease, transform 0.5s ease 0.15s, opacity 0.5s ease 0.15s;
+}
+
+.tickets-block--form-opened {
+  .tickets-block__form {
+    transition: opacity 0.8s ease;
+  }
+}
+
+
+.slider__pagination {
+  transition: opacity 0.3s ease, transform 0s ease 0.3s;
+
+  .screen--mc.active & {
+    transition: opacity 0.5s ease 0.25s, transform 0.5s ease 0.25s;
+  }
+}
+
+
+.swiper-slide {
+  .slogan__word span {
+    transition: none;
+  }
+}
+
+
+.swiper-wrapper {
+  transition-timing-function: cubic-bezier(0.23, 0, 0.33, 1);
+
+  .slider__list span {
+    animation-duration: 0.75s;
+    animation-delay: 0.35s;
+    animation-timing-function: cubic-bezier(0.37, 0, 0.13, 1);
+    animation-fill-mode: both;
+    animation-play-state: paused;
+  }
+
+  &.active {
+    .swiper-slide-active {
+      .whiff {
+        opacity: 1;
+        animation-name: show-whiff;
+        animation-duration: 1.5s;
+        animation-delay: 0.15s;
+        animation-iteration-count: 1;
+        animation-timing-function: cubic-bezier(0, 0, 0, 1);
+        animation-fill-mode: forwards;
+      }
+    }
+
+    @for $i from 1 through 5 {
+      .slider__list li:nth-child(#{$i}) .whiff {
+        animation-delay: (0.15s + 0.2s * $i);
+      }
+    }
+
+    .swiper-slide-active .slider__list span {
+      animation-play-state: running;
+      animation-name: slider__show-paragraph;
+    }
+
+    @for $i from 1 through 5 {
+      .slider__list li:nth-child(#{$i}) span {
+        animation-delay: (0.35s + 0.2s * $i);
+      }
+    }
+  }
+}
+
+
+.swiper-slide {
+  .slogan__word span {
+    transition: none;
+  }
+}
+
+
+.tickets-form__ticket {
+  &.animate {
+    animation-name: tickets-form__show-ticket;
+    animation-duration: 0.7s;
+    animation-timing-function: ease;
+
+    .tickets-form__ticket {
+      &_x {
+        animation-name: tickets-form__move-ticket-x;
+        animation-duration: 0.7s;
+        animation-timing-function: cubic-bezier(.23,0,.33,1);
+        animation-fill-mode: forwards;
+      }
+
+      &_y {
+        animation-name: tickets-form__move-ticket-y;
+        animation-duration: 0.7s;
+        animation-timing-function: cubic-bezier(.59,0,.73,1);
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+}
+
+
+.tickets-block__button {
+  &--next {
+    transition: opacity 0.3s ease, transform 0.55s ease;
+
+    &:hover {
+      transition: transform 0.25s cubic-bezier(0.23, 0, 0.7, 1);
+    }
+  }
+}
+
+
+.tickets-form__counter {
+  &::before {
+    transition: transform 0.2s ease;
+  }
+}
+
+
+.btn {
+  &::before,
+  &::after {
+    transition-duration: 0.2s;
+    transition-property: top, bottom, left, right, border-color;
+  }
+}
+
+
+.social-btn {
+  transition: color 0.55s ease;
+}
+
+.social-btn:hover {
+  transition-duration: 0.3s;
+}
+
+.social-btn {
+  &::after {
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    transition-property: border-color, transform;
+  }
+}
+
+.whiff {
+  transition: opacity 0.5s ease;
+}
+
+// It is a complete disaster! I want to hit somebody especially one how wrote it!
+// Непрофессионалисм - не порок. Получать за это деньги - грех
+

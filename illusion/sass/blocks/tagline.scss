@@ -1,0 +1,103 @@
+.slogan {
+  margin: 0;
+  padding-top: 15vh;
+  max-width: 98rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+  font-size: 5.6rem;
+  line-height: 1.1;
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: $stop-scaling) {
+    padding-top: 115px;
+    max-width: 960px;
+    font-size: 56px;
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    width: 100%;
+    max-width: 34rem;
+    text-align: left;
+    font-size: 2.4rem;
+    padding-bottom: 1em;
+
+    br {
+      display: none;
+    }
+  }
+
+  @media (max-width: $tablet - 1) and (orientation: landscape) {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    text-align: left;
+    font-size: 2.4rem;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+
+.slogan__col {
+  display: block;
+
+  &--1 {
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    display: block;
+    max-width: 24rem;
+
+    &--1 {
+      padding-left: 3.2rem;
+    }
+
+    &--3 {
+      align-self: flex-end;
+      text-align: right;
+    }
+  }
+
+  @media (max-width: $tablet - 1) and (orientation: landscape) {
+    display: flex;
+    flex-direction: column;
+    max-width: 24rem;
+
+    &--1 {
+      padding-left: 5rem;
+    }
+
+    &--3 {
+      text-align: right;
+    }
+  }
+}
+
+
+.slogan__word {
+  overflow: hidden;
+  display: inline-block;
+  padding-top: 4px;
+  vertical-align: bottom;
+
+  span {
+    display: inline-block;
+    transform: translateY(100%);
+
+    .accent-typography--active & {
+      transform: translateY(0);
+    }
+  }
+}

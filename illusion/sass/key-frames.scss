@@ -1,0 +1,91 @@
+@keyframes show-whiff {
+  from {
+    stroke-dashoffset: -50%;
+  }
+
+  to {
+    stroke-dashoffset: 50%;
+  }
+}
+
+
+@keyframes show-whiff-infinite {
+  0%,
+  0.1% {
+    stroke-dashoffset: -50%;
+  }
+
+  28% {
+    stroke-dashoffset: 50%;
+  }
+
+  100% {
+    stroke-dashoffset: 50%;
+  }
+}
+
+
+@keyframes show-and-hide-whiff {
+  from {
+    stroke-dashoffset: -50%;
+  }
+
+  to {
+    stroke-dashoffset: 150%;
+  }
+}
+
+
+@keyframes slider__show-paragraph {
+  0% {
+    transform: translateX(6em);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes tickets-form__show-ticket {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  96% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+@keyframes tickets-form__move-ticket-x {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(var(--cartDeltaX));
+  }
+}
+
+
+@keyframes tickets-form__move-ticket-y {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(var(--cartDeltaY));
+  }
+}
+
