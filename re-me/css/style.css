@@ -1328,6 +1328,10 @@ span.mm-listitem__text {
   margin-right: 150px;
 }
 
+@media(max-width: 600px) {
+  margin-right: 0;
+}
+
 .screen .section:last-child {
   margin-right: 0;
 }
