@@ -1329,7 +1329,9 @@ span.mm-listitem__text {
 }
 
 @media(max-width: 600px) {
-  margin-right: 0;
+  .section {
+     margin-right: 0;
+  }
 }
 
 .screen .section:last-child {
