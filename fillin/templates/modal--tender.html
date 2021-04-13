@@ -1,0 +1,54 @@
+<div class="modal modal--tender" id="tender">
+    <div class="modal__container">
+        <div class="modal__wrapper">
+            <div class="modal__title title-h2">
+                Пригласить на тендер
+            </div>
+            <div class="modal__inner">
+                <form class="modal__form main-form">
+                    <fieldset>
+                        <ul class="form-list">
+                            <li class="form-list__50">
+                                <div class="group">
+                                    <input class="input" type="text" id="name" required>
+                                    <label class="label" for="name">Ваше имя*</label>
+                                </div>
+                            </li>
+                            <li class="form-list__50">
+                                <div class="group">
+                                    <input class="input" type="tel" id="phone" required>
+                                    <label class="label" for="phone">Название компании*</label>
+                                </div>
+                            </li>
+                            <li class="form-list__50">
+                                <div class="group">
+                                    <input class="input" type="email" id="email" required>
+                                    <label class="label" for="email">Ваш email*</label>
+                                </div>
+                            </li>
+                            <li class="form-list__50">
+                                <div class="group">
+                                    <input class="input" type="tel" id="phone" required>
+                                    <label class="label" for="phone">Номер телефона*</label>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="main-form__final">
+                            <button class="btn">
+                                Отправить
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-arrow-light"></use>
+                                </svg>
+                            </button>
+                            <div class="private">
+                                Отправляя данные, вы соглашаетесь
+                                с <a class="link" href="#">политикой конфиденциальности</a>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <button class="modal__close js-modal-close close"></button>
+    </div>
+</div>
