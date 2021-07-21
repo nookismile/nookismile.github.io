@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="520" height="514" viewBox="0 0 520 514">
+    <defs>
+        <linearGradient id="c" x1="50%" x2="50%" y1="0%" y2="47.019%">
+            <stop offset="0%" stop-color="#FFF"/>
+            <stop offset="100%" stop-color="#E9FAFF"/>
+        </linearGradient>
+        <rect id="b" width="500" height="52" rx="26"/>
+        <filter id="a" width="107%" height="167.3%" x="-3.5%" y="-24%" filterUnits="objectBoundingBox">
+            <feOffset dy="5" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.576470588 0 0 0 0 0.701960784 0 0 0 0 0.721568627 0 0 0 0.5 0"/>
+        </filter>
+        <filter id="d" width="104.8%" height="146.2%" x="-2.4%" y="-13.5%" filterUnits="objectBoundingBox">
+            <feOffset dy="-4" in="SourceAlpha" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.5 0"/>
+        </filter>
+        <linearGradient id="e" x1="55.883%" x2="55.883%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#8EA3A7"/>
+            <stop offset="100%" stop-color="#556A6E"/>
+        </linearGradient>
+        <path id="g" d="M38.063 87H38v392h425V87h-.063a31.47 31.47 0 0 0 .063-2c0-17.12-13.88-31-31-31H69c-17.12 0-31 13.88-31 31 0 .672.021 1.339.063 2z"/>
+        <filter id="f" width="118.8%" height="118.8%" x="-9.4%" y="-8.2%" filterUnits="objectBoundingBox">
+            <feOffset dy="5" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="12.5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(10 5)">
+        <use fill="#000" filter="url(#a)" xlink:href="#b"/>
+        <use fill="url(#c)" xlink:href="#b"/>
+        <use fill="#000" filter="url(#d)" xlink:href="#b"/>
+        <rect width="440" height="12" x="30" y="20" fill="url(#e)" rx="6"/>
+        <g fill="#000">
+            <use filter="url(#f)" xlink:href="#g"/>
+        </g>
+        <path fill="#FFF" d="M467.812 467H470V45c0-12.703-10.297-23-23-23H53c-12.703 0-23 10.297-23 23v422h2.188c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h2.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h1.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h2.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h2.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h2.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h2.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h2.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h1.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h2.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h2.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h2.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h2.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h2.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h2.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h1.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h2.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h2.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h2.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h2.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h2.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h1.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h2.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h2.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h2.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h2.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h2.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h2.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h1.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h2.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h2.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h2.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h2.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h2.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h1.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h2.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4h2.376c.594-2.309 2.523-4 4.812-4s4.218 1.691 4.812 4z"/>
+    </g>
+</svg>
